@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман Бакакин](https://up.htmlacademy.ru/adaptive/17/user/571665).
-* Наставник: `Неизвестно`.
+* Наставник: [Елена Рашкован](https://htmlacademy.ru/profile/id196306).
 
 ---
 
