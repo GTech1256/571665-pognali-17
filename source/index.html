@@ -5,8 +5,303 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="logo navigation__logo">
+          <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
+        </a>
+        <div class="burger navigation__burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+      </nav>
+      <h2 class="page-header__title page-header__position_center">
+          В путешествие с крутыми попутчиками!
+      </h2>
+      <div class="interaction-buttons"> <!-- background: man with chemodan -->
+        <div class="interaction-buttons__buttons"> <!-- margin-bottom: -20px; -->
+            <a href="tel:555-555-5555" class="interaction-buttons__button interaction-buttons__button_phone">
+              Позвонить нам
+            </a>
+            <a href="mailto:mail@htmlacademy.ru" class="interaction-buttons__button interaction-buttons__button_email">
+              Написть нам письмо
+            </a>
+            <a href="auth.html" class="interaction-buttons__button interaction-buttons__button_text">
+              Авторизация
+            </a>
+        </div>
+      </div>
+      <div class="how-it"> <!-- background: linear-gradient(50%) -->
+        <blockquote class="review how-it__review">
+            <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
+            <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          </blockquote>
+          <ul class="how-use how-it__how-use">
+            <!--
+              scss cycle:
+              .generate:how-use__item(@n) when(@n > 0) {
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+                how-use__item:nth-child(@n)::after {
+                  content: @n;
+                }
+
+                .generate:how-use__item(@n - 1);
+              }
+            -->
+            <li class="how-use__item">
+              <p class="how-use__text">Выберите направление</p>
+            </li>
+            <li class="how-use__item">
+              <p class="how-use__text">Изучите идеи путешественников</p>
+            </li>
+            <li class="how-use__item">
+              <p class="how-use__text">Находите тех, кто похож на вас</p>
+            </li>
+            <li class="how-use__item">
+              <p class="how-use__text">Путешествуйте вместе!</p>
+            </li>
+          </ul><!-- /.how-use how-it__how-use -->
+      </div><!-- /.how-it -->
+      <section class="section-wrapper section-wrapper_service page-header__section-wrapper">
+        <h3 class="section-wrapper__title">О сервисе</h3>
+        <p class="section-wrapper__text">
+            Любое путешествие веселее
+            с попутчиками, которые на одной волне с тобой!
+            Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+        </p>
+        <p class="section-wrapper__text section-wrapper__text_bold">
+            А если найдете кого-то
+            близкого по духу — скорее
+            зовите в совместный трип!
+        </p>
+      </section>
+    </header><!-- /.page-header -->
+    <main>
+      <h1 class="visually-hidden">
+        Онлайн площадка подбора попутчиков Погнали.
+      </h1>
+      <section class="section-wrapper">
+        <h2 class="section-wrapper__title">Направления</h2>
+        <p class="section-wrapper__text">
+            Мы не продаем туры
+            и ничего не рекламируем.
+            Люди сами пишут о странах, куда хотели бы отправиться
+            и чем можно там заняться.
+        </p>
+        <ul class="section-wrapper__list">
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Тайланд" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <h3 class="country__name">Тайланд</h3>
+                <h3 class="country__people">18321</h3>
+                <h3 class="country__description">Джунгли зовут!</h3>
+              </div>
+            </div>
+          </li>
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Франции" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <h3 class="country__name">Франция</h3>
+                <h3 class="country__people">12518</h3>
+                <h3 class="country__description">Трэ бьен, манифик!</h3>
+              </div>
+            </div>
+          </li>
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <h3 class="country__name">Чехия</h3>
+                <h3 class="country__people">5326</h3>
+                <h3 class="country__description">Закоулки старой Европы</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="section-wrapper__more">
+          Показать все
+        </button> <!-- /.section-wrapper__list -->
+      </section> <!-- /.section-wrapper -->
+
+      <section class="section-wrapper section-wrapper_companions">
+        <h2 class="section-wrapper__title">Попутчики</h2>
+        <p class="section-wrapper__text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        </p>
+        <p class="section-wrapper__text_bold">
+            Теперь можно легко найти единомышленников!
+        </p>
+        <ul class="section-wrapper__list">
+          <li class="section-wrapper__item user-card">
+            <div class="user-card__level round-level">
+              <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+              <div class="round-level__label">
+                  <p class="round-level__percents">
+                    99
+                  </p>
+                  <p class="round-level__percents">
+                    level
+                  </p>
+              </div>
+              <div class="round-level__progress round-level__progress_99">
+
+                  <div class="round-level__pie">
+                    <div class="round-level__left-side round-level__half-circle"></div>
+                    <div class="round-level__right-side round-level__half-circle"></div>
+                </div>
+              </div>
+            </div> <!-- /.user-card__level /.round-level -->
+            <img class="user-card__pic" src="http://placehold.it/270x270" alt="Фотография пользователя" width="270" height="270">
+            <div class="user-card__info">
+              <ul class="user-card__countries">
+                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Сейшельских островов" width="35" height="24"></li>
+              </ul>
+              <p class="user-card__full-name">
+                Таня Фирсова
+              </p>
+              <p class="user-card__tags">
+                <span class="user-card__tag">#ЗОЖ</span>
+                <span class="user-card__tag">#ПП</span>
+                <span class="user-card__tag">#Фитнес</span>
+                <span class="user-card__tag">#пляж</span>
+                <span class="user-card__tag">#авокадо</span>
+                <span class="user-card__tag">#смузи</span>
+              </p>
+              <div class="user-card__movements">
+                <img class="user-card__movement user-card__movement_active" src="http://placehold.it/19x21" alt="Самолет" width="19" height="21">
+                <img class="user-card__movement" src="http://placehold.it/19x21" alt="Поезд" width="19" height="21">
+                <img class="user-card__movement" src="http://placehold.it/19x21" alt="Велосипед" width="19" height="21">
+                <img class="user-card__movement" src="http://placehold.it/19x21" alt="Пешком" width="19" height="21">
+              </div>
+            </div><!-- /.user-card__info -->
+          </li><!-- /.section-wrapper__item /.user-card -->
+          <li class="section-wrapper__item user-card">
+            <div class="user-card__level round-level">
+              <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+              <div class="round-level__label">
+                  <p class="round-level__percents">
+                    80
+                  </p>
+                  <p class="round-level__percents">
+                    level
+                  </p>
+              </div>
+              <div class="round-level__progress round-level__progress_30">
+
+                  <div class="round-level__pie">
+                    <div class="round-level__left-side round-level__half-circle"></div>
+                    <div class="round-level__right-side round-level__half-circle"></div>
+                </div>
+              </div>
+            </div> <!-- /.user-card__level /.round-level -->
+            <img class="user-card__pic" src="http://placehold.it/270x270" alt="Фотография пользователя" width="270" height="270">
+            <div class="user-card__info">
+              <ul class="user-card__countries">
+                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Бельгии" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24"></li>
+              </ul>
+              <p class="user-card__full-name">
+                Таня Фирсова
+              </p>
+              <p class="user-card__tags">
+                <span class="user-card__tag">#бургер</span>
+                <span class="user-card__tag">#бар</span>
+                <span class="user-card__tag">#футбол</span>
+                <span class="user-card__tag">#концерт</span>
+                <span class="user-card__tag">#крафт</span>
+              </p>
+              <div class="user-card__movements">
+                <img class="user-card__movement user-card__movement_active" src="http://placehold.it/19x21" alt="Самолет" width="19" height="21">
+                <img class="user-card__movement user-card__movement_active" src="http://placehold.it/19x21" alt="Поезд" width="19" height="21">
+                <img class="user-card__movement" src="http://placehold.it/19x21" alt="Велосипед" width="19" height="21">
+                <img class="user-card__movement user-card__movement_active" src="http://placehold.it/19x21" alt="Пешком" width="19" height="21">
+              </div>
+            </div><!-- /.user-card__info -->
+          </li><!-- /.section-wrapper__item /.user-card -->
+
+        </ul>
+        <button type="button" class="section-wrapper__more">
+          Показать всех
+        </button> <!-- /.section-wrapper__list -->
+      </section> <!-- /.section-wrapper -->
+
+      <section class="add-profile">
+        <h2 class="add-profile__title">
+          Добавтьте
+          свой
+          профиль
+        </h2>
+        <ul class="add-profile__tariffs">
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Базовое размещение
+              Бесплатно
+            </p>
+          </li>
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Вывод на первых позициях
+              99 руб./мес
+            </p>
+          </li>
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Кастомный цвет карточки
+              59 руб./мес
+            </p>
+          </li>
+        </ul>
+        <button class="add-profile__text-btn">
+          Показать тарифы для бизнеса
+        </button>
+      </section>
+
+    </main>
+    <footer class="page-footer">
+      <h3 class="page-footer__title">
+        Погнали?
+      </h3>
+      <div class="page-footer__soc-links soc-links">
+        <a
+          class="soc-links__link soc-links__link_fb"
+          href="facebook.com"
+          target="_blank"
+        >
+          Мы Вконтакте
+        </a>
+        <a
+          class="soc-links__link soc-links__link_vk"
+          href="vk.com"
+          target="_blank"
+        >
+          Мы Фейсбук
+        </a>
+        <a
+          class="soc-links__link soc-links__link_inst"
+          href="instagram.com"
+          target="_blank"
+        >
+          Мы в инстаграм
+        </a>
+      </div><!-- ./page-footer__soc-links /.soc-links -->
+      <div class="page-footer__dev-by-wrapper">
+        <p class="page-footer__dev-by-text">
+          Разработано
+        </p>
+        <a class="page-footer__dev-by-logo" href="htmlacademy.com" target="_blank">
+          HTMLAcademy
+        </a>
+      </div>
+    </footer>
 
   </body>
 </html>
