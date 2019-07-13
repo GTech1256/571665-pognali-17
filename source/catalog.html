@@ -6,15 +6,60 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <a class="logo navigation__logo" href="index.html">
+      <div class="top-bar"><!-- always on top -->
+        <a class="logo top-bar__logo">
+          <!-- svg -->
           <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
+          <!-- /svg -->
         </a>
-        <div class="burger navigation__burger">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
+        <div class="burger top-bar__burger">
         </div>
-      </nav>
+        <div class="mobile-menu">
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
+              <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
+              <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
+              <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
+                <a href="#companions">Авторизация</a>
+              </li>
+            </ul>
+          </nav>
+          <p>
+            <a href="tel:8 800 555-86-28" class="mobile-menu__contacts mobile-menu__contacts_phone">
+              8 800 555-86-28
+            </a>
+          </p>
+          <p>
+            <a href="emailto:mail@htmlacademy.ru" class="mobile-menu__contacts mobile-menu__contacts_email">
+              mail@htmlacademy.ru
+            </a>
+          </p>
+          <div class="mobile-menu__soc">
+              <a
+                class="mobile-menu__link mobile-menu__link_fb"
+                href="facebook.com"
+                target="_blank"
+              >
+                Мы в Фейсбук
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_vk"
+                href="vk.com"
+                target="_blank"
+              >
+                Мы в Вконтакте
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_inst"
+                href="instagram.com"
+                target="_blank"
+              >
+                Мы в инстаграм
+              </a>
+            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+        </div><!-- /.mobile-menu -->
+      </div><!-- /.top-bar -->
     </header><!-- /.page-header -->
     <main class="page-main">
       <h1 class="visually-hidden">
