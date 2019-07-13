@@ -78,37 +78,37 @@
             </a>
         </div>
       </div>
-      <div class="how-it"> <!-- background: linear-gradient(50%) -->
-        <blockquote class="review how-it__review">
-            <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
-            <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-          </blockquote>
-          <ul class="how-use how-it__how-use">
-            <!--
-              scss cycle:
-              .generate:how-use__item(@n) when(@n > 0) {
+      <blockquote class="review how-it-works__review">
+        <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
+        <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+      </blockquote>
+      <section class="how-it-works"> <!-- background: linear-gradient(50%) -->
+        <ol class="how-use how-it-works__how-use">
+          <!--
+            scss cycle:
+            .generate:how-use__item(@n) when(@n > 0) {
 
-                how-use__item:nth-child(@n)::after {
-                  content: @n;
-                }
-
-                .generate:how-use__item(@n - 1);
+              how-use__item:nth-child(@n)::after {
+                content: @n;
               }
-            -->
-            <li class="how-use__item">
-              <p class="how-use__text">Выберите направление</p>
-            </li>
-            <li class="how-use__item">
-              <p class="how-use__text">Изучите идеи путешественников</p>
-            </li>
-            <li class="how-use__item">
-              <p class="how-use__text">Находите тех, кто похож на вас</p>
-            </li>
-            <li class="how-use__item">
-              <p class="how-use__text">Путешествуйте вместе!</p>
-            </li>
-          </ul><!-- /.how-use how-it__how-use -->
-      </div><!-- /.how-it -->
+
+              .generate:how-use__item(@n - 1);
+            }
+          -->
+          <li class="how-use__item">
+            <p class="how-use__text">Выберите направление</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Изучите идеи путешественников</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Находите тех, кто похож на вас</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Путешествуйте вместе!</p>
+          </li>
+        </ol><!-- /.how-use how-it-works__how-use -->
+      </section><!-- /.how-it-works -->
       <section
         class="section-wrapper section-wrapper_service page-header__section-wrapper"
         id="about-service"
