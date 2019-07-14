@@ -30,13 +30,19 @@
               </li>
             </ul>
           </nav>
-          <p>
-            <a href="tel:8 800 555-86-28" class="mobile-menu__contacts mobile-menu__contacts_phone">
+          <p class="contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_phone"
+              href="tel:8 800 555-86-28"
+            >
               8 800 555-86-28
             </a>
           </p>
-          <p>
-            <a href="emailto:mail@htmlacademy.ru" class="mobile-menu__contacts mobile-menu__contacts_email">
+          <p class="contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_email"
+              href="emailto:mail@htmlacademy.ru"
+            >
               mail@htmlacademy.ru
             </a>
           </p>
@@ -341,6 +347,61 @@
         <a href="tariffs.html" class="add-profile__text-btn">
           Показать тарифы для бизнеса
         </a>
+      </section> <!-- /.add-profile -->
+
+      <section class="CTA-form">
+        <h2 class="CTA-form__title">Заинтересовались?</h2>
+        <p class="CTA-form__desc">
+            Зарегистрируйтесь,
+          это быстро и бесплатно!
+        Уже зарегистрированы? Тогда
+          скорее <a class="CTA-form__link" href="auth.html">авторизуйтесь</a>.
+        </p>
+        <form class="CTA-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="CTA-form__label">
+            Ваша почта
+            <input class="CTA-form__input" type="email" placeholder="E-mail">
+          </label>
+          <button class="CTA-form__btn" type="submit">Отправить почту для регистрации</button>
+        </form>
+        <p class="CTA-form__desc">
+                Остались вопросы?
+          Мы с радостью на них ответим!
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_phone contacts-paragraph__link_color_dark"
+            href="tel:8 800 555-86-28"
+          >
+            8 800 555-86-28
+          </a>
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_email contacts-paragraph__link_color_dark"
+            href="emailto:mail@htmlacademy.ru"
+          >
+            mail@htmlacademy.ru
+          </a>
+        </p>
+      </section> <!-- /.CTA-form -->
+
+      <section class="contacts">
+        <p class="contacts__address">
+            ул. Большая
+            Конюшенная, 19/8
+        </p>
+        <a
+          class="contacts__path-btn"
+          href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.322252%2C59.937287&mode=routes&rtext=59.938631%2C30.323055~59.936296%2C30.321214&rtt=auto&ruri=ymapsbm1%3A%2F%2Forg%3Foid%3D1284388067~ymapsbm1%3A%2F%2Forg%3Foid%3D1025543839&z=17"
+        >
+          Проложить маршрут
+        </a>
+        <div class="contacts__map-wrapper">
+          <img class="contacts__map-pic" src="http://placehold.it/320x546" alt="Карта улицы Большая Конюшенная, дом 19/8" width="320" height="546">
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4552bfa40275aaafe2d2152c1678da88014fd3bfa95d0df711bde6b36ebfdd68&amp;source=constructor" width="500" height="400" frameborder="0">
+          </iframe>
+        </div>
       </section>
 
     </main>
