@@ -5,8 +5,381 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
+    <header class="page-header">
+      <h1 class="visually-hidden">
+        Онлайн площадка подбора попутчиков Погнали.
+      </h1>
+      <div class="top-bar"><!-- always on top -->
+        <a class="logo top-bar__logo">
+          <!-- svg -->
+          <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
+          <!-- /svg -->
+        </a>
+        <input class="visually-hidden" type="checkbox" id="burger-toggle">
+        <label class="burger top-bar__burger" for="burger-toggle">
+          Отображение меню.
+        </label>
+        <div class="mobile-menu">
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
+              <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
+              <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
+              <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
+                <a href="#companions">Авторизация</a>
+              </li>
+            </ul>
+          </nav>
+          <p>
+            <a href="tel:8 800 555-86-28" class="mobile-menu__contacts mobile-menu__contacts_phone">
+              8 800 555-86-28
+            </a>
+          </p>
+          <p>
+            <a href="emailto:mail@htmlacademy.ru" class="mobile-menu__contacts mobile-menu__contacts_email">
+              mail@htmlacademy.ru
+            </a>
+          </p>
+          <div class="mobile-menu__soc">
+              <a
+                class="mobile-menu__link mobile-menu__link_fb"
+                href="facebook.com"
+                target="_blank"
+              >
+                Мы в Фейсбук
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_vk"
+                href="vk.com"
+                target="_blank"
+              >
+                Мы в Вконтакте
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_inst"
+                href="instagram.com"
+                target="_blank"
+              >
+                Мы в инстаграм
+              </a>
+            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+        </div><!-- /.mobile-menu -->
+      </div><!-- /.top-bar -->
+      <h2 class="page-header__title page-header__position_center">
+          В путешествие с крутыми попутчиками!
+      </h2>
+      <div class="interaction-buttons"> <!-- background: man with chemodan -->
+        <div class="interaction-buttons__buttons"> <!-- margin-bottom: -20px; -->
+            <a href="tel:555-555-5555" class="interaction-buttons__button interaction-buttons__button_phone">
+              Позвонить нам
+            </a>
+            <a href="mailto:mail@htmlacademy.ru" class="interaction-buttons__button interaction-buttons__button_email">
+              Написть нам письмо
+            </a>
+            <a href="auth.html" class="interaction-buttons__button interaction-buttons__button_text">
+              Авторизация
+            </a>
+        </div>
+      </div>
+      <blockquote class="review how-it-works__review">
+        <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
+        <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+      </blockquote>
+      <section class="how-it-works"> <!-- background: linear-gradient(50%) -->
+        <ol class="how-use how-it-works__how-use">
+          <!--
+            scss cycle:
+            .generate:how-use__item(@n) when(@n > 0) {
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+              how-use__item:nth-child(@n)::after {
+                content: @n;
+              }
+
+              .generate:how-use__item(@n - 1);
+            }
+          -->
+          <li class="how-use__item">
+            <p class="how-use__text">Выберите направление</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Изучите идеи путешественников</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Находите тех, кто похож на вас</p>
+          </li>
+          <li class="how-use__item">
+            <p class="how-use__text">Путешествуйте вместе!</p>
+          </li>
+        </ol><!-- /.how-use how-it-works__how-use -->
+      </section><!-- /.how-it-works -->
+      <section
+        class="section-wrapper section-wrapper_service page-header__section-wrapper"
+        id="about-service"
+      >
+        <h3 class="section-wrapper__title">О сервисе</h3>
+        <p class="section-wrapper__text">
+            Любое путешествие веселее
+            с попутчиками, которые на одной волне с тобой!
+            Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+        </p>
+        <p class="section-wrapper__text section-wrapper__text_bold">
+            А если найдете кого-то
+            близкого по духу — скорее
+            зовите в совместный трип!
+        </p>
+      </section>
+    </header><!-- /.page-header -->
+    <main>
+      <section class="section-wrapper" id="directions">
+        <h2 class="section-wrapper__title">Направления</h2>
+        <p class="section-wrapper__text">
+            Мы не продаем туры
+            и ничего не рекламируем.
+            Люди сами пишут о странах, куда хотели бы отправиться
+            и чем можно там заняться.
+        </p>
+        <ul class="section-wrapper__list">
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Тайланд" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country__name">Тайланд</p>
+                <p class="country__people">
+                  <span class="visually-hidden">население:</span> 18321
+                </p>
+                <p class="country__description">Джунгли зовут!</p>
+              </div>
+            </div>
+          </li>
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Франции" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country__name">Франция</p>
+                <p class="country__people">
+                    <span class="visually-hidden">население:</span> 12518
+                </p>
+                <p class="country__description">Трэ бьен, манифик!</p>
+              </div>
+            </div>
+          </li>
+          <li class="section-wrapper__item country">
+            <img class="country__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
+            <div class="country__info">
+              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24">
+              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country__name">Чехия</p>
+                <p class="country__people">
+                    <span class="visually-hidden">население:</span> 5326
+                </p>
+                <p class="country__description">Закоулки старой Европы</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="section-wrapper__more" href="form.html">
+          Показать все
+        </a> <!-- /.section-wrapper__list -->
+      </section> <!-- /.section-wrapper -->
+
+      <section class="section-wrapper section-wrapper_companions" id="companions">
+        <h2 class="section-wrapper__title">Попутчики</h2>
+        <p class="section-wrapper__text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        </p>
+        <p class="section-wrapper__text_bold">
+            Теперь можно легко найти единомышленников!
+        </p>
+        <ul class="section-wrapper__list">
+          <li class="section-wrapper__item user-card">
+            <div class="user-card__level round-level">
+              <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+              <div class="round-level__label">
+                  <p class="round-level__percents">
+                    99
+                  </p>
+                  <p class="round-level__desc">
+                    level
+                  </p>
+              </div>
+              <div class="round-level__progress round-level__progress_99">
+
+                  <div class="round-level__pie">
+                    <div class="round-level__left-side round-level__half-circle"></div>
+                    <div class="round-level__right-side round-level__half-circle"></div>
+                </div>
+              </div>
+            </div> <!-- /.user-card__level /.round-level -->
+            <a href="#">
+              <img
+                class="user-card__pic"
+                src="http://placehold.it/270x270"
+                alt="Фотография пользователя"
+                width="270"
+                height="270"
+              >
+            </a>
+            <div class="user-card__info">
+              <ul class="user-card__countries">
+                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Сейшельских островов" width="35" height="24"></li>
+              </ul>
+              <p class="user-card__full-name">
+                <a href="#">
+                  Таня Фирсова
+                </a>
+              </p>
+              <p class="user-card__tags">
+                <span class="user-card__tag">#ЗОЖ</span>
+                <span class="user-card__tag">#ПП</span>
+                <span class="user-card__tag">#Фитнес</span>
+                <span class="user-card__tag">#пляж</span>
+                <span class="user-card__tag">#авокадо</span>
+                <span class="user-card__tag">#смузи</span>
+              </p>
+              <div class="user-card__transport-preferences">
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
+                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Поезд" width="19" height="21">
+                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
+                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Пешком" width="19" height="21">
+              </div>
+            </div><!-- /.user-card__info -->
+          </li><!-- /.section-wrapper__item /.user-card -->
+          <li class="section-wrapper__item user-card">
+            <div class="user-card__level round-level">
+              <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+              <div class="round-level__label">
+                  <p class="round-level__percents">
+                    80
+                  </p>
+                  <p class="round-level__desc">
+                    level
+                  </p>
+              </div>
+              <div class="round-level__progress round-level__progress_30">
+
+                  <div class="round-level__pie">
+                    <div class="round-level__left-side round-level__half-circle"></div>
+                    <div class="round-level__right-side round-level__half-circle"></div>
+                </div>
+              </div>
+            </div> <!-- /.user-card__level /.round-level -->
+            <a href="#">
+              <img
+                class="user-card__pic"
+                src="http://placehold.it/270x270"
+                alt="Фотография пользователя"
+                width="270"
+                height="270"
+              >
+            </a>
+            <div class="user-card__info">
+              <ul class="user-card__countries">
+                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Бельгии" width="35" height="24"></li>
+                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24"></li>
+              </ul>
+              <p class="user-card__full-name">
+                <a href="#">
+                  Петя Демин
+                </a>
+              </p>
+              <p class="user-card__tags">
+                <span class="user-card__tag">#бургер</span>
+                <span class="user-card__tag">#бар</span>
+                <span class="user-card__tag">#футбол</span>
+                <span class="user-card__tag">#концерт</span>
+                <span class="user-card__tag">#крафт</span>
+              </p>
+              <div class="user-card__transport-preferences">
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
+                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Поезд" width="19" height="21">
+                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
+                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Пешком" width="19" height="21">
+              </div>
+            </div><!-- /.user-card__info -->
+          </li><!-- /.section-wrapper__item /.user-card -->
+
+        </ul>
+        <a href="catalog.html" class="section-wrapper__more">
+          Показать всех
+        </a> <!-- /.section-wrapper__list -->
+      </section> <!-- /.section-wrapper -->
+
+      <section class="add-profile">
+        <h2 class="add-profile__title">
+          Добавтьте
+          свой
+          профиль
+        </h2>
+        <ol class="add-profile__tariffs">
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Базовое размещение
+              Бесплатно
+            </p>
+          </li>
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Вывод на первых позициях
+              99 руб./мес
+            </p>
+          </li>
+          <li class="add-profile__tariff-wrapper">
+            <p class="add-profile__tariff-description">
+              Кастомный цвет карточки
+              59 руб./мес
+            </p>
+          </li>
+        </ol>
+        <a href="tariffs.html" class="add-profile__text-btn">
+          Показать тарифы для бизнеса
+        </a>
+      </section>
+
+    </main>
+    <footer class="page-footer">
+      <h3 class="page-footer__title">
+        Погнали?
+      </h3>
+      <div class="page-footer__soc-links soc-links">
+        <a
+          class="soc-links__link soc-links__link_fb"
+          href="facebook.com"
+          target="_blank"
+        >
+          Мы в Фейсбук
+        </a>
+        <a
+          class="soc-links__link soc-links__link_vk"
+          href="vk.com"
+          target="_blank"
+        >
+          Мы в Вконтакте
+        </a>
+        <a
+          class="soc-links__link soc-links__link_inst"
+          href="instagram.com"
+          target="_blank"
+        >
+          Мы в инстаграм
+        </a>
+      </div><!-- ./page-footer__soc-links /.soc-links -->
+      <div class="page-footer__dev-by-wrapper">
+        <p class="page-footer__dev-by-text">
+          Разработано
+        </p>
+        <a class="page-footer__dev-by-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          HTMLAcademy
+        </a>
+      </div>
+    </footer>
 
   </body>
 </html>

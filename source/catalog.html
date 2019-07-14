@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Направления — Погнали!</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="top-bar"><!-- always on top -->
+        <a href="index.html" class="logo top-bar__logo">
+          <!-- svg -->
+          <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
+          <!-- /svg -->
+        </a>
+        <input class="visually-hidden" type="checkbox" id="burger-toggle">
+        <label class="burger top-bar__burger" for="burger-toggle">
+          Отображение меню.
+        </label>
+        <div class="menu">
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__nav-item"><a href="#about-service">О сервисе</a></li>
+              <li class="menu__nav-item"><a href="#directions">Направления</a></li>
+              <li class="menu__nav-item"><a href="#companions">Попутчики</a></li>
+              <li class="menu__nav-item menu__nav-item_button">
+                <a href="#companions">Авторизация</a>
+              </li>
+            </ul>
+          </nav>
+          <p>
+            <a href="tel:8 800 555-86-28" class="menu__contacts menu__contacts_phone">
+              8 800 555-86-28
+            </a>
+          </p>
+          <p>
+            <a href="emailto:mail@htmlacademy.ru" class="menu__contacts menu__contacts_email">
+              mail@htmlacademy.ru
+            </a>
+          </p>
+          <div class="menu__soc">
+              <a
+                class="menu__link menu__link_fb"
+                href="facebook.com"
+                target="_blank"
+              >
+                Мы в Фейсбук
+              </a>
+              <a
+                class="menu__link menu__link_vk"
+                href="vk.com"
+                target="_blank"
+              >
+                Мы в Вконтакте
+              </a>
+              <a
+                class="menu__link menu__link_inst"
+                href="instagram.com"
+                target="_blank"
+              >
+                Мы в инстаграм
+              </a>
+            </div><!-- ./page-footer__menu /.menu -->
+        </div><!-- /.menu -->
+      </div><!-- /.top-bar -->
+    </header><!-- /.page-header -->
+    <main class="page-main">
+      <div class="page-main__title-wrapper">
+        <h1 class="page-main__title">
+            Попутчики
+        </h1>
+      </div>
+      <section class="companions">
+        <h3 class="visually-hidden">
+          Список попутчиков
+        </h3>
+        <ul class="companions__list">
+          <li class="companions__profile user-profile">
+            <div class="user-profile__visual-info">
+                <div class="user-profile__pic-wrapper">
+                  <a href="#">
+                    <img
+                      class="user-profile__pic"
+                      src="http://placehold.it/70x70"
+                      alt="Фотография пользователя"
+                      width="70"
+                      height="70"
+                    >
+                  </a>
+                  <button class="user-profile__favorite-wrapper" type="button">
+                      <img
+                        class="user-profile__favorite user-profile__favorite_active"
+                        src="http://placehold.it/13x11"
+                        alt="Кнопка добавления понравившего"
+                        width="13"
+                        height="11"
+                      >
+                      Кнопка добавления понравившего
+                  </button>
+                </div><!-- /.user-profile__pic-wrapper -->
+                <div class="user-profile__fullname-wrapper">
+                  <p class="user-profile__fullname">
+                    <a href="#">
+                      Таня
+                      Фирсова
+                    </a>
+                  </p>
+                  <p class="user-profile__distance">
+                    1,5 м
+                  </p>
+                </div>
+                <div class="user-profile__online-status">
+                  <!-- red/green circle -->
+                </div>
+            </div><!-- /.user-profile__visual-info -->
+            <p class="user-profile__tags">
+              <span class="user-profile__tag">#ЗОЖ</span>
+              <span class="user-profile__tag">#ПП</span>
+              <span class="user-profile__tag">#Фитнес</span>
+              <span class="user-profile__tag">#пляж</span>
+              <span class="user-profile__tag">#авокадо</span>
+              <span class="user-profile__tag">#смузи</span>
+            </p>
+            <div class="user-profile__want-visit want-visit">
+              <p class="want-visit__title">
+                хочет посетить:
+              </p>
+              <ul class="want-visit__list">
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Шри ланка" width="26" height="18">
+                  <p class="want-visit__country-name">Шри ланка</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Тайланд" width="26" height="18">
+                  <p class="want-visit__country-name">Тайланд</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Сейшелы" width="26" height="18">
+                  <p class="want-visit__country-name">Сейшелы</p>
+                </li>
+              </ul><!-- /.want-visit__list -->
+            </div><!-- /.user-profile__want-visit /.want-visit -->
+            <div class="user-profile__footer">
+              <div class="user-profile__transport-preferences-wrapper">
+                <p class="user-profile__transport-preferences-title">транспорт</p>
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал  Самолет" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Поезд" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Пешком" width="19" height="21">
+              </div>
+              <div class="user-profile__level round-level">
+                <p class="user-profile__level-title">
+                  левел:
+                </p>
+                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                <div class="round-level__label">
+                    <p class="round-level__percents round-level__percents_large">
+                      99
+                    </p>
+                </div>
+                <div class="round-level__progress round-level__progress_99">
+
+                    <div class="round-level__pie">
+                      <div class="round-level__left-side round-level__half-circle"></div>
+                      <div class="round-level__right-side round-level__half-circle"></div>
+                  </div>
+                </div>
+              </div> <!-- /.user-profile__level /.round-level -->
+            </div><!-- /.user-profile__footer -->
+            <a href="user-invite.html" class="user-profile__invite-btn">
+              позвать!
+            </a>
+          </li><!-- /.companions__profile /.user-profile -->
+          <li class="companions__profile user-profile">
+            <div class="user-profile__visual-info">
+                <div class="user-profile__pic-wrapper">
+                  <a href="#">
+                    <img
+                      class="user-profile__pic"
+                      src="http://placehold.it/70x70"
+                      alt="Фотография пользователя"
+                      width="70"
+                      height="70"
+                    >
+                  </a>
+                  <button class="user-profile__favorite-wrapper" type="button">
+                      <img
+                        class="user-profile__favorite"
+                        src="http://placehold.it/13x11"
+                        alt="Кнопка добавления понравившего"
+                        width="13"
+                        height="11"
+                      >
+                      Кнопка добавления понравившего
+                  </button>
+                </div><!-- /.user-profile__pic-wrapper -->
+                <div class="user-profile__fullname-wrapper">
+                  <p class="user-profile__fullname">
+                    <a href="#">
+                      Петя
+                      Демин
+                    </a>
+                  </p>
+                  <p class="user-profile__distance">
+                    150
+                  </p>
+                </div>
+                <div class="user-profile__online-status">
+                  <!-- red/green circle -->
+                </div>
+            </div><!-- /.user-profile__visual-info -->
+            <p class="user-profile__tags">
+              <span class="user-profile__tag">#бургер</span>
+              <span class="user-profile__tag">#бар</span>
+              <span class="user-profile__tag">#футбол</span>
+              <span class="user-profile__tag">#концерт</span>
+              <span class="user-profile__tag">#крафт</span>
+            </p>
+            <div class="user-profile__want-visit want-visit">
+              <p class="want-visit__title">
+                хочет посетить:
+              </p>
+              <ul class="want-visit__list">
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Бельгия" width="26" height="18">
+                  <p class="want-visit__country-name">Бельгия</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Чехия" width="26" height="18">
+                  <p class="want-visit__country-name">Чехия</p>
+                </li>
+              </ul><!-- /.want-visit__list -->
+            </div><!-- /.user-profile__want-visit /.want-visit -->
+            <div class="user-profile__footer">
+              <div class="user-profile__transport-preferences-wrapper">
+                <p class="user-profile__transport-preferences-title">транспорт</p>
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Поезд" width="19" height="21">
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Велосипед" width="19" height="21">
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Пешком" width="19" height="21">
+              </div>
+              <div class="user-profile__level round-level">
+                <p class="user-profile__level-title">
+                  левел:
+                </p>
+                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                <div class="round-level__label">
+                    <p class="round-level__percents round-level__percents_large">
+                      80
+                    </p>
+                </div>
+                <div class="round-level__progress round-level__progress_80">
+
+                    <div class="round-level__pie">
+                      <div class="round-level__left-side round-level__half-circle"></div>
+                      <div class="round-level__right-side round-level__half-circle"></div>
+                  </div>
+                </div>
+              </div> <!-- /.user-profile__level /.round-level -->
+            </div><!-- /.user-profile__footer -->
+            <a href="user-invite.html" class="user-profile__invite-btn">
+              позвать!
+            </a>
+          </li><!-- /.companions__profile /.user-profile -->
+          <li class="companions__profile user-profile">
+            <div class="user-profile__visual-info">
+                <div class="user-profile__pic-wrapper">
+                  <a href="#">
+                    <img
+                      class="user-profile__pic"
+                      src="http://placehold.it/70x70"
+                      alt="Фотография пользователя"
+                      width="70"
+                      height="70"
+                    >
+                  </a>
+                  <button class="user-profile__favorite-wrapper" type="button">
+                      <img
+                        class="user-profile__favorite"
+                        src="http://placehold.it/13x11"
+                        alt="Кнопка добавления понравившего"
+                        width="13"
+                        height="11"
+                      >
+                      Кнопка добавления понравившего
+                  </button>
+                </div><!-- /.user-profile__pic-wrapper -->
+                <div class="user-profile__fullname-wrapper">
+                  <p class="user-profile__fullname">
+                    <a href="#">
+                      Марк
+                      Смолов
+                    </a>
+                  </p>
+                  <p class="user-profile__distance">
+                    1700
+                  </p>
+                </div>
+                <div class="user-profile__online-status">
+                  <!-- red/green circle -->
+                </div>
+            </div><!-- /.user-profile__visual-info -->
+            <p class="user-profile__tags">
+              <span class="user-profile__tag">#рэп</span>
+              <span class="user-profile__tag">#тату</span>
+              <span class="user-profile__tag">#хайпбист</span>
+              <span class="user-profile__tag">#кроссовки</span>
+              <span class="user-profile__tag">#суприм</span>
+            </p>
+            <div class="user-profile__want-visit want-visit">
+              <p class="want-visit__title">
+                хочет посетить:
+              </p>
+              <ul class="want-visit__list">
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="США" width="26" height="18">
+                  <p class="want-visit__country-name">США</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Австралия" width="26" height="18">
+                  <p class="want-visit__country-name">Австралия</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Доминикана" width="26" height="18">
+                  <p class="want-visit__country-name">Доминикана</p>
+                </li>
+              </ul><!-- /.want-visit__list -->
+            </div><!-- /.user-profile__want-visit /.want-visit -->
+            <div class="user-profile__footer">
+              <div class="user-profile__transport-preferences-wrapper">
+                <p class="user-profile__transport-preferences-title">транспорт</p>
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Поезд" width="19" height="21">
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Велосипед" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Пешком" width="19" height="21">
+              </div>
+              <div class="user-profile__level round-level">
+                <p class="user-profile__level-title">
+                  левел:
+                </p>
+                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                <div class="round-level__label">
+                    <p class="round-level__percents round-level__percents_large">
+                      25
+                    </p>
+                </div>
+                <div class="round-level__progress round-level__progress_25">
+
+                    <div class="round-level__pie">
+                      <div class="round-level__left-side round-level__half-circle"></div>
+                      <div class="round-level__right-side round-level__half-circle"></div>
+                  </div>
+                </div>
+              </div> <!-- /.user-profile__level /.round-level -->
+            </div><!-- /.user-profile__footer -->
+            <a href="user-invite.html" class="user-profile__invite-btn">
+              позвать!
+            </a>
+          </li><!-- /.companions__profile /.user-profile -->
+          <li class="companions__profile user-profile">
+            <div class="user-profile__visual-info">
+                <div class="user-profile__pic-wrapper">
+                  <a href="#">
+                    <img
+                      class="user-profile__pic"
+                      src="http://placehold.it/70x70"
+                      alt="Фотография пользователя"
+                      width="70"
+                      height="70"
+                    >
+                  </a>
+                  <button class="user-profile__favorite-wrapper" type="button">
+                      <img
+                        class="user-profile__favorite"
+                        src="http://placehold.it/13x11"
+                        alt="Кнопка добавления понравившего"
+                        width="13"
+                        height="11"
+                      >
+                      Кнопка добавления понравившего
+                  </button>
+                </div><!-- /.user-profile__pic-wrapper -->
+                <div class="user-profile__fullname-wrapper">
+                  <p class="user-profile__fullname">
+                    <a href="#">
+                      Ларисап
+                      Роговая
+                    </a>
+                  </p>
+                  <p class="user-profile__distance">
+                    23
+                  </p>
+                </div>
+                <div class="user-profile__online-status user-profile__online-status_online">
+                  <!-- red/green circle -->
+                </div>
+            </div><!-- /.user-profile__visual-info -->
+            <p class="user-profile__tags">
+              <span class="user-profile__tag">#образование</span>
+              <span class="user-profile__tag">#карьера</span>
+              <span class="user-profile__tag">#учеба</span>
+              <span class="user-profile__tag">#линкедин</span>
+            </p>
+            <div class="user-profile__want-visit want-visit">
+              <p class="want-visit__title">
+                хочет посетить:
+              </p>
+              <ul class="want-visit__list">
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Великобритания" width="26" height="18">
+                  <p class="want-visit__country-name">Великобритания</p>
+                </li>
+                <li class="want-visit__country-wrapper">
+                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Германия" width="26" height="18">
+                  <p class="want-visit__country-name">Германия</p>
+                </li>
+              </ul><!-- /.want-visit__list -->
+            </div><!-- /.user-profile__want-visit /.want-visit -->
+            <div class="user-profile__footer">
+              <div class="user-profile__transport-preferences-wrapper">
+                <p class="user-profile__transport-preferences-title">транспорт</p>
+                <span class="visually-hidden">Предпочтения пользователя</span>
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
+                <img class="user-profile__transport user-profile__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал  Поезд" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
+                <img class="user-profile__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Пешком" width="19" height="21">
+              </div>
+              <div class="user-profile__level round-level">
+                <p class="user-profile__level-title">
+                  левел:
+                </p>
+                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                <div class="round-level__label">
+                    <p class="round-level__percents round-level__percents_large">
+                      50
+                    </p>
+                </div>
+                <div class="round-level__progress round-level__progress_50">
+
+                    <div class="round-level__pie">
+                      <div class="round-level__left-side round-level__half-circle"></div>
+                      <div class="round-level__right-side round-level__half-circle"></div>
+                  </div>
+                </div>
+              </div> <!-- /.user-profile__level /.round-level -->
+            </div><!-- /.user-profile__footer -->
+            <a href="user-invite.html" class="user-profile__invite-btn">
+              позвать!
+            </a>
+          </li><!-- /.companions__profile /.user-profile -->
+        </ul><!-- /.companions__list -->
+      </section><!-- /.companions -->
+
+      <a href="new-companions.html" class="show-more-btn-text" type="button">
+        <span class="show-more-btn-text__plus"></span>
+        Показать еще
+      </a>
+
+      <div class="slide-controller">
+        <a
+          class="slide-controller__arrow"
+          href="catalog-prev.html"
+          type="button"
+        >
+          Показать предыдущую страницу
+        </a>
+        <a
+          class="slide-controller__arrow slide-controller__arrow_right"
+          href="catalog-next.html"
+          type="button"
+        >
+          Показать следующую страницу
+        </a>
+      </div>
+
+
+    </main>
+    <footer class="page-footer">
+      <h3 class="page-footer__title">
+        Погнали?
+      </h3>
+      <div class="page-footer__soc-links soc-links">
+        <a
+          class="soc-links__link soc-links__link_fb"
+          href="facebook.com"
+          target="_blank"
+        >
+          Мы Вконтакте
+        </a>
+        <a
+          class="soc-links__link soc-links__link_vk"
+          href="vk.com"
+          target="_blank"
+        >
+          Мы Фейсбук
+        </a>
+        <a
+          class="soc-links__link soc-links__link_inst"
+          href="instagram.com"
+          target="_blank"
+        >
+          Мы в инстаграм
+        </a>
+      </div><!-- ./page-footer__soc-links /.soc-links -->
+      <div class="page-footer__dev-by-wrapper">
+        <p class="page-footer__dev-by-text">
+          Разработано
+        </p>
+        <a class="page-footer__dev-by-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          HTMLAcademy
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
