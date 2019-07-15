@@ -15,62 +15,63 @@
           <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
           <!-- /svg -->
         </a>
-        <input class="visually-hidden" type="checkbox" id="burger-toggle">
-        <label class="burger top-bar__burger" for="burger-toggle">
-          Отображение меню.
-        </label>
-        <div class="mobile-menu">
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-              <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
-              <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
-              <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
-              <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
-                <a href="#companions">Авторизация</a>
-              </li>
-            </ul>
-          </nav>
-          <p class="contacts-paragraph">
+        <button
+          class="main-nav__toggle main-nav__toggle_hidden"
+          type="button">
+          Открыть меню
+        </button>
+      </div>
+      <div class="mobile-menu mobile-menu_open">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
+            <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
+            <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
+            <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
+              <a href="#companions">Авторизация</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_phone"
+            href="tel:8 800 555-86-28"
+          >
+            8 800 555-86-28
+          </a>
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_email"
+            href="emailto:mail@htmlacademy.ru"
+          >
+            mail@htmlacademy.ru
+          </a>
+        </p>
+        <div class="mobile-menu__soc">
             <a
-              class="contacts-paragraph__link contacts-paragraph__link_phone"
-              href="tel:8 800 555-86-28"
+              class="mobile-menu__link mobile-menu__link_fb"
+              href="facebook.com"
+              target="_blank"
             >
-              8 800 555-86-28
+              Мы в Фейсбук
             </a>
-          </p>
-          <p class="contacts-paragraph">
             <a
-              class="contacts-paragraph__link contacts-paragraph__link_email"
-              href="emailto:mail@htmlacademy.ru"
+              class="mobile-menu__link mobile-menu__link_vk"
+              href="vk.com"
+              target="_blank"
             >
-              mail@htmlacademy.ru
+              Мы в Вконтакте
             </a>
-          </p>
-          <div class="mobile-menu__soc">
-              <a
-                class="mobile-menu__link mobile-menu__link_fb"
-                href="facebook.com"
-                target="_blank"
-              >
-                Мы в Фейсбук
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_vk"
-                href="vk.com"
-                target="_blank"
-              >
-                Мы в Вконтакте
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_inst"
-                href="instagram.com"
-                target="_blank"
-              >
-                Мы в инстаграм
-              </a>
-            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
-        </div><!-- /.mobile-menu -->
-      </div><!-- /.top-bar -->
+            <a
+              class="mobile-menu__link mobile-menu__link_inst"
+              href="instagram.com"
+              target="_blank"
+            >
+              Мы в инстаграм
+            </a>
+          </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+      </div><!-- /.mobile-menu -->
       <h2 class="page-header__title page-header__position_center">
           В путешествие с крутыми попутчиками!
       </h2>
