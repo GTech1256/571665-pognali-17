@@ -32,7 +32,7 @@
         <p class="contacts-paragraph">
           <a
             class="contacts-paragraph__link contacts-paragraph__link_phone"
-            href="tel:8 800 555-86-28"
+            href="tel:+7(800)-555-86-28"
           >
             8 800 555-86-28
           </a>
@@ -82,7 +82,7 @@
           <div class="profile-settings__level">
             <!-- TODO: level -->
           </div>
-          <img class="profile-settings__user-pic" src="http://placehold.it/100x100" width="100" height="100">
+          <img class="profile-settings__user-pic" src="http://placehold.it/100x100" alt="Аватарка пользователя" width="100" height="100">
         </div><!-- /.profile-settings__head -->
 
         <button class="blue-btn" type="button">Сменить фото</button>
@@ -98,26 +98,32 @@
 
           <input class="visually-hidden" type="checkbox" id="transport-aircraft">
           <label for="transport-aircraft">
-            Самолет
+            Авиаперелет
             <img
               class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
-              alt="Самолет"
+              alt="Авиаперелет"
               width="19"
               height="21"
             >
+            <span class="tooltip">
+              Авиаперелет
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-train">
           <label for="transport-train">
-            Поезд
+            Автотранспорт
             <img
               class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
-              alt="Поезд"
+              alt="Автотранспорт"
               width="19"
               height="21"
             >
+            <span class="tooltip">
+              Автотранспорт
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-bicycle">
@@ -130,6 +136,9 @@
               width="19"
               height="21"
             >
+            <span class="tooltip">
+              Велосипед
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-afoot">
@@ -142,6 +151,9 @@
               width="19"
               height="21"
             >
+            <span class="tooltip">
+              Пешком
+            </span>
           </label>
 
         </fieldset><!-- /.fieldset -->
@@ -159,7 +171,7 @@
               3 попутчика
             </p>
             <p class="profile-plans__date">
-              <time datetime="26-03">26 мар</time> - <time datetime="29-03">29 мар</time>
+              <time datetime="03-26">26 мар</time> - <time datetime="03-29">29 мар</time>
             </p>
             <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
           </li>
@@ -171,7 +183,7 @@
               1 попутчик
             </p>
             <p class="profile-plans__date">
-              <time datetime="01-07">26 июл</time> - <time datetime="15-07">29 июл</time>
+              <time datetime="07-01">26 июл</time> - <time datetime="07-15">29 июл</time>
             </p>
             <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
           </li>
