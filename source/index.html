@@ -155,18 +155,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Тайланд" width="270" height="110">
             <div class="country__info">
-              <div class="country__flag-wrapper">
-                <img
-                  class="country__flag"
-                  src="http://placehold.it/35x24"
-                  alt="Флаг Тайланда"
-                  width="35"
-                  height="24"
-                >
-                <p class="tooltip">
-                  Тайланд
-                </p>
-              </div>
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Тайланда"
+                width="35"
+                height="24"
+                data-tooltip-text="Тайланд"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Тайланд</p>
                 <p class="country__people">
@@ -179,18 +175,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
             <div class="country__info">
-              <div class="country__flag-wrapper">
-                <img
-                  class="country__flag"
-                  src="http://placehold.it/35x24"
-                  alt="Флаг Франции"
-                  width="35"
-                  height="24"
-                >
-                <p class="tooltip">
-                  Франция
-                </p>
-              </div>
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Франции"
+                width="35"
+                height="24"
+                data-tooltip-text="Франция"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Франция</p>
                 <p class="country__people">
@@ -203,18 +195,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
             <div class="country__info">
-              <div class="country__flag-wrapper">
-                <img
-                  class="country__flag"
-                  src="http://placehold.it/35x24"
-                  alt="Флаг Чехии"
-                  width="35"
-                  height="24"
-                >
-                <p class="tooltip">
-                  Чехия
-                </p>
-              </div>
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Чехии"
+                width="35"
+                height="24"
+                data-tooltip-text="Чехия"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Чехия</p>
                 <p class="country__people">
@@ -272,38 +260,32 @@
               <ul class="user-card__countries">
                 <li class="user-card__country-wrapper">
                   <img
-                    class="user-card__country user-card__country_active"
+                    class="user-card__country user-card__country_active tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Шри-ланга"
                     width="35"
                     height="24"
+                    data-tooltip-text="Шри-ланг"
                   >
-                  <p class="tooltip">
-                    Шри-ланг
-                  </p>
                 </li>
                 <li class="user-card__country-wrapper">
                   <img
-                    class="user-card__country"
+                    class="user-card__country tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Тайланда"
                     width="35"
                     height="24"
+                    data-tooltip-text="Тайланд"
                   >
-                  <p class="tooltip">
-                    Тайланда
-                  </p>
                 </li>
                 <li class="user-card__country-wrapper">
                   <img
-                    class="user-card__country"
+                    class="user-card__country tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Сейшельских островов"
                     width="35" height="24"
+                    data-tooltip-text="Сейшельские острова"
                   >
-                  <p class="tooltip">
-                    Сейшельские Острова
-                  </p>
                 </li>
               </ul>
               <p class="user-card__full-name">
@@ -321,54 +303,38 @@
               </p>
               <div class="user-card__transport-preferences">
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport user-card__transport_active"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь выбрал Авиаперелет"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Авиаперелет
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь не выбрал Автотранспорт"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Автотранспорт
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь не выбрал Велосипед"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Велосипед
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь не выбрал Пешком"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Пешком
-                  </p>
-                </div>
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Авиаперелет"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Авиаперелет"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Автотранспорт"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Автотранспорт"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Велосипед"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Велосипед"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Пешком"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Пешком"
+                >
               </div>
             </div><!-- /.user-card__info -->
           </li><!-- /.section-wrapper__item /.user-card -->
@@ -404,27 +370,23 @@
               <ul class="user-card__countries">
                 <li class="user-card__country-wrapper">
                   <img
-                    class="user-card__country user-card__country_active"
+                    class="user-card__country user-card__country_active tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Шри-ланга"
                     width="35"
                     height="24"
+                    data-tooltip-text="Шри-ланг"
                   >
-                  <p class="tooltip">
-                    Чехия
-                  </p>
                 </li>
                 <li class="user-card__country-wrapper">
                   <img
-                    class="user-card__country"
+                    class="user-card__country tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Бельгии"
                     width="35"
                     height="24"
+                    data-tooltip-text="Бельгия"
                   >
-                  <p class="tooltip">
-                    Бельгия
-                  </p>
                 </li>
               </ul>
               <p class="user-card__full-name">
@@ -441,54 +403,38 @@
               </p>
               <div class="user-card__transport-preferences">
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport user-card__transport_active"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь выбрал Авиаперелет"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Авиаперелет
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport user-card__transport_active"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь выбрал Автотранспорт"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Автотранспорт
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь не выбрал Велосипед"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Велосипед
-                  </p>
-                </div>
-                <div class="user-card__transport-wrapper">
-                  <img
-                    class="user-card__transport user-card__transport_active"
-                    src="http://placehold.it/19x21"
-                    alt="Пользователь выбрал Пешком"
-                    width="19"
-                    height="21"
-                  >
-                  <p class="tooltip">
-                    Пешком
-                  </p>
-                </div>
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Авиаперелет"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Авиаперелет"
+                >
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Автотранспорт"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Автотранспорт"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Велосипед"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Велосипед"
+                >
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Пешком"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Пешком"
+                >
               </div>
             </div><!-- /.user-card__info -->
           </li><!-- /.section-wrapper__item /.user-card -->
