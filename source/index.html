@@ -15,56 +15,69 @@
           <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
           <!-- /svg -->
         </a>
-        <input class="visually-hidden" type="checkbox" id="burger-toggle">
-        <label class="burger top-bar__burger" for="burger-toggle">
-          Отображение меню.
-        </label>
-        <div class="mobile-menu">
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-              <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
-              <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
-              <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
-              <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
-                <a href="#companions">Авторизация</a>
-              </li>
-            </ul>
-          </nav>
-          <p>
-            <a href="tel:8 800 555-86-28" class="mobile-menu__contacts mobile-menu__contacts_phone">
-              8 800 555-86-28
+        <button
+          class="main-nav__toggle main-nav__toggle_hidden"
+          type="button">
+          Открыть меню
+        </button>
+      </div>
+      <div class="mobile-menu mobile-menu_open">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__nav-item">
+              <a href="#about-service">О сервисе</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="link-btn" href="auth.html">Авторизация</a>
+            </li>
+          </ul>
+        </nav><!-- /.mobile-menu__nav -->
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_phone"
+            href="tel:8 800 555-86-28"
+          >
+            8 800 555-86-28
+          </a>
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_email"
+            href="emailto:mail@htmlacademy.ru"
+          >
+            mail@htmlacademy.ru
+          </a>
+        </p>
+        <div class="mobile-menu__soc">
+            <a
+              class="mobile-menu__link mobile-menu__link_fb"
+              href="facebook.com"
+              target="_blank"
+            >
+              Мы в Фейсбук
             </a>
-          </p>
-          <p>
-            <a href="emailto:mail@htmlacademy.ru" class="mobile-menu__contacts mobile-menu__contacts_email">
-              mail@htmlacademy.ru
+            <a
+              class="mobile-menu__link mobile-menu__link_vk"
+              href="vk.com"
+              target="_blank"
+            >
+              Мы в Вконтакте
             </a>
-          </p>
-          <div class="mobile-menu__soc">
-              <a
-                class="mobile-menu__link mobile-menu__link_fb"
-                href="facebook.com"
-                target="_blank"
-              >
-                Мы в Фейсбук
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_vk"
-                href="vk.com"
-                target="_blank"
-              >
-                Мы в Вконтакте
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_inst"
-                href="instagram.com"
-                target="_blank"
-              >
-                Мы в инстаграм
-              </a>
-            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
-        </div><!-- /.mobile-menu -->
-      </div><!-- /.top-bar -->
+            <a
+              class="mobile-menu__link mobile-menu__link_inst"
+              href="instagram.com"
+              target="_blank"
+            >
+              Мы в инстаграм
+            </a>
+          </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+      </div><!-- /.mobile-menu -->
       <h2 class="page-header__title page-header__position_center">
           В путешествие с крутыми попутчиками!
       </h2>
@@ -130,7 +143,7 @@
       </section>
     </header><!-- /.page-header -->
     <main>
-      <section class="section-wrapper" id="directions">
+      <section class="section-wrapper">
         <h2 class="section-wrapper__title">Направления</h2>
         <p class="section-wrapper__text">
             Мы не продаем туры
@@ -142,7 +155,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Тайланд" width="270" height="110">
             <div class="country__info">
-              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24">
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Тайланда"
+                width="35"
+                height="24"
+                data-tooltip-text="Тайланд"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Тайланд</p>
                 <p class="country__people">
@@ -155,7 +175,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
             <div class="country__info">
-              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Франции" width="35" height="24">
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Франции"
+                width="35"
+                height="24"
+                data-tooltip-text="Франция"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Франция</p>
                 <p class="country__people">
@@ -168,7 +195,14 @@
           <li class="section-wrapper__item country">
             <img class="country__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
             <div class="country__info">
-              <img class="country__flag" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24">
+              <img
+                class="country__flag tooltip"
+                src="http://placehold.it/35x24"
+                alt="Флаг Чехии"
+                width="35"
+                height="24"
+                data-tooltip-text="Чехия"
+              >
               <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
                 <p class="country__name">Чехия</p>
                 <p class="country__people">
@@ -184,7 +218,7 @@
         </a> <!-- /.section-wrapper__list -->
       </section> <!-- /.section-wrapper -->
 
-      <section class="section-wrapper section-wrapper_companions" id="companions">
+      <section class="section-wrapper section-wrapper_companions">
         <h2 class="section-wrapper__title">Попутчики</h2>
         <p class="section-wrapper__text">
             Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
@@ -224,9 +258,35 @@
             </a>
             <div class="user-card__info">
               <ul class="user-card__countries">
-                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
-                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Тайланда" width="35" height="24"></li>
-                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Сейшельских островов" width="35" height="24"></li>
+                <li class="user-card__country-wrapper">
+                  <img
+                    class="user-card__country user-card__country_active tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Шри-ланга"
+                    width="35"
+                    height="24"
+                    data-tooltip-text="Шри-ланг"
+                  >
+                </li>
+                <li class="user-card__country-wrapper">
+                  <img
+                    class="user-card__country tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Тайланда"
+                    width="35"
+                    height="24"
+                    data-tooltip-text="Тайланд"
+                  >
+                </li>
+                <li class="user-card__country-wrapper">
+                  <img
+                    class="user-card__country tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Сейшельских островов"
+                    width="35" height="24"
+                    data-tooltip-text="Сейшельские острова"
+                  >
+                </li>
               </ul>
               <p class="user-card__full-name">
                 <a href="#">
@@ -243,10 +303,38 @@
               </p>
               <div class="user-card__transport-preferences">
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
-                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Поезд" width="19" height="21">
-                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
-                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Пешком" width="19" height="21">
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Авиаперелет"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Авиаперелет"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Автотранспорт"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Автотранспорт"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Велосипед"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Велосипед"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Пешком"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Пешком"
+                >
               </div>
             </div><!-- /.user-card__info -->
           </li><!-- /.section-wrapper__item /.user-card -->
@@ -280,9 +368,26 @@
             </a>
             <div class="user-card__info">
               <ul class="user-card__countries">
-                <li><img class="user-card__country user-card__country_active" src="http://placehold.it/35x24" alt="Флаг Шри-ланга" width="35" height="24"></li>
-                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Бельгии" width="35" height="24"></li>
-                <li><img class="user-card__country" src="http://placehold.it/35x24" alt="Флаг Чехии" width="35" height="24"></li>
+                <li class="user-card__country-wrapper">
+                  <img
+                    class="user-card__country user-card__country_active tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Шри-ланга"
+                    width="35"
+                    height="24"
+                    data-tooltip-text="Шри-ланг"
+                  >
+                </li>
+                <li class="user-card__country-wrapper">
+                  <img
+                    class="user-card__country tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Бельгии"
+                    width="35"
+                    height="24"
+                    data-tooltip-text="Бельгия"
+                  >
+                </li>
               </ul>
               <p class="user-card__full-name">
                 <a href="#">
@@ -298,10 +403,38 @@
               </p>
               <div class="user-card__transport-preferences">
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Самолет" width="19" height="21">
-                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Поезд" width="19" height="21">
-                <img class="user-card__transport" src="http://placehold.it/19x21" alt="Пользователь не выбрал Велосипед" width="19" height="21">
-                <img class="user-card__transport user-card__transport_active" src="http://placehold.it/19x21" alt="Пользователь выбрал Пешком" width="19" height="21">
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Авиаперелет"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Авиаперелет"
+                >
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Автотранспорт"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Автотранспорт"
+                >
+                <img
+                  class="user-card__transport tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь не выбрал Велосипед"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Велосипед"
+                >
+                <img
+                  class="user-card__transport user-card__transport_active tooltip"
+                  src="http://placehold.it/19x21"
+                  alt="Пользователь выбрал Пешком"
+                  width="19"
+                  height="21"
+                  data-tooltip-text="Пешком"
+                >
               </div>
             </div><!-- /.user-card__info -->
           </li><!-- /.section-wrapper__item /.user-card -->
@@ -341,6 +474,61 @@
         <a href="tariffs.html" class="add-profile__text-btn">
           Показать тарифы для бизнеса
         </a>
+      </section> <!-- /.add-profile -->
+
+      <section class="CTA-form">
+        <h2 class="CTA-form__title">Заинтересовались?</h2>
+        <p class="CTA-form__desc">
+            Зарегистрируйтесь,
+          это быстро и бесплатно!
+        Уже зарегистрированы? Тогда
+          скорее <a class="CTA-form__link" href="auth.html">авторизуйтесь</a>.
+        </p>
+        <form class="CTA-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="CTA-form__label">
+            Ваша почта
+            <input class="CTA-form__input" type="email" placeholder="E-mail">
+          </label>
+          <button class="CTA-form__btn" type="submit">Отправить почту для регистрации</button>
+        </form>
+        <p class="CTA-form__desc">
+                Остались вопросы?
+          Мы с радостью на них ответим!
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_phone contacts-paragraph__link_color_dark"
+            href="tel:8 800 555-86-28"
+          >
+            8 800 555-86-28
+          </a>
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_email contacts-paragraph__link_color_dark"
+            href="emailto:mail@htmlacademy.ru"
+          >
+            mail@htmlacademy.ru
+          </a>
+        </p>
+      </section> <!-- /.CTA-form -->
+
+      <section class="contacts">
+        <p class="contacts__address">
+            ул. Большая
+            Конюшенная, 19/8
+        </p>
+        <a
+          class="contacts__path-btn"
+          href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.322252%2C59.937287&mode=routes&rtext=59.938631%2C30.323055~59.936296%2C30.321214&rtt=auto&ruri=ymapsbm1%3A%2F%2Forg%3Foid%3D1284388067~ymapsbm1%3A%2F%2Forg%3Foid%3D1025543839&z=17"
+        >
+          Проложить маршрут
+        </a>
+        <div class="contacts__map-wrapper">
+          <img class="contacts__map-pic" src="http://placehold.it/320x546" alt="Карта улицы Большая Конюшенная, дом 19/8" width="320" height="546">
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4552bfa40275aaafe2d2152c1678da88014fd3bfa95d0df711bde6b36ebfdd68&amp;source=constructor" width="500" height="400" frameborder="0">
+          </iframe>
+        </div>
       </section>
 
     </main>
@@ -381,5 +569,28 @@
       </div>
     </footer>
 
+    <!--  popups -->
+    <section class="modal" role="dialog">
+      <h2 class="modal__title">Бизнес-тарифы</h2>
+      <ul class="modal__list">
+        <li class="modal__item">
+          Реклама у блоггера
+          300 000 руб./пост
+        </li>
+        <li class="modal__item">
+          Накрутка подписчиков
+          от 1 руб./шт.
+        </li>
+        <li class="modal__item">
+          Лайки от ботов
+          от 20 коп./лайк
+        </li>
+        <li class="modal__item">
+          Ваш продакт-плейсмент
+          Индивидуально
+        </li>
+      </ul>
+      <button class="modal__close-btn" type="button">Закрыть окно</button>
+    </section>
   </body>
 </html>

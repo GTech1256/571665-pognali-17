@@ -7,62 +7,68 @@
   <body>
     <header class="page-header">
       <div class="top-bar"><!-- always on top -->
-        <a class="logo top-bar__logo">
+        <a class="logo top-bar__logo" href="index.html">
           <!-- svg -->
           <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
-          <!-- /svg -->
+          <!-- /svg  -->
         </a>
-        <input class="visually-hidden" type="checkbox" id="burger-toggle">
-        <label class="burger top-bar__burger" for="burger-toggle">
-          Отображение меню.
-        </label>
-        </div>
-        <div class="mobile-menu">
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-              <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
-              <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
-              <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
-              <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
-                <a href="#companions">Авторизация</a>
-              </li>
-            </ul>
-          </nav>
-          <p>
-            <a href="tel:8 800 555-86-28" class="mobile-menu__contacts mobile-menu__contacts_phone">
-              8 800 555-86-28
-            </a>
-          </p>
-          <p>
-            <a href="emailto:mail@htmlacademy.ru" class="mobile-menu__contacts mobile-menu__contacts_email">
-              mail@htmlacademy.ru
-            </a>
-          </p>
-          <div class="mobile-menu__soc">
-              <a
-                class="mobile-menu__link mobile-menu__link_fb"
-                href="facebook.com"
-                target="_blank"
-              >
-                Мы в Фейсбук
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_vk"
-                href="vk.com"
-                target="_blank"
-              >
-                Мы в Вконтакте
-              </a>
-              <a
-                class="mobile-menu__link mobile-menu__link_inst"
-                href="instagram.com"
-                target="_blank"
-              >
-                Мы в инстаграм
-              </a>
-            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
-        </div><!-- /.mobile-menu -->
-      </div><!-- /.top-bar -->
+        <button
+          class="main-nav__toggle main-nav__toggle_hidden"
+          type="button">
+          Открыть меню
+        </button>
+      </div>
+      <div class="mobile-menu mobile-menu_open">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
+            <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
+            <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
+            <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
+              <a href="#companions">Авторизация</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_phone"
+            href="tel:+7(800)-555-86-28"
+          >
+            8 800 555-86-28
+          </a>
+        </p>
+        <p class="contacts-paragraph">
+          <a
+            class="contacts-paragraph__link contacts-paragraph__link_email"
+            href="emailto:mail@htmlacademy.ru"
+          >
+            mail@htmlacademy.ru
+          </a>
+        </p>
+        <div class="mobile-menu__soc">
+          <a
+            class="mobile-menu__link mobile-menu__link_fb"
+            href="facebook.com"
+            target="_blank"
+          >
+            Мы в Фейсбук
+          </a>
+          <a
+            class="mobile-menu__link mobile-menu__link_vk"
+            href="vk.com"
+            target="_blank"
+          >
+            Мы в Вконтакте
+          </a>
+          <a
+            class="mobile-menu__link mobile-menu__link_inst"
+            href="instagram.com"
+            target="_blank"
+          >
+            Мы в инстаграм
+          </a>
+        </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+      </div><!-- /.mobile-menu -->
     </header><!-- /.page-header -->
     <main class="page-main">
       <div class="page-main__title-wrapper">
@@ -70,6 +76,871 @@
             Направления
         </h1>
       </div>
+      <section class="profile-settings">
+        <h2 class="visually-hidden">Настройки профиля</h2>
+        <div class="profile-settings__head">
+          <div class="profile-settings__level">
+            <!-- TODO: level -->
+          </div>
+          <img class="profile-settings__user-pic" src="http://placehold.it/100x100" alt="Аватарка пользователя" width="100" height="100">
+        </div><!-- /.profile-settings__head -->
+
+        <button class="blue-btn" type="button">Сменить фото</button>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__title">Тэги</legend>
+          <textarea class="fieldset__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__title">Транспорт</legend>
+          <span class="visually-hidden">Ваш выбор транспорта для путешествия</span>
+
+          <input class="visually-hidden" type="checkbox" id="transport-aircraft">
+          <label for="transport-aircraft">
+            Авиаперелет
+            <img
+              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              src="http://placehold.it/19x21"
+              alt="Авиаперелет"
+              width="19"
+              height="21"
+              data-tooltip-text="Авиаперелет"
+            >
+          </label>
+
+          <input class="visually-hidden" type="checkbox" id="transport-train">
+          <label for="transport-train">
+            Автотранспорт
+            <img
+              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              src="http://placehold.it/19x21"
+              alt="Автотранспорт"
+              width="19"
+              height="21"
+              data-tooltip-text="Автотранспорт"
+            >
+          </label>
+
+          <input class="visually-hidden" type="checkbox" id="transport-bicycle">
+          <label for="transport-bicycle">
+            Велосипед
+            <img
+              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              src="http://placehold.it/19x21"
+              alt="Велосипед"
+              width="19"
+              height="21"
+              data-tooltip-text="Велосипед"
+            >
+          </label>
+
+          <input class="visually-hidden" type="checkbox" id="transport-afoot">
+          <label for="transport-afoot">
+            Пешком
+            <img
+              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              src="http://placehold.it/19x21"
+              alt="Пешком"
+              width="19"
+              height="21"
+              data-tooltip-text="Пешком"
+            >
+          </label>
+
+        </fieldset><!-- /.fieldset -->
+
+      </section><!-- /.profile-settings -->
+
+      <section class="profile-plans">
+        <h2 class="profile-plans__title">Мои планы:</h2>
+        <ol class="profile-plans__list">
+          <li class="profile-plans__element">
+            <p class="profile-plans__country-path">
+              Франция, Италия
+            </p>
+            <p class="profile-plans__companions">
+              3 попутчика
+            </p>
+            <p class="profile-plans__date">
+              <time datetime="03-26">26 мар</time> - <time datetime="03-29">29 мар</time>
+            </p>
+            <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
+          </li>
+          <li class="profile-plans__element">
+            <p class="profile-plans__country-path">
+              Тайланд, Индонезия
+            </p>
+            <p class="profile-plans__companions">
+              1 попутчик
+            </p>
+            <p class="profile-plans__date">
+              <time datetime="07-01">26 июл</time> - <time datetime="07-15">29 июл</time>
+            </p>
+            <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
+          </li>
+        </ol>
+      </section><!-- /.profile-plans -->
+
+      <section class="profile-add-plan">
+        <h2 class="profile-add-plan__title">
+          Добавить план
+        </h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <section class="profile-step" id="step-1">
+              <p class="profile-step__title">Шаг 1.</p>
+              <h3 class="profile-step__title">Даты пребывания</h3>
+              <p class="profile-step__desc">
+                  Укажите предпочтительное количество попутчиков, которых
+                  вы хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
+              <div class="smart-counter">
+                <p class="smart-counter__title">Ищу попутчиков:</p>
+                <p class="smart-counter__extra">Чел.</p>
+                <div class="smart-counter__holder">
+                  <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
+                  <input type="number" name="companion-count" value="2" placeholder="Количество попутчиков" required min="0">
+                  <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
+                </div>
+              </div><!-- /.smart-counter -->
+              <div class="smart-counter">
+                <p class="smart-counter__title">Длительность:</p>
+                <p class="smart-counter__extra">Дн.</p>
+                <div class="smart-counter__holder">
+                  <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
+                  <input type="number" name="duration" value="2" placeholder="Количество дней" required min="0">
+                  <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
+                </div>
+              </div><!-- /.smart-counter -->
+
+              <input class="visually-hidden" type="checkbox" id="with-kids">
+              <label class="profile-step__kids-checkbox" for="with-kids">
+                Можно с детьми
+              </label>
+
+              <div class="text-slider">
+                <button class="text-slider__btn text-slider__btn_decrement" type="button">Предыдущий месяц</button>
+                <time class="text-slider__time" datetime="2019-03">Март 2019</time>
+                <button class="text-slider__btn text-slider__btn_increment" type="button">Следующий месяц</button>
+              </div><!-- /.text-slider-->
+
+              <table class="calendar">
+                <thead class="calendar__days">
+                  <tr>
+                    <td class="calendar__day-w">П</td>
+                    <td class="calendar__day-w">в</td>
+                    <td class="calendar__day-w">с</td>
+                    <td class="calendar__day-w">ч</td>
+                    <td class="calendar__day-w">п</td>
+                    <td class="calendar__day-w calendar__day-w_off">с</td>
+                    <td class="calendar__day-w calendar__day-w_off">В</td>
+                  </tr>
+                </thead>
+                <tbody class="calendar__dates">
+                  <tr>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-24"
+                      >
+                      <label for="1-24">
+                          24
+                      </label>
+
+                    </td>
+                    <td>
+                        <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-25"
+                      >
+                      <label for="1-25">
+                          25
+                      </label>
+                    </td>
+                    <td>
+                        <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-26"
+                      >
+                      <label for="1-26">
+                          26
+                      </label>
+                    </td>
+                    <td><input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-27"
+                    >
+                    <label for="1-27">
+                        27
+                    </label></td>
+                    <td><input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-28"
+                    >
+                    <label for="1-28">
+                        28
+                    </label>
+                  </td>
+                    <td>
+                        <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-1"
+                      >
+                      <label for="1-1">
+                          1
+                      </label>
+                    </td>
+                    <td>
+                        <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-2"
+                      >
+                      <label for="1-2">
+                          2
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-3"
+                      >
+                      <label for="2-3">
+                          3
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-4"
+                      >
+                      <label for="2-4">
+                          4
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-5"
+                      >
+                      <label for="2-5">
+                        5
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-6"
+                      >
+                      <label for="2-6">
+                        6
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-7"
+                      >
+                      <label for="2-7">
+                        7
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-8"
+                      >
+                      <label for="2-8">
+                        8
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="2-9"
+                      >
+                      <label for="2-9">
+                        9
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-10"
+                      >
+                      <label for="3-10">
+                        10
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-11"
+                      >
+                      <label for="3-11">
+                        11
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-12"
+                      >
+                      <label for="3-12">
+                        12
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-13"
+                      >
+                      <label for="3-13">
+                        13
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-14"
+                      >
+                      <label for="3-14">
+                        14
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-15"
+                      >
+                      <label for="3-15">
+                        15
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="3-16"
+                      >
+                      <label for="3-16">
+                        16
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-17"
+                      >
+                      <label for="4-17">
+                        17
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-18"
+                      >
+                      <label for="4-18">
+                        18
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-19"
+                      >
+                      <label for="4-19">
+                        19
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-20"
+                      >
+                      <label for="4-20">
+                        20
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-21"
+                      >
+                      <label for="4-21">
+                        21
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-22"
+                      >
+                      <label for="4-22">
+                        22
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="4-23"
+                      >
+                      <label for="4-23">
+                        23
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="5-24"
+                      >
+                      <label for="5-24">
+                        24
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="5-25"
+                      >
+                      <label for="5-25">
+                        25
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        checked
+                        id="5-26"
+                      >
+                      <label for="5-26">
+                        26
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        checked
+                        id="5-27"
+                      >
+                      <label for="5-27">
+                        27
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        checked
+                        id="5-28"
+                      >
+                      <label for="5-28">
+                        28
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="5-29"
+                      >
+                      <label for="5-29">
+                        29
+                      </label>
+                    </td>
+                    <td>
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="5-30"
+                    >
+                    <label for="5-30">
+                      30
+                    </label>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-31"
+                      >
+                      <label for="6-31">
+                        31
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-1"
+                      >
+                      <label for="6-1">
+                        1
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-2"
+                      >
+                      <label for="6-2">
+                        2
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-3"
+                      >
+                      <label for="6-3">
+                        3
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-4"
+                      >
+                      <label for="6-4">
+                        4
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-5"
+                      >
+                      <label for="6-5">
+                        5
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-6"
+                      >
+                      <label for="6-6">
+                        6
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <a class="link-btn link-btn_width_230" href="#step-2">следующий шаг</a>
+
+          </section><!-- /.profile-step -->
+
+          <section class="profile-step" id="step-2">
+              <p class="profile-step__title">Шаг 2.</p>
+              <h3 class="profile-step__title">Маршрут</h3>
+              <p class="profile-step__desc">
+                  Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
+              </p>
+
+              <div class="country-selector">
+                <button class="country-selector__select-btn" type="button">Босния и греция</button>
+                <img
+                  class="country-selector__flag tooltip"
+                  src="http://placehold.it/35x24"
+                  alt="Флаг боснии и греции"
+                  width="35"
+                  height="24"
+                  data-tooltip-text="Босния и Греция"
+                >
+                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
+              </div>
+              <div class="country-selector">
+                <button class="country-selector__select-btn" type="button">Чехословакия</button>
+                <img
+                  class="country-selector__flag tooltip"
+                  src="http://placehold.it/35x24"
+                  alt="флаг Чехословакии"
+                  width="35"
+                  height="24"
+                  data-tooltip-text="Чехословакия"
+                >
+                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
+              </div>
+              <div class="country-selector">
+                <button class="country-selector__select-btn" type="button">Выберите страну</button>
+                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
+                <div class="country-picker">
+                  <div class="country-picker__alphabet">
+                    <span class="visually-hidden">Выбор букв страны</span>
+                    <input class="visually-hidden" name="letter" value="а" type="radio" id="letter-1">
+                    <label class="country-picker__letter" for="letter-1">
+                      а
+                    </label>
+                    <input class="visually-hidden" name="letter" value="б" type="radio" id="letter-2">
+                    <label class="country-picker__letter" for="letter-2">
+                      б
+                    </label>
+                    <input class="visually-hidden" name="letter" value="в" type="radio" id="letter-3">
+                    <label class="country-picker__letter" for="letter-3">
+                      в
+                    </label>
+                    <input class="visually-hidden" name="letter" value="г" type="radio" id="letter-4">
+                    <label class="country-picker__letter" for="letter-4">
+                      г
+                    </label>
+                    <input class="visually-hidden" name="letter" value="д" type="radio" id="letter-5">
+                    <label class="country-picker__letter" for="letter-5">
+                      д
+                    </label>
+                    <input class="visually-hidden" name="letter" value="е" type="radio" id="letter-6">
+                    <label class="country-picker__letter" for="letter-6">
+                      е
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ё" type="radio" id="letter-7">
+                    <label class="country-picker__letter" for="letter-7">
+                      ё
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ж" type="radio" id="letter-8">
+                    <label class="country-picker__letter" for="letter-8">
+                      ж
+                    </label>
+                    <input class="visually-hidden" name="letter" value="з" type="radio" id="letter-9">
+                    <label class="country-picker__letter" for="letter-9">
+                      з
+                    </label>
+                    <input class="visually-hidden" name="letter" value="и" type="radio" id="letter-10">
+                    <label class="country-picker__letter" for="letter-10">
+                      и
+                    </label>
+                    <input class="visually-hidden" name="letter" value="й" type="radio" id="letter-11">
+                    <label class="country-picker__letter" for="letter-11">
+                      й
+                    </label>
+                    <input class="visually-hidden" name="letter" value="к" type="radio" id="letter-12">
+                    <label class="country-picker__letter" for="letter-12">
+                      к
+                    </label>
+                    <input class="visually-hidden" name="letter" value="л" type="radio" id="letter-13">
+                    <label class="country-picker__letter" for="letter-13">
+                      л
+                    </label>
+                    <input class="visually-hidden" name="letter" value="м" type="radio" id="letter-14">
+                    <label class="country-picker__letter" for="letter-14">
+                      м
+                    </label>
+                    <input class="visually-hidden" name="letter" value="н" type="radio" id="letter-15">
+                    <label class="country-picker__letter" for="letter-15">
+                      н
+                    </label>
+                    <input class="visually-hidden" name="letter" value="о" type="radio" id="letter-16">
+                    <label class="country-picker__letter" for="letter-16">
+                      о
+                    </label>
+                    <input class="visually-hidden" name="letter" value="п" type="radio" id="letter-17">
+                    <label class="country-picker__letter" for="letter-17">
+                      п
+                    </label>
+                    <input class="visually-hidden" name="letter" value="р" type="radio" id="letter-18">
+                    <label class="country-picker__letter" for="letter-18">
+                      р
+                    </label>
+                    <input class="visually-hidden" name="letter" value="с" type="radio" id="letter-19">
+                    <label class="country-picker__letter" for="letter-19">
+                      с
+                    </label>
+                    <input class="visually-hidden" name="letter" value="т" type="radio" id="letter-20">
+                    <label class="country-picker__letter" for="letter-20">
+                      т
+                    </label>
+                    <input class="visually-hidden" name="letter" value="у" type="radio" id="letter-21">
+                    <label class="country-picker__letter" for="letter-21">
+                      у
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ф" type="radio" id="letter-22">
+                    <label class="country-picker__letter" for="letter-22">
+                      ф
+                    </label>
+                    <input class="visually-hidden" name="letter" value="х" type="radio" id="letter-23">
+                    <label class="country-picker__letter" for="letter-23">
+                      х
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ц" type="radio" id="letter-24">
+                    <label class="country-picker__letter" for="letter-24">
+                      ц
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ч" type="radio" id="letter-25">
+                    <label class="country-picker__letter" for="letter-25">
+                      ч
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ш" type="radio" id="letter-26">
+                    <label class="country-picker__letter" for="letter-26">
+                      ш
+                    </label>
+                    <input class="visually-hidden" name="letter" value="щ" type="radio" id="letter-27">
+                    <label class="country-picker__letter" for="letter-27">
+                      щ
+                    </label>
+                    <input class="visually-hidden" name="letter" value="э" type="radio" id="letter-28">
+                    <label class="country-picker__letter" for="letter-28">
+                      э
+                    </label>
+                    <input class="visually-hidden" name="letter" value="ю" type="radio" id="letter-29">
+                    <label class="country-picker__letter" for="letter-29">
+                      ю
+                    </label>
+                    <input class="visually-hidden" name="letter" value="я" type="radio" id="letter-30">
+                    <label class="country-picker__letter" for="letter-30">
+                      я
+                    </label>
+                  </div><!-- /.country-picker__alphabet -->
+                  <p class="country-picker__country">Афганистан</p>
+                  <p class="country-picker__country">Албания</p>
+                  <p class="country-picker__country">Алгерия</p>
+                  <p class="country-picker__country">Андорра</p>
+                  <p class="country-picker__country">Армения</p>
+                  <p class="country-picker__country">Австралия</p>
+                  <p class="country-picker__country">Австрия</p>
+                  <p class="country-picker__country">Азербайджанм</p>
+                </div><!-- /.country-picker -->
+              </div>
+              <div class="country-selector">
+                <button class="country-selector__add-btn" type="button">Добавить страну</button>
+              </div>
+
+              <a class="link-btn link-btn_width_230" href="#step-3">следующий шаг</a>
+              <a class="link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-1">на шаг назад</a>
+
+          </section><!-- /.profile-step -->
+
+          <section class="profile-step" id="step-3">
+              <p class="profile-step__title">Шаг 3.</p>
+              <h3 class="profile-step__title">Развлечения</h3>
+              <p class="profile-step__desc">
+                  Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+              </p>
+
+              <div class="country-entertainment">
+                <div class="country-entertainment__holder">
+                  <p class="country-entertainment__country-name">Босния и Герцегов</p>
+                  <img
+                    class="country-entertainment__country-flag tooltip"
+                    src="http://placehold.it/35x24"
+                    data-tooltip-text="Босния и Герцегов"
+                    width="35"
+                    height="24"
+                    alt="Флаг Боснии и Герцегов"
+                  >
+                </div>
+                <textarea
+                  class="country-entertainment__desc"
+                  placeholder="План действий"
+                  required
+                  name="action-plan-a"></textarea>
+              </div>
+
+              <div class="country-entertainment">
+                <div class="country-entertainment__holder">
+                  <p class="country-entertainment__country-name">Чехословакия</p>
+                  <img
+                    class="country-entertainment__country-flag tooltip"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Чехословакии"
+                    width="35"
+                    height="24"
+                    data-tooltip-text="Чехословакия"
+                  >
+                </div>
+                <textarea
+                  class="country-entertainment__desc"
+                  placeholder="План действий"
+                  required
+                  name="action-plan-b">Пить пиво и лазить
+                    по старым замкам,
+                    наслаждаться аритектурой
+                    и вот это все.</textarea>
+              </div>
+
+              <button class="link-btn link-btn_width_230" type="submit">Отправить</button>
+              <a class="link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-2">на шаг назад</a>
+
+          </section><!-- /.profile-step -->
+        </form>
+
+      </section> <!-- profile-add-plan -->
+
+
     </main>
     <footer class="page-footer">
       <h3 class="page-footer__title">
