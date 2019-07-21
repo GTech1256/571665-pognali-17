@@ -3,7 +3,7 @@
 @import "./fonts.scss";
 
 /* blocks import */
-@import "./blocks/tooltip.scss";
+@import "./blocks/tooltip-wrapper.scss";
 @import "./blocks/soc-links.scss";
 @import "./blocks/page-footer.scss";
 @import "./blocks/top-bar.scss";
@@ -16,7 +16,9 @@
 @import "./blocks/how-use.scss";
 @import "./blocks/section-wrapper.scss";
 @import "./blocks/country-card.scss";
-
+@import "./blocks/page-index.scss";
+@import "./blocks/page-body.scss";
+@import "./blocks/user-card.scss";
 
 /* global styles */
 

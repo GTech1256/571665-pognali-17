@@ -1,30 +1,36 @@
+@for $i from 1 through 5 {
+  .section-wrapper:nth-child(#{$i}) {
+    z-index: calc(10 - #{$i});
+  }
+}
+
 .section-wrapper {
   padding: 31px 25px;
-  padding-bottom: 62px;
+  // padding-bottom: 62px;
+  position: relative;
+
+  background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
 
   &_service {
     position: relative;
+
     background: url("../../img/about-mobile@1x.png") center no-repeat;
-    border-radius: 30px;
+
     perspective: 1px;
 
     z-index: 1;
-    /*
-    &::before {
-      display: block;
-      height: 132px;
+  }
 
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
+  &_directions {
+    padding-top: 69px;
+  }
 
-      background-color: #141b3b;
+  &_companions {
+    padding-top: 98px;
+    margin-top: -30px;
 
-      content: "";
-      z-index: 0;
-    }
-    */
+    background: #192144;
   }
 }
 
@@ -40,7 +46,7 @@
 }
 
 .section-wrapper__text {
-  width: 87%;
+  width: 89%;
   padding-left: 25px;
   margin: 0;
   margin-bottom: 20px;
@@ -57,11 +63,55 @@
   &_dark {
     color: $text-color;
   }
+
+  &:last-of-type {
+    margin-bottom: 51px;
+  }
 }
 
 .section-wrapper__list {
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
 
+  padding-top: 11px;
+
   list-style: none;
+}
+
+.section-wrapper__item {
+  margin-bottom: 10px;
+}
+
+.section-wrapper__more {
+  @include link-btn;
+
+  display: flex;
+  height: 62px;
+
+  line-height: 62px;
+
+  padding: 0 25px;
+  padding-right: 23px;
+
+  text-align: left;
+  text-transform: none;
+  border-radius: 10px;
+
+  &::after {
+    display: block;
+
+    margin: auto;
+    margin-right: 0;
+
+    border: 7px solid #1d2e5b;
+
+    border-left-width: 10px;
+
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+
+    content: "";
+  }
 }

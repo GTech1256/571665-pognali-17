@@ -1,0 +1,93 @@
+.user-card {
+  position: relative;
+}
+
+.user-card__level {
+  position: absolute;
+}
+
+.user-card__pic {
+  display: block;
+  width: 270px;
+  height: 270px;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.user-card__info {
+  padding: 0 45px;
+
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+}
+
+.user-card__countries {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: -10px;
+
+  list-style: none;
+}
+
+.user-card__country-card-wrapper {
+  margin: 0 10px;
+}
+
+.user-card__country-card {
+  display: block;
+  width: 35px;
+  height: 24px;
+}
+
+.user-card__full-name {
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  left: 50%;
+
+  text-align: center;
+  color: $blue-base;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+
+  transform: translateX(-50%);
+
+  &::before {
+    display: block;
+    width: 5px;
+    height: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+
+    border-radius: 50%;
+
+    background-color: #f97676;
+
+    transform: translateY(-50%);
+    content: "";
+  }
+
+  &_online::before {
+    background-color: #81e31e;
+  }
+}
+
+.user-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card__tag {
+  margin: 0 4px;
+}
+
+.user-card__transport-preferences {
+  display: flex;
+  justify-content: center;
+}

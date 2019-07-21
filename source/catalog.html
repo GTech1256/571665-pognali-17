@@ -319,52 +319,48 @@
               </label>
               <div class="accordion__body">
                 <input class="visually-hidden" type="checkbox" id="air-flight" name="air-flight" checked>
-                <label class="accordion__title" for="air-flight">
-                  Авиаперелет
+                <label class="accordion__title tooltip-wrapper" for="air-flight">
                   <img
-                    class="accordion__transport tooltip"
+                    class="accordion__transport"
                     src="http://placehold.it/19x21"
                     alt="Авиаперелет"
-                    data-tooltip-text="Авиаперелет"
                     width="19"
                     height="21"
                   >
+                  <span class="tooltip-wrapper__content">Авиаперелет</span>
                 </label>
                 <input class="visually-hidden" type="checkbox" id="automobile" name="automobile" checked>
-                <label class="accordion__title" for="automobile">
-                  Автотранспорт
+                <label class="accordion__title tooltip-wrapper" for="automobile">
                   <img
-                    class="accordion__transport tooltip"
+                    class="accordion__transport"
                     src="http://placehold.it/19x21"
                     alt="Автотранспорт"
-                    data-tooltip-text="Автотранспорт"
                     width="19"
                     height="21"
                   >
+                  <span class="tooltip-wrapper__content">Автотранспорт</span>
                 </label>
                 <input class="visually-hidden" type="checkbox" id="bicycle" name="bicycle">
-                <label class="accordion__title" for="bicycle">
-                    Велосипед
+                <label class="accordion__title tooltip-wrapper" for="bicycle">
                   <img
-                    class="accordion__transport tooltip"
+                    class="accordion__transport"
                     src="http://placehold.it/19x21"
                     alt="Велосипед"
-                    data-tooltip-text="Велосипед"
                     width="19"
                     height="21"
                   >
+                  <span class="tooltip-wrapper__content">Велосипед</span>
                 </label>
                 <input class="visually-hidden" type="checkbox" id="afoot" name="afoot" checked>
                 <label class="accordion__title" for="afoot">
-                  Пешком
                   <img
-                    class="accordion__transport tooltip"
+                    class="accordion__transport"
                     src="http://placehold.it/19x21"
                     alt="Пешком"
-                    data-tooltip-text="Пешком"
                     width="19"
                     height="21"
                   >
+                  <span class="tooltip-wrapper__content">Пешком</span>
                 </label>
               </div><!-- accordion__body -->
             </li><!-- /.accordion__item -->
@@ -495,38 +491,54 @@
               <div class="user-profile__transport-preferences-wrapper">
                 <p class="user-profile__transport-preferences-title">транспорт</p>
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Авиаперелет"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Авиаперелет"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Автотранспорт"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Автотранспорт"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Велосипед"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Велосипед"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Пешком"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Пешком"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Авиаперелет"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Авиаперелет
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Автотранспорт"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Автотранспорт
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Велосипед"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Велосипед
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Пешком"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Пешком
+                  </p>
+                </div>
               </div>
               <div class="user-profile__level round-level">
                 <p class="user-profile__level-title">
@@ -608,38 +620,54 @@
               <div class="user-profile__transport-preferences-wrapper">
                 <p class="user-profile__transport-preferences-title">транспорт</p>
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Авиаперелет"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Авиаперелет"
-                >
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Автотранспорт"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Автотранспорт"
-                >
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Велосипед"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Велосипед"
-                >
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Пешком"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Пешком"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Авиаперелет
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Автотранспорт"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Автотранспорт
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Велосипед"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Велосипед
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Пешком"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Пешком
+                  </p>
+                </div>
               </div>
               <div class="user-profile__level round-level">
                 <p class="user-profile__level-title">
@@ -725,38 +753,54 @@
               <div class="user-profile__transport-preferences-wrapper">
                 <p class="user-profile__transport-preferences-title">транспорт</p>
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Авиаперелет"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Авиаперелет"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Автотранспорт"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Автотранспорт"
-                >
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Велосипед"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Велосипед"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Пешком"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Пешком"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Авиаперелет"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Авиаперелет
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Автотранспорт"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Автотранспорт
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Велосипед"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Велосипед
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Пешком"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Пешком
+                  </p>
+                </div>
               </div>
               <div class="user-profile__level round-level">
                 <p class="user-profile__level-title">
@@ -837,38 +881,54 @@
               <div class="user-profile__transport-preferences-wrapper">
                 <p class="user-profile__transport-preferences-title">транспорт</p>
                 <span class="visually-hidden">Предпочтения пользователя</span>
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал Авиаперелет"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Авиаперелет"
-                >
-                <img
-                  class="user-profile__transport user-profile__transport_active tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь выбрал  Автотранспорт"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Автотранспорт"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Велосипед"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Велосипед"
-                >
-                <img
-                  class="user-profile__transport tooltip"
-                  src="http://placehold.it/19x21"
-                  alt="Пользователь не выбрал Пешком"
-                  width="19"
-                  height="21"
-                  data-tooltip-text="Пешком"
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Авиаперелет"
+                    width="19"
+                    height="21"
                   >
+                  <p class="tooltip-wrapper__content">
+                    Авиаперелет
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport user-profile__transport_active"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь выбрал Автотранспорт"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Автотранспорт
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Велосипед"
+                    width="19"
+                    height="21"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Велосипед
+                  </p>
+                </div>
+                <div class="tooltip-wrapper">
+                  <img
+                    class="user-profile__transport"
+                    src="http://placehold.it/19x21"
+                    alt="Пользователь не выбрал Пешком"
+                    width="19"
+                    height="21"
+                   >
+                   <p class="tooltip-wrapper__content">
+                    Пешком
+                  </p>
+                </div>
               </div>
               <div class="user-profile__level round-level">
                 <p class="user-profile__level-title">

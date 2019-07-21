@@ -97,55 +97,59 @@
           <span class="visually-hidden">Ваш выбор транспорта для путешествия</span>
 
           <input class="visually-hidden" type="checkbox" id="transport-aircraft">
-          <label for="transport-aircraft">
-            Авиаперелет
+          <label for="transport-aircraft tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Авиаперелет"
               width="19"
               height="21"
-              data-tooltip-text="Авиаперелет"
             >
+            <span class="tooltip-wrapper__content">
+              Авиаперелет
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-train">
-          <label for="transport-train">
-            Автотранспорт
+          <label for="transport-train tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Автотранспорт"
               width="19"
               height="21"
-              data-tooltip-text="Автотранспорт"
             >
+            <span class="tooltip-wrapper__content">
+              Автотранспорт
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-bicycle">
-          <label for="transport-bicycle">
-            Велосипед
+          <label for="transport-bicycle tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Велосипед"
               width="19"
               height="21"
-              data-tooltip-text="Велосипед"
             >
+            <span class="tooltip-wrapper__content">
+              Велосипед
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-afoot">
-          <label for="transport-afoot">
-            Пешком
+          <label for="transport-afoot tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Пешком"
               width="19"
               height="21"
-              data-tooltip-text="Пешком"
             >
+            <span class="tooltip-wrapper__content">
+              Пешком
+            </span>
           </label>
 
         </fieldset><!-- /.fieldset -->
@@ -716,26 +720,34 @@
 
               <div class="country-selector">
                 <button class="country-selector__select-btn" type="button">Босния и греция</button>
-                <img
-                  class="country-selector__flag tooltip"
-                  src="http://placehold.it/35x24"
-                  alt="Флаг боснии и греции"
-                  width="35"
-                  height="24"
-                  data-tooltip-text="Босния и Греция"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="country-selector__flag"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Боснии и Греции"
+                    width="35"
+                    height="24"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Босния и Греция
+                  </p>
+                </div>
                 <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
               </div>
               <div class="country-selector">
                 <button class="country-selector__select-btn" type="button">Чехословакия</button>
-                <img
-                  class="country-selector__flag tooltip"
-                  src="http://placehold.it/35x24"
-                  alt="флаг Чехословакии"
-                  width="35"
-                  height="24"
-                  data-tooltip-text="Чехословакия"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="country-selector__flag"
+                    src="http://placehold.it/35x24"
+                    alt="флаг Чехословакии"
+                    width="35"
+                    height="24"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Чехословакия
+                  </p>
+                </div>
                 <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
               </div>
               <div class="country-selector">
@@ -894,14 +906,18 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Босния и Герцегов</p>
-                  <img
-                    class="country-entertainment__country-flag tooltip"
-                    src="http://placehold.it/35x24"
-                    data-tooltip-text="Босния и Герцегов"
-                    width="35"
-                    height="24"
-                    alt="Флаг Боснии и Герцегов"
-                  >
+                  <div class="tooltip-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="http://placehold.it/35x24"
+                      alt="Флаг Боснии и Герцегов"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Босния и Герцегов
+                    </p>
+                  </div>
                 </div>
                 <textarea
                   class="country-entertainment__desc"
@@ -913,14 +929,18 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Чехословакия</p>
-                  <img
-                    class="country-entertainment__country-flag tooltip"
-                    src="http://placehold.it/35x24"
-                    alt="Флаг Чехословакии"
-                    width="35"
-                    height="24"
-                    data-tooltip-text="Чехословакия"
-                  >
+                  <div class="tooltip-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="http://placehold.it/35x24"
+                      alt="Флаг Чехословакии"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Чехословакия
+                    </p>
+                  </div>
                 </div>
                 <textarea
                   class="country-entertainment__desc"
