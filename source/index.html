@@ -2,115 +2,109 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">
         Онлайн площадка подбора попутчиков Погнали.
       </h1>
-      <div class="top-bar"><!-- always on top -->
-        <a class="logo top-bar__logo">
-          <!-- svg -->
-          <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
-          <!-- /svg -->
-        </a>
-        <button
-          class="main-nav__toggle main-nav__toggle_hidden"
-          type="button">
-          Открыть меню
-        </button>
+      <div class="top-bar"><!-- always on top --> <!-- . top-bar_open -->
+        <div class="top-bar__top-wrappers">
+          <a class="logo top-bar__logo">
+            <!-- svg -->
+            <img src="./img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
+            <!-- /svg -->
+          </a>
+          <button
+            class="top-bar__toggle-btn"
+            type="button">
+            Открыть меню
+          </button><!-- .top-bar__toggle-btn_hidden .top-bar__toggle-btn_type_close -->
+        </div>
+
+        <div class="mobile-menu"><!-- .mobile-menu_open -->
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__nav-item">
+                <a href="#about-service">О сервисе</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a href="catalog.html">Попутчики</a>
+              </li>
+              <li class="mobile-menu__nav-item mobile-menu__link-btn">
+                <a class="mobile-menu__link-btn-pos link-btn" href="auth.html">Авторизация</a>
+              </li>
+            </ul>
+          </nav><!-- /.mobile-menu__nav -->
+          <p class="mobile-menu__contacts-paragraph contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_phone"
+              href="tel:8 800 555-86-28"
+            >
+              8 800 555-86-28
+            </a>
+          </p>
+          <p class="mobile-menu__contacts-paragraph contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_email"
+              href="emailto:mail@htmlacademy.ru"
+            >
+              mail@htmlacademy.ru
+            </a>
+          </p>
+          <div class="mobile-menu__soc">
+              <a
+                class="mobile-menu__link mobile-menu__link_fb"
+                href="//facebook.com"
+                target="_blank"
+              >
+                Мы в Фейсбук
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_vk"
+                href="//vk.com"
+                target="_blank"
+              >
+                Мы в Вконтакте
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_inst"
+                href="//instagram.com"
+                target="_blank"
+              >
+                Мы в инстаграм
+              </a>
+            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+        </div><!-- /.mobile-menu -->
       </div>
-      <div class="mobile-menu mobile-menu_open">
-        <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__nav-item">
-              <a href="#about-service">О сервисе</a>
-            </li>
-            <li class="mobile-menu__nav-item">
-              <a href="form.html">Направления</a>
-            </li>
-            <li class="mobile-menu__nav-item">
-              <a href="catalog.html">Попутчики</a>
-            </li>
-            <li class="mobile-menu__nav-item">
-              <a class="link-btn" href="auth.html">Авторизация</a>
-            </li>
-          </ul>
-        </nav><!-- /.mobile-menu__nav -->
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_phone"
-            href="tel:8 800 555-86-28"
-          >
-            8 800 555-86-28
-          </a>
-        </p>
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_email"
-            href="emailto:mail@htmlacademy.ru"
-          >
-            mail@htmlacademy.ru
-          </a>
-        </p>
-        <div class="mobile-menu__soc">
-            <a
-              class="mobile-menu__link mobile-menu__link_fb"
-              href="facebook.com"
-              target="_blank"
-            >
-              Мы в Фейсбук
-            </a>
-            <a
-              class="mobile-menu__link mobile-menu__link_vk"
-              href="vk.com"
-              target="_blank"
-            >
-              Мы в Вконтакте
-            </a>
-            <a
-              class="mobile-menu__link mobile-menu__link_inst"
-              href="instagram.com"
-              target="_blank"
-            >
-              Мы в инстаграм
-            </a>
-          </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
-      </div><!-- /.mobile-menu -->
-      <h2 class="page-header__title page-header__position_center">
+      <h2 class="page-header__title">
           В путешествие с крутыми попутчиками!
       </h2>
       <div class="interaction-buttons"> <!-- background: man with chemodan -->
         <div class="interaction-buttons__buttons"> <!-- margin-bottom: -20px; -->
-            <a href="tel:555-555-5555" class="interaction-buttons__button interaction-buttons__button_phone">
+            <a class="interaction-buttons__button interaction-buttons__button_phone" href="tel:555-555-5555">
               Позвонить нам
             </a>
-            <a href="mailto:mail@htmlacademy.ru" class="interaction-buttons__button interaction-buttons__button_email">
+            <a class="interaction-buttons__button interaction-buttons__button_email" href="mailto:mail@htmlacademy.ru">
               Написть нам письмо
             </a>
-            <a href="auth.html" class="interaction-buttons__button interaction-buttons__button_text">
+            <a class="interaction-buttons__button interaction-buttons__button_text" href="auth.html">
               Авторизация
             </a>
         </div>
       </div>
-      <blockquote class="review how-it-works__review">
+      <blockquote class="review">
         <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
         <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
       </blockquote>
-      <section class="how-it-works"> <!-- background: linear-gradient(50%) -->
-        <ol class="how-use how-it-works__how-use">
-          <!--
-            scss cycle:
-            .generate:how-use__item(@n) when(@n > 0) {
-
-              how-use__item:nth-child(@n)::after {
-                content: @n;
-              }
-
-              .generate:how-use__item(@n - 1);
-            }
-          -->
+      <section class="how-use"> <!-- background: linear-gradient(50%) -->
+        <ol class="how-use__list">
           <li class="how-use__item">
             <p class="how-use__text">Выберите направление</p>
           </li>
@@ -123,21 +117,21 @@
           <li class="how-use__item">
             <p class="how-use__text">Путешествуйте вместе!</p>
           </li>
-        </ol><!-- /.how-use how-it-works__how-use -->
-      </section><!-- /.how-it-works -->
+        </ol><!-- /.how-use how-use__how-use -->
+      </section><!-- /.how-use -->
       <section
         class="section-wrapper section-wrapper_service page-header__section-wrapper"
         id="about-service"
       >
         <h3 class="section-wrapper__title">О сервисе</h3>
         <p class="section-wrapper__text">
-            Любое путешествие веселее
+            Любое путешествие веселее<br>
             с попутчиками, которые на одной волне с тобой!
             Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
         <p class="section-wrapper__text section-wrapper__text_bold">
             А если найдете кого-то
-            близкого по духу — скорее
+            близкого по духу - скорее
             зовите в совместный трип!
         </p>
       </section>
@@ -145,70 +139,76 @@
     <main>
       <section class="section-wrapper">
         <h2 class="section-wrapper__title">Направления</h2>
-        <p class="section-wrapper__text">
-            Мы не продаем туры
+        <p class="section-wrapper__text section-wrapper__text_dark">
+            Мы не продаем туры<br>
             и ничего не рекламируем.
             Люди сами пишут о странах, куда хотели бы отправиться
             и чем можно там заняться.
         </p>
         <ul class="section-wrapper__list">
-          <li class="section-wrapper__item country">
-            <img class="country__pic" src="http://placehold.it/270x110" alt="Тайланд" width="270" height="110">
-            <div class="country__info">
+          <li class="section-wrapper__item country-card">
+            <img
+              class="country-card__pic"
+              src="./img/thailand-mobile@1x.jpg"
+              alt="Тайланд"
+              width="270"
+              height="110"
+            >
+            <div class="country-card__info">
               <img
-                class="country__flag tooltip"
+                class="country-card__flag tooltip"
                 src="http://placehold.it/35x24"
                 alt="Флаг Тайланда"
                 width="35"
                 height="24"
                 data-tooltip-text="Тайланд"
               >
-              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
-                <p class="country__name">Тайланд</p>
-                <p class="country__people">
+              <div class="country-card__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country-card__name">Тайланд</p>
+                <p class="country-card__people">
                   <span class="visually-hidden">население:</span> 18321
                 </p>
-                <p class="country__description">Джунгли зовут!</p>
+                <p class="country-card__description">Джунгли зовут!</p>
               </div>
             </div>
           </li>
-          <li class="section-wrapper__item country">
-            <img class="country__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
-            <div class="country__info">
+          <li class="section-wrapper__item country-card">
+            <img class="country-card__pic" src="http://placehold.it/270x110" alt="Франция" width="270" height="110">
+            <div class="country-card__info">
               <img
-                class="country__flag tooltip"
+                class="country-card__flag tooltip"
                 src="http://placehold.it/35x24"
                 alt="Флаг Франции"
                 width="35"
                 height="24"
                 data-tooltip-text="Франция"
               >
-              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
-                <p class="country__name">Франция</p>
-                <p class="country__people">
+              <div class="country-card__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country-card__name">Франция</p>
+                <p class="country-card__people">
                     <span class="visually-hidden">население:</span> 12518
                 </p>
-                <p class="country__description">Трэ бьен, манифик!</p>
+                <p class="country-card__description">Трэ бьен, манифик!</p>
               </div>
             </div>
           </li>
-          <li class="section-wrapper__item country">
-            <img class="country__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
-            <div class="country__info">
+          <li class="section-wrapper__item country-card">
+            <img class="country-card__pic" src="http://placehold.it/270x110" alt="Чехия" width="270" height="110">
+            <div class="country-card__info">
               <img
-                class="country__flag tooltip"
+                class="country-card__flag tooltip"
                 src="http://placehold.it/35x24"
                 alt="Флаг Чехии"
                 width="35"
                 height="24"
                 data-tooltip-text="Чехия"
               >
-              <div class="country__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
-                <p class="country__name">Чехия</p>
-                <p class="country__people">
+              <div class="country-card__info-wrapper"> <!-- IE9 flex bug. style=disp:flex; -->
+                <p class="country-card__name">Чехия</p>
+                <p class="country-card__people">
                     <span class="visually-hidden">население:</span> 5326
                 </p>
-                <p class="country__description">Закоулки старой Европы</p>
+                <p class="country-card__description">Закоулки старой Европы</p>
               </div>
             </div>
           </li>
@@ -258,9 +258,9 @@
             </a>
             <div class="user-card__info">
               <ul class="user-card__countries">
-                <li class="user-card__country-wrapper">
+                <li class="user-card__country-card-wrapper">
                   <img
-                    class="user-card__country user-card__country_active tooltip"
+                    class="user-card__country-card user-card__country-card_active tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Шри-ланга"
                     width="35"
@@ -268,9 +268,9 @@
                     data-tooltip-text="Шри-ланг"
                   >
                 </li>
-                <li class="user-card__country-wrapper">
+                <li class="user-card__country-card-wrapper">
                   <img
-                    class="user-card__country tooltip"
+                    class="user-card__country-card tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Тайланда"
                     width="35"
@@ -278,9 +278,9 @@
                     data-tooltip-text="Тайланд"
                   >
                 </li>
-                <li class="user-card__country-wrapper">
+                <li class="user-card__country-card-wrapper">
                   <img
-                    class="user-card__country tooltip"
+                    class="user-card__country-card tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Сейшельских островов"
                     width="35" height="24"
@@ -368,9 +368,9 @@
             </a>
             <div class="user-card__info">
               <ul class="user-card__countries">
-                <li class="user-card__country-wrapper">
+                <li class="user-card__country-card-wrapper">
                   <img
-                    class="user-card__country user-card__country_active tooltip"
+                    class="user-card__country-card user-card__country-card_active tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Шри-ланга"
                     width="35"
@@ -378,9 +378,9 @@
                     data-tooltip-text="Шри-ланг"
                   >
                 </li>
-                <li class="user-card__country-wrapper">
+                <li class="user-card__country-card-wrapper">
                   <img
-                    class="user-card__country tooltip"
+                    class="user-card__country-card tooltip"
                     src="http://placehold.it/35x24"
                     alt="Флаг Бельгии"
                     width="35"
@@ -533,27 +533,31 @@
 
     </main>
     <footer class="page-footer">
-      <h3 class="page-footer__title">
-        Погнали?
-      </h3>
+      <img
+        class="page-footer__title-img"
+        src="img/logo-mobile-blue@1x.png"
+        alt="Логотип сайта 'Погнали?'"
+        width="96"
+        height="15"
+      >
       <div class="page-footer__soc-links soc-links">
         <a
           class="soc-links__link soc-links__link_fb"
-          href="facebook.com"
+          href="//facebook.com"
           target="_blank"
         >
           Мы в Фейсбук
         </a>
         <a
           class="soc-links__link soc-links__link_vk"
-          href="vk.com"
+          href="//vk.com"
           target="_blank"
         >
           Мы в Вконтакте
         </a>
         <a
           class="soc-links__link soc-links__link_inst"
-          href="instagram.com"
+          href="//instagram.com"
           target="_blank"
         >
           Мы в инстаграм

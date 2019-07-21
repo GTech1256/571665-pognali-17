@@ -1,0 +1,36 @@
+.soc-links {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.soc-links__link {
+  display: block;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+
+  position: relative;
+
+  background-color: $yellow-base;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+
+  &_fb {
+    background-image: url("../../img/facebook.svg");
+    background-size: 11px 21px;
+  }
+
+  &_vk {
+    background-image: url("../../img/vk.svg");
+    background-size: 23px 12px;
+  }
+
+  &_inst {
+    background-image: url("../../img/instagram.svg");
+    background-size: 18px 18px;
+  }
+}
+

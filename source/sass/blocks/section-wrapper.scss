@@ -1,0 +1,67 @@
+.section-wrapper {
+  padding: 31px 25px;
+  padding-bottom: 62px;
+
+  &_service {
+    position: relative;
+    background: url("../../img/about-mobile@1x.png") center no-repeat;
+    border-radius: 30px;
+    perspective: 1px;
+
+    z-index: 1;
+    /*
+    &::before {
+      display: block;
+      height: 132px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      background-color: #141b3b;
+
+      content: "";
+      z-index: 0;
+    }
+    */
+  }
+}
+
+.section-wrapper__title {
+  padding-left: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $orange-text;
+}
+
+.section-wrapper__text {
+  width: 87%;
+  padding-left: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #ffffff;
+
+  &_bold {
+    font-weight: 700;
+  }
+
+  &_dark {
+    color: $text-color;
+  }
+}
+
+.section-wrapper__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

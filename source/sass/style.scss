@@ -1,0 +1,90 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+/* blocks import */
+@import "./blocks/tooltip.scss";
+@import "./blocks/soc-links.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/top-bar.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/mobile-menu.scss";
+@import "./blocks/link-btn.scss";
+@import "./blocks/contacts-paragraph.scss";
+@import "./blocks/interaction-buttons.scss";
+@import "./blocks/review.scss";
+@import "./blocks/how-use.scss";
+@import "./blocks/section-wrapper.scss";
+@import "./blocks/country-card.scss";
+
+
+/* global styles */
+
+/**
+* z-index settings:
+*
+*
+*
+*
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  font: 400 15px/30px "BloggerSans", "Tahoma", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+*  Service Classes
+*/
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+/* REMOVE INPUT[SEARCH] CROSS*/
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

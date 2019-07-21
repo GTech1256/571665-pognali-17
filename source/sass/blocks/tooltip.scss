@@ -1,0 +1,28 @@
+.tooltip {
+  position: relative;
+
+  content: "";
+
+  &::before,
+  &::after {
+    display: block;
+
+    position: absolute;
+
+    background-color: #101d41;
+
+    content: "";
+    z-index: 100;
+  }
+
+  &::before {
+    width: 16px;
+    height: 16px;
+
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: attr(data-tooltip-text);
+  }
+}

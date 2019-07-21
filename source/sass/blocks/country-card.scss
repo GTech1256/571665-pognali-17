@@ -1,0 +1,15 @@
+.country-card {
+  position: relative;
+
+  border-radius: 10px;
+}
+
+.country-card__pic {
+  border-radius: 10px;
+}
+
+.country-card__flag {
+  position: absolute;
+  top: 50%;
+  border-radius: 10px;
+}

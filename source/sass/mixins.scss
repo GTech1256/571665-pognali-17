@@ -1,0 +1,16 @@
+
+@mixin link-btn {
+  display: block;
+  width: 270px;
+  height: 50px;
+
+  background: $yellow-base no-repeat;
+  border-radius: 25px;
+
+  color: $blue-darken;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}

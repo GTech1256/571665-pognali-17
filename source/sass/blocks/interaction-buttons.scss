@@ -1,0 +1,49 @@
+.interaction-buttons {
+  height: 255px;
+  /* margin-bottom: 45px; */
+
+  position: relative;
+
+  background: url("../../img/globe-back-mobile@1x.jpg") no-repeat;
+
+  background-position: center -223px;
+
+  &::before {
+    display: block;
+    height: inherit;
+    background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat 79px 0;
+    content: "";
+  }
+}
+
+.interaction-buttons__buttons {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.interaction-buttons__button {
+  @include link-btn;
+
+  height: 40px;
+
+  &_phone {
+    font-size: 0;
+    width: 40px;
+    background: #ff8d30 url("../../img/topmenu-phone.svg") center/18px no-repeat;
+  }
+
+  &_email {
+    font-size: 0;
+    width: 40px;
+    background: #ffbd30 url("../../img/topmenu-mail.svg") center/18px no-repeat;
+  }
+
+  &_text {
+    width: 189px;
+    line-height: 40px;
+  }
+}
