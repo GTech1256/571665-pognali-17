@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 38px 25px 0 25px;
+  padding: 38px 25px 4px 25px;
   margin-top: -25px;
 
   position: relative;
@@ -17,7 +17,7 @@
 .page-footer__dev-by-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 22px;
+  padding-top: 13px;
   margin-bottom: 14px;
   border-top: 1px solid #f2f2f2;
 }
@@ -29,5 +29,15 @@
 }
 
 .page-footer__dev-by-logo {
+  display: block;
   font-size: 0;
+
+  width: 27px;
+  height: 34px;
+
+  background: url("../../img/htmlacademy.svg");
+}
+
+.page-footer__dev-by-text {
+  margin: 0;
 }

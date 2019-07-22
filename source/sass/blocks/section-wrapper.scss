@@ -74,7 +74,7 @@
   margin-bottom: 26px;
   padding: 0;
 
-  padding-top: 11px;
+  padding-top: 10px;
 
   list-style: none;
 }
@@ -85,8 +85,8 @@
 
 .section-wrapper__more {
   @include link-btn;
+  @include triangle-arrow-right; // display: flex
 
-  display: flex;
   height: 62px;
 
   line-height: 62px;
@@ -98,20 +98,9 @@
   text-transform: none;
   border-radius: 10px;
 
-  &::after {
-    display: block;
 
-    margin: auto;
-    margin-right: 0;
+}
 
-    border: 7px solid #1d2e5b;
-
-    border-left-width: 10px;
-
-    border-right-width: 0;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-
-    content: "";
-  }
+.section-wrapper__list-user-card {
+  margin-bottom: 21px;
 }

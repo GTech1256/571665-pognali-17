@@ -14,3 +14,24 @@
   line-height: 50px;
   text-align: center;
 }
+
+@mixin triangle-arrow-right {
+  display: flex;
+
+  &::after {
+    display: block;
+
+    margin: auto;
+    margin-right: 0;
+
+    border: 7px solid #1d2e5b;
+
+    border-left-width: 10px;
+
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+
+    content: "";
+  }
+}

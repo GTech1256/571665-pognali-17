@@ -1,0 +1,79 @@
+.add-profile {
+  padding: 48px 25px;
+  padding-left: 49px;
+  padding-bottom: 40px;
+
+  position: relative;
+  z-index: 3;
+
+  background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
+}
+
+.add-profile__title {
+  display: block;
+  width: 120px;
+  margin: 0;
+  margin-bottom: 46px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+
+  position: relative;
+
+  color: $orange-text;
+
+  &::after {
+    display: inline-block;
+    width: 99px;
+    height: 99px;
+
+    position: absolute;
+    right: -125px;
+    top: -11px;
+
+    background: url("../../img/rates@1x.png") no-repeat;
+    background-size: cover;
+    content: "";
+  }
+}
+
+.add-profile__tariffs {
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+  list-style: none;
+}
+
+.add-profile__tariff-description {
+  width: 200px;
+  margin: 0;
+  padding: 9px 0;
+  padding-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+
+  border-top: 1px solid #e1e3e9;
+
+  &:last-child {
+    border-bottom: 1px solid #e1e3e9;
+  }
+}
+
+.add-profile__text-btn {
+  display: block;
+  margin-right: 26px;
+
+  color: $blue-nav-text;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.add-profile__tariff-price {
+  display: block;
+}
