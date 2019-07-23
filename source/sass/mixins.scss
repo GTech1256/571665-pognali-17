@@ -36,3 +36,12 @@
     content: "";
   }
 }
+
+@mixin triangle-arrow-left {
+  @include triangle-arrow-right;
+
+  &::after {
+    border-left-width: 0;
+    border-right-width: 7px;
+  }
+}

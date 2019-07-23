@@ -1,0 +1,38 @@
+.page-main {
+  background-color: #edeff6;
+}
+
+.page-main__title-wrapper {
+  padding: 0 25px;
+
+  background-color: $blue-darken;
+  border-radius: 0 0 20px 20px;
+}
+
+.page-main__title {
+  display: inline-block;
+  padding: 0;
+  padding-bottom: 13px;
+  margin: 0;
+
+  position: relative;
+
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+
+  &::before {
+    height: 5px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -2px;
+
+    background-color: $orange-text;
+    border-radius: 2.4px;
+
+    content: "";
+  }
+}
