@@ -1,0 +1,52 @@
+.country-picker-bar {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  &::before {
+    display: block;
+    width: 15px;
+    height: 10px;
+
+    background: url("../../img/filter.svg");
+
+    content: "";
+  }
+}
+
+.country-picker-bar__toggle-element-wrapper {
+  display: flex;
+  width: 17px;
+  justify-content: space-between;
+  margin-left: auto;
+
+  position: relative;
+}
+
+.country-picker-bar__toggle-element {
+  width: 3px;
+  height: 3px;
+  flex-shrink: 0;
+
+  background-color: $blue-nav-text;
+
+  transform: rotate(0deg);
+
+  transition: opacity 0.3s, width 0.3s, transform 0.3s;
+
+  &_close {
+    width: 17px;
+    height: 2px;
+
+    position: absolute;
+    transform: rotate(45deg);
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

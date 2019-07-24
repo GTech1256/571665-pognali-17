@@ -1,0 +1,68 @@
+/* Shared for all accordion types */
+.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__item {
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-top: 1px solid #f3c72b;
+}
+
+/*
+.accordion [type=radio], .accordion [type=checkbox] {
+  display:none;
+}
+*/
+
+.accordion__title {
+  display: block;
+  padding: 10px 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $blue-base;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accordion__body {
+  padding: 0;
+  overflow: hidden;
+  height: 0;
+  border-top: 0;
+}
+
+.visually-hidden:checked + .accordion__body {
+  height: auto;
+}
+
+.accordion__value {
+  display: flex;
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 15px;
+
+  &::before {
+    display: block;
+    margin-right: 10px;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    border-radius: 2px;
+
+    content: "";
+  }
+}
+
+.visually-hidden:checked + .accordion__value::before {
+  background-color: gray;
+}
