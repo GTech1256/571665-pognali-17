@@ -1,0 +1,140 @@
+.user-card-filter {
+  padding: 15px 0 22px 0;
+
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.user-card-filter__pic-wrapper {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+
+  position: relative;
+}
+
+.user-card-filter__pic {
+  border-radius: 50%;
+}
+
+.user-card-filter__visual-info {
+  display: flex;
+  padding-left: 13px;
+
+  position: relative;
+}
+
+.user-card-filter__online-status {
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  font-size: 0;
+
+  background-color: #f97676;
+  border-radius: 50%;
+
+  &_user_online::after {
+    background-color: #81e31e;
+  }
+}
+
+.user-card-filter__favorite-wrapper {
+  display: block;
+  width: 31px;
+  height: 31px;
+
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+
+  font-size: 0;
+
+  background-color: #edeff6;
+  border: none;
+  border-radius: 50%;
+}
+
+.user-card-filter__fullname {
+  width: 80px;
+  margin: 0;
+
+  color: $blue-base;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.user-card-filter__popularity {
+  color: $blue-darken;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.user-card-filter__tags {
+  display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 25px;
+  flex-wrap: wrap;
+}
+
+.user-card-filter__tag {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.user-card-filter__footer {
+  border-top: 1px solid #edeff6;
+  display: flex;
+  padding: 0 25px;
+
+  justify-content: space-between;
+}
+
+.user-card-filter__transport-preferences-wrapper {
+  padding: 0;
+}
+
+.user-card-filter__transport-preferences-title {
+  display: inline-block;
+  margin: 0;
+  padding: 0 13px;
+
+  position: relative;
+  top: -15px;
+
+  font-size: 15px;
+  line-height: 18px;
+
+  background-color: #ffffff;
+}
+
+.user-card-filter__transport-preferences-list {
+  display: flex;
+}
+
+.user-card-filter__level-title {
+  display: inline-block;
+  margin: 0;
+  padding: 0 13px;
+
+  position: relative;
+  top: -15px;
+
+  font-size: 15px;
+  line-height: 18px;
+
+  background-color: #ffffff;
+}
+
+.user-card-filter__link-btn {
+  margin: 0 auto;
+}

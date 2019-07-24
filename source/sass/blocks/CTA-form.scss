@@ -1,0 +1,103 @@
+.CTA-form {
+  margin-top: -50px;
+  padding: 29px 25px;
+  padding-top: 119px;
+
+  position: relative;
+  z-index: 2;
+
+  background-color: $blue-nav-text;
+  border-radius: 0 0 30px 30px;
+}
+
+.CTA-form__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $orange-text;
+}
+
+.CTA-form__desc {
+  margin: 0;
+  margin-bottom: 31px;
+
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #ffffff;
+
+  &_under-form {
+    margin-bottom: 19px;
+  }
+}
+
+.CTA-form__link {
+  color: $yellow-base;
+
+  text-decoration: underline;
+}
+
+.CTA-form__form {
+  margin-bottom: 27px;
+  display: block;
+  width: 270px;
+  height: 62px;
+  position: relative;
+}
+
+.CTA-form__label {
+  font-size: 0;
+}
+
+.CTA-form__input {
+  display: block;
+  width: 270px;
+  height: 62px;
+
+  padding: 0 25px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  border: none;
+  border-radius: 10px;
+
+  &::placeholder {
+    font-weight: 700;
+    line-height: 62px;
+    font-size: 18px;
+    color: #444444;
+
+    opacity: 0.3;
+  }
+}
+
+.CTA-form__btn {
+  @include triangle-arrow-right;
+
+  width: 60px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  font-size: 0;
+  border-radius: 10px;
+  border: none;
+
+  background-color: $yellow-base;
+
+  &::after {
+    margin-right: 17px;
+  }
+}

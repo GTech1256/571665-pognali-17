@@ -1,0 +1,50 @@
+.companions {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+}
+
+.companions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.companions__profile {
+  margin-bottom: 10px;
+}
+
+
+.companions__show-more-btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 20px;
+
+  position: relative;
+
+  text-align: center;
+  color: $blue-base;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+
+  &::before,
+  &::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+
+    background-color: $blue-base;
+
+    content: "";
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+}

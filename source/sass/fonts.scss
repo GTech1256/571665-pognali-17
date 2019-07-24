@@ -1,0 +1,74 @@
+/* by https://developer.mozilla.org/ru/docs/Web/CSS/font-weight#%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B5%D1%81%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8 */
+
+// Regular
+@font-face {
+  font-weight: 400;
+  font-family: "BloggerSans";
+  font-style: normal;
+  src: local("BloggerSans Light"),
+    url("../fonts/Bloggersans.woff2") format("woff2"),
+    url("../fonts/Bloggersans.woff") format("woff");
+}
+// Italic
+@font-face {
+  font-weight: 400;
+  font-family: "BloggerSans";
+  font-style: italic;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersansitalic.woff2") format("woff2"),
+    url("../fonts/Bloggersansitalic.woff") format("woff");
+}
+// Bold
+@font-face {
+  font-weight: 700;
+  font-family: "BloggerSans";
+  font-style: normal;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersansbold.woff2") format("woff2"),
+    url("../fonts/Bloggersansbold.woff") format("woff");
+}
+// Bold - Italic
+@font-face {
+  font-weight: 700;
+  font-family: "BloggerSans";
+  font-style: italic;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersansbolditalic.woff2") format("woff2"),
+    url("../fonts/Bloggersansbolditalic.woff") format("woff");
+}
+// Light
+@font-face {
+  font-weight: 300;
+  font-family: "BloggerSans";
+  font-style: normal;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersanslight.woff2") format("woff2"),
+    url("../fonts/Bloggersanslight.woff") format("woff");
+}
+// Light - Italic
+@font-face {
+  font-weight: 300;
+  font-family: "BloggerSans";
+  font-style: italic;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersanslightitalic.woff2") format("woff2"),
+    url("../fonts/Bloggersanslightitalic.woff") format("woff");
+}
+// Medium
+@font-face {
+  font-weight: 500;
+  font-family: "BloggerSans";
+  font-style: normal;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersansmedium.woff2") format("woff2"),
+    url("../fonts/Bloggersansmedium.woff") format("woff");
+}
+// Medium - Italic
+@font-face {
+  font-weight: 500;
+  font-family: "BloggerSans";
+  font-style: italic;
+  src: local("BloggerSans Bold"),
+    url("../fonts/Bloggersansmediumitalic.woff2") format("woff2"),
+    url("../fonts/Bloggersansmediumitalic.woff") format("woff");
+}

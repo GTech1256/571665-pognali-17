@@ -1,0 +1,57 @@
+.address {
+  margin-top: -49px;
+  padding: 80px 25px;
+  padding-bottom: 34px;
+
+  position: relative;
+
+  z-index: 1;
+
+  background-color: $yellow-base;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.address__path-btn {
+  display: block;
+  padding: 19px;
+
+  color: $blue-base;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  border: 3px solid $blue-base;
+  border-radius: 10px;
+
+  @include triangle-arrow-right;
+}
+
+.address__text {
+  display: flex;
+  margin: 0;
+  margin-bottom: 33px;
+
+  color: $blue-nav-text;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  &::before {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    margin-right: 17px;
+
+    background: #121936 url("../../img/contacts-location.svg") center/14px 22px no-repeat;
+
+    border-radius: 50%;
+
+    content: "";
+  }
+}

@@ -1,0 +1,53 @@
+.contacts-paragraph {
+  margin: 0;
+}
+
+.contacts-paragraph__link {
+  display: flex;
+
+  position: relative;
+
+  color: $blue-nav-text;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 45px;
+
+  &::before {
+    margin-right: 16px;
+    width: 45px;
+    height: 45px;
+
+    background-color: #121936;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &_phone {
+    &::before {
+      background-image: url("../../img/contacts-phone-yellow.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../../img/contacts-phone-orange.svg");
+    }
+  }
+
+  &_email {
+    &::before {
+      background-image: url("../../img/contacts-mail-yellow.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../../img/contacts-mail-orange.svg");
+    }
+  }
+
+  &_color_yellow {
+    color: $yellow-base;
+  }
+}
+
