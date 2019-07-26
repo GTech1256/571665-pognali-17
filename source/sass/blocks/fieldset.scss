@@ -1,0 +1,36 @@
+.fieldset {
+  margin: 0;
+  padding: 0;
+
+  border-radius: 8px;
+  border-color: #cbced9;
+}
+
+.fieldset__title {
+  display: block;
+  margin: 0 auto;
+  padding: 0 17px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $blue-base;
+}
+
+.fieldset__tags {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+
+.fieldset__transport-preference {
+  display: flex;
+  justify-content: center;
+}

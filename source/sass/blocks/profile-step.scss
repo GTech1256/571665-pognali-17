@@ -1,0 +1,43 @@
+.profile-step {
+  padding: 25px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.profile-step__title {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $blue-base;
+}
+
+.profile-step__desc {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.profile-step__kids-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 15px;
+
+  &::before {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+
+    content: "";
+  }
+}
+
+.visually-hidden:checked + .profile-step__kids-checkbox::before {
+  background-color: red; // TODO: set image
+}
