@@ -2,7 +2,10 @@
   background: linear-gradient(to bottom, #161c36 478px, #161c35 478px, #161c35 763px, #192144 763px);
   border-radius: 0 0 30px 30px;
 
-  margin-bottom: 38px;
+  &_long {
+    padding-bottom: 33px;
+    border-radius: 0;
+  }
 }
 
 .page-header__title {

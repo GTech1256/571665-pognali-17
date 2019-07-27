@@ -2,73 +2,84 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики — Погнали!</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="top-bar"><!-- always on top -->
-        <a class="logo top-bar__logo" href="index.html">
-          <!-- svg -->
-          <img src="http://placehold.it/100x19" alt="Логотип: 'Погнали?'" width="100" height="19">
-          <!-- /svg  -->
-        </a>
-        <button
-          class="main-nav__toggle main-nav__toggle_hidden"
-          type="button">
-          Открыть меню
-        </button>
-      </div>
-      <div class="mobile-menu mobile-menu_open">
-        <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__nav-item"><a href="#about-service">О сервисе</a></li>
-            <li class="mobile-menu__nav-item"><a href="#directions">Направления</a></li>
-            <li class="mobile-menu__nav-item"><a href="#companions">Попутчики</a></li>
-            <li class="mobile-menu__nav-item mobile-menu__nav-item_button">
-              <a href="#companions">Авторизация</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_phone"
-            href="tel:+7(800)-555-86-28"
-          >
-            8 800 555-86-28
+      <div class="top-bar top-bar_open"><!-- always on top -->
+        <div class="top-bar__top-wrappers">
+          <a class="logo top-bar__logo" href="index.html">
+            <!-- svg -->
+            <img src="./img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
+            <!-- /svg -->
           </a>
-        </p>
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_email"
-            href="emailto:mail@htmlacademy.ru"
-          >
-            mail@htmlacademy.ru
-          </a>
-        </p>
-        <div class="mobile-menu__soc">
-          <a
-            class="mobile-menu__link mobile-menu__link_fb"
-            href="facebook.com"
-            target="_blank"
-          >
-            Мы в Фейсбук
-          </a>
-          <a
-            class="mobile-menu__link mobile-menu__link_vk"
-            href="vk.com"
-            target="_blank"
-          >
-            Мы в Вконтакте
-          </a>
-          <a
-            class="mobile-menu__link mobile-menu__link_inst"
-            href="instagram.com"
-            target="_blank"
-          >
-            Мы в инстаграм
-          </a>
-        </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
-      </div><!-- /.mobile-menu -->
+          <button
+            class="top-bar__toggle-btn top-bar__toggle-btn_hidden top-bar__toggle-btn_type_close"
+            type="button">
+            Открыть меню
+          </button>
+        </div>
+
+        <div class="mobile-menu mobile-menu_open">
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__nav-item">
+                <a href="#about-service">О сервисе</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a href="catalog.html">Попутчики</a>
+              </li>
+              <li class="mobile-menu__nav-item mobile-menu__link-btn">
+                <a class="mobile-menu__link-btn-pos link-btn" href="auth.html">Авторизация</a>
+              </li>
+            </ul>
+          </nav><!-- /.mobile-menu__nav -->
+          <p class="mobile-menu__contacts-paragraph contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_phone"
+              href="tel:8 800 555-86-28"
+            >
+              8 800 555-86-28
+            </a>
+          </p>
+          <p class="mobile-menu__contacts-paragraph contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_email"
+              href="emailto:mail@htmlacademy.ru"
+            >
+              mail@htmlacademy.ru
+            </a>
+          </p>
+          <div class="mobile-menu__soc">
+              <a
+                class="mobile-menu__link mobile-menu__link_fb"
+                href="//facebook.com"
+                target="_blank"
+              >
+                Мы в Фейсбук
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_vk"
+                href="//vk.com"
+                target="_blank"
+              >
+                Мы в Вконтакте
+              </a>
+              <a
+                class="mobile-menu__link mobile-menu__link_inst"
+                href="//instagram.com"
+                target="_blank"
+              >
+                Мы в инстаграм
+              </a>
+            </div><!-- ./page-footer__mobile-menu /.mobile-menu -->
+        </div><!-- /.mobile-menu -->
+      </div><!-- /.top-bar -->
     </header><!-- /.page-header -->
     <main class="page-main">
       <div class="page-main__title-wrapper">
@@ -97,55 +108,59 @@
           <span class="visually-hidden">Ваш выбор транспорта для путешествия</span>
 
           <input class="visually-hidden" type="checkbox" id="transport-aircraft">
-          <label for="transport-aircraft">
-            Авиаперелет
+          <label for="transport-aircraft tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Авиаперелет"
               width="19"
               height="21"
-              data-tooltip-text="Авиаперелет"
             >
+            <span class="tooltip-wrapper__content">
+              Авиаперелет
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-train">
-          <label for="transport-train">
-            Автотранспорт
+          <label for="transport-train tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Автотранспорт"
               width="19"
               height="21"
-              data-tooltip-text="Автотранспорт"
             >
+            <span class="tooltip-wrapper__content">
+              Автотранспорт
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-bicycle">
-          <label for="transport-bicycle">
-            Велосипед
+          <label for="transport-bicycle tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Велосипед"
               width="19"
               height="21"
-              data-tooltip-text="Велосипед"
             >
+            <span class="tooltip-wrapper__content">
+              Велосипед
+            </span>
           </label>
 
           <input class="visually-hidden" type="checkbox" id="transport-afoot">
-          <label for="transport-afoot">
-            Пешком
+          <label for="transport-afoot tooltip-wrapper">
             <img
-              class="fieldset__transport-preference fieldset__transport-preference_active tooltip"
+              class="fieldset__transport-preference fieldset__transport-preference_active"
               src="http://placehold.it/19x21"
               alt="Пешком"
               width="19"
               height="21"
-              data-tooltip-text="Пешком"
             >
+            <span class="tooltip-wrapper__content">
+              Пешком
+            </span>
           </label>
 
         </fieldset><!-- /.fieldset -->
@@ -716,26 +731,34 @@
 
               <div class="country-selector">
                 <button class="country-selector__select-btn" type="button">Босния и греция</button>
-                <img
-                  class="country-selector__flag tooltip"
-                  src="http://placehold.it/35x24"
-                  alt="Флаг боснии и греции"
-                  width="35"
-                  height="24"
-                  data-tooltip-text="Босния и Греция"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="country-selector__flag"
+                    src="http://placehold.it/35x24"
+                    alt="Флаг Боснии и Греции"
+                    width="35"
+                    height="24"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Босния и Греция
+                  </p>
+                </div>
                 <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
               </div>
               <div class="country-selector">
                 <button class="country-selector__select-btn" type="button">Чехословакия</button>
-                <img
-                  class="country-selector__flag tooltip"
-                  src="http://placehold.it/35x24"
-                  alt="флаг Чехословакии"
-                  width="35"
-                  height="24"
-                  data-tooltip-text="Чехословакия"
-                >
+                <div class="tooltip-wrapper">
+                  <img
+                    class="country-selector__flag"
+                    src="http://placehold.it/35x24"
+                    alt="флаг Чехословакии"
+                    width="35"
+                    height="24"
+                  >
+                  <p class="tooltip-wrapper__content">
+                    Чехословакия
+                  </p>
+                </div>
                 <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
               </div>
               <div class="country-selector">
@@ -894,14 +917,18 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Босния и Герцегов</p>
-                  <img
-                    class="country-entertainment__country-flag tooltip"
-                    src="http://placehold.it/35x24"
-                    data-tooltip-text="Босния и Герцегов"
-                    width="35"
-                    height="24"
-                    alt="Флаг Боснии и Герцегов"
-                  >
+                  <div class="tooltip-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="http://placehold.it/35x24"
+                      alt="Флаг Боснии и Герцегов"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Босния и Герцегов
+                    </p>
+                  </div>
                 </div>
                 <textarea
                   class="country-entertainment__desc"
@@ -913,14 +940,18 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Чехословакия</p>
-                  <img
-                    class="country-entertainment__country-flag tooltip"
-                    src="http://placehold.it/35x24"
-                    alt="Флаг Чехословакии"
-                    width="35"
-                    height="24"
-                    data-tooltip-text="Чехословакия"
-                  >
+                  <div class="tooltip-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="http://placehold.it/35x24"
+                      alt="Флаг Чехословакии"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Чехословакия
+                    </p>
+                  </div>
                 </div>
                 <textarea
                   class="country-entertainment__desc"
@@ -941,29 +972,33 @@
       </section> <!-- profile-add-plan -->
 
 
-    </main>
+    </main><!-- /.page-index -->
     <footer class="page-footer">
-      <h3 class="page-footer__title">
-        Погнали?
-      </h3>
+      <img
+        class="page-footer__title-img"
+        src="img/logo-mobile-blue@1x.png"
+        alt="Логотип сайта 'Погнали?'"
+        width="96"
+        height="15"
+      >
       <div class="page-footer__soc-links soc-links">
         <a
           class="soc-links__link soc-links__link_fb"
-          href="facebook.com"
+          href="//facebook.com"
           target="_blank"
         >
-          Мы Вконтакте
+          Мы в Фейсбук
         </a>
         <a
           class="soc-links__link soc-links__link_vk"
-          href="vk.com"
+          href="//vk.com"
           target="_blank"
         >
-          Мы Фейсбук
+          Мы в Вконтакте
         </a>
         <a
           class="soc-links__link soc-links__link_inst"
-          href="instagram.com"
+          href="//instagram.com"
           target="_blank"
         >
           Мы в инстаграм
@@ -977,7 +1012,7 @@
           HTMLAcademy
         </a>
       </div>
-    </footer>
+    </footer> <!-- /.page-footer -->
 
   </body>
 </html>

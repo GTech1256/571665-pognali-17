@@ -1,0 +1,41 @@
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-wrapper__content {
+  padding: 20px 23px;
+
+  position: absolute;
+  left: 50%;
+
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 24px;
+
+  transform: translateX(-50%);
+  background-color: #101d41;
+
+  opacity: 0;
+
+
+  &::before {
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%) rotate(45deg);
+
+    background-color: #101d41;
+
+    content: "";
+    z-index: 100;
+    width: 16px;
+    height: 16px;
+
+  }
+}
+
+.tooltip-wrapper:hover > .tooltip-wrapper__content {
+  opacity: 1;
+}

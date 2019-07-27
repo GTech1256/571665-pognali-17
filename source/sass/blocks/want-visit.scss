@@ -1,0 +1,46 @@
+.want-visit {
+  padding: 0 14px;
+  border-top: 1px solid #edeff6;
+}
+
+.want-visit__title {
+  display: inline-block;
+  margin: 0;
+  padding: 0 13px;
+
+  position: relative;
+  top: -15px;
+
+  font-size: 15px;
+  line-height: 18px;
+
+  background-color: #ffffff;
+}
+
+.want-visit__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.want-visit__country-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.want-visit__country-flag {
+  width: 26px;
+  height: 18px;
+
+  margin-right: 15px;
+}
+
+.want-visit__country-name {
+  margin: 0;
+
+  color: $blue-base;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+}
