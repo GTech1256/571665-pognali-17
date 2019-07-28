@@ -1,0 +1,95 @@
+.country-picker {
+  display: none;
+  padding: 0 25px;
+}
+
+.companions-country-filter__country-picker-control:checked ~ .country-picker {
+  display: block;
+}
+
+.country-picker__name-word-part {
+  display: block;
+
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 700;
+
+  color: $blue-nav-text;
+
+  opacity: 0.3;
+}
+
+.country-picker__name-word-part-control:checked + .country-picker__name-word-part {
+  opacity: 1;
+}
+
+.country-picker__alphabet {
+  border: 1px solid #cbced9;
+  border-collapse: collapse;
+}
+
+.country-picker__tr {
+  height: 42px;
+}
+
+.country-picker__td {
+  width: 45px;
+  height: 42px;
+}
+
+.country-picker__letter {
+  display: block;
+  width: 45px;
+  height: 42px;
+
+  color: $blue-base;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.country-picker__letter-control:checked + .country-picker__letter {
+  color: #ffffff;
+
+  background-color: $blue-base;
+}
+
+.country-picker__country {
+  display: block;
+
+  color: #444444;
+
+  background-color: transparent;
+  border: none;
+}
+
+.country-picker__close-btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  line-height: 40px;
+  font-size: 17px;
+  font-weight: 700;
+
+  background-color: #d6daed;
+  border: none;
+  border-radius: 20px;
+
+  @include cross-before;
+
+  &::before,
+  &::after {
+    left: 55px;
+
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}

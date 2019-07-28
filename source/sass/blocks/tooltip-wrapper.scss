@@ -11,28 +11,29 @@
   color: #ffffff;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
 
   transform: translateX(-50%);
   background-color: #101d41;
 
   opacity: 0;
-
+  pointer-events: none;
 
   &::before {
     display: block;
+    width: 16px;
+    height: 16px;
 
     position: absolute;
     left: 50%;
     top: -8px;
+    z-index: 100;
+
     transform: translateX(-50%) rotate(45deg);
 
     background-color: #101d41;
 
     content: "";
-    z-index: 100;
-    width: 16px;
-    height: 16px;
-
   }
 }
 

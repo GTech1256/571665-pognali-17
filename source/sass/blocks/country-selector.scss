@@ -1,0 +1,75 @@
+.country-selector {
+  display: flex;
+  margin-bottom: 22px;
+
+  position: relative;
+  //TODO: circle on element
+  /*&::before {
+
+  }
+  */
+  // arrow to bottom
+  &:not(:last-of-type)::after {
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    right: 50px;
+
+    bottom: -7px;
+    content: url("../../img/small-arrow.svg");
+  }
+}
+
+.country-selector__select-btn {
+  height: 42px;
+  flex-grow: 1;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  color: $blue-base;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+
+  &_add-element {
+    background-color: #edeff6;
+    border: none;
+  }
+}
+
+.country-selector__flag {
+  display: block;
+  width: 53px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.country-selector__cancel-btn {
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  font-size: 0;
+
+  cursor: pointer;
+
+  background-color: #edeff6;
+  border: none;
+  border-radius: 50%;
+}

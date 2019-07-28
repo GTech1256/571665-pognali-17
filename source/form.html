@@ -90,13 +90,20 @@
       <section class="profile-settings">
         <h2 class="visually-hidden">Настройки профиля</h2>
         <div class="profile-settings__head">
-          <div class="profile-settings__level">
+          <div class="profile-settings__level" data-user-level="80">
             <!-- TODO: level -->
+            Уровень: 80
           </div>
-          <img class="profile-settings__user-pic" src="http://placehold.it/100x100" alt="Аватарка пользователя" width="100" height="100">
+          <img
+            class="profile-settings__user-pic"
+            src="http://placehold.it/100x100"
+            alt="Аватарка пользователя"
+            width="100"
+            height="100"
+          >
         </div><!-- /.profile-settings__head -->
 
-        <button class="blue-btn" type="button">Сменить фото</button>
+        <button class="link-btn link-btn_bgc_gray" type="button">Сменить фото</button>
 
         <fieldset class="fieldset">
           <legend class="fieldset__title">Тэги</legend>
@@ -106,63 +113,63 @@
         <fieldset class="fieldset">
           <legend class="fieldset__title">Транспорт</legend>
           <span class="visually-hidden">Ваш выбор транспорта для путешествия</span>
+          <div class="fieldset__transport-preference">
+            <input class="visually-hidden" type="checkbox" id="transport-aircraft">
+            <label class="calendar__date-label" for="transport-aircraft tooltip-wrapper">
+              <img
+                class="fieldset__transport-preference fieldset__transport-preference_active"
+                src="http://placehold.it/19x21"
+                alt="Авиаперелет"
+                width="19"
+                height="21"
+              >
+              <span class="tooltip-wrapper__content">
+                Авиаперелет
+              </span>
+            </label>
 
-          <input class="visually-hidden" type="checkbox" id="transport-aircraft">
-          <label for="transport-aircraft tooltip-wrapper">
-            <img
-              class="fieldset__transport-preference fieldset__transport-preference_active"
-              src="http://placehold.it/19x21"
-              alt="Авиаперелет"
-              width="19"
-              height="21"
-            >
-            <span class="tooltip-wrapper__content">
-              Авиаперелет
-            </span>
-          </label>
+            <input class="visually-hidden" type="checkbox" id="transport-train">
+            <label class="calendar__date-label" for="transport-train tooltip-wrapper">
+              <img
+                class="fieldset__transport-preference fieldset__transport-preference_active"
+                src="http://placehold.it/19x21"
+                alt="Автотранспорт"
+                width="19"
+                height="21"
+              >
+              <span class="tooltip-wrapper__content">
+                Автотранспорт
+              </span>
+            </label>
 
-          <input class="visually-hidden" type="checkbox" id="transport-train">
-          <label for="transport-train tooltip-wrapper">
-            <img
-              class="fieldset__transport-preference fieldset__transport-preference_active"
-              src="http://placehold.it/19x21"
-              alt="Автотранспорт"
-              width="19"
-              height="21"
-            >
-            <span class="tooltip-wrapper__content">
-              Автотранспорт
-            </span>
-          </label>
+            <input class="visually-hidden" type="checkbox" id="transport-bicycle">
+            <label class="calendar__date-label" for="transport-bicycle tooltip-wrapper">
+              <img
+                class="fieldset__transport-preference fieldset__transport-preference_active"
+                src="http://placehold.it/19x21"
+                alt="Велосипед"
+                width="19"
+                height="21"
+              >
+              <span class="tooltip-wrapper__content">
+                Велосипед
+              </span>
+            </label>
 
-          <input class="visually-hidden" type="checkbox" id="transport-bicycle">
-          <label for="transport-bicycle tooltip-wrapper">
-            <img
-              class="fieldset__transport-preference fieldset__transport-preference_active"
-              src="http://placehold.it/19x21"
-              alt="Велосипед"
-              width="19"
-              height="21"
-            >
-            <span class="tooltip-wrapper__content">
-              Велосипед
-            </span>
-          </label>
-
-          <input class="visually-hidden" type="checkbox" id="transport-afoot">
-          <label for="transport-afoot tooltip-wrapper">
-            <img
-              class="fieldset__transport-preference fieldset__transport-preference_active"
-              src="http://placehold.it/19x21"
-              alt="Пешком"
-              width="19"
-              height="21"
-            >
-            <span class="tooltip-wrapper__content">
-              Пешком
-            </span>
-          </label>
-
+            <input class="visually-hidden" type="checkbox" id="transport-afoot">
+            <label class="calendar__date-label" for="transport-afoot tooltip-wrapper">
+              <img
+                class="fieldset__transport-preference fieldset__transport-preference_active"
+                src="http://placehold.it/19x21"
+                alt="Пешком"
+                width="19"
+                height="21"
+              >
+              <span class="tooltip-wrapper__content">
+                Пешком
+              </span>
+            </label>
+          </div><!-- /.fieldset__transport-preference -->
         </fieldset><!-- /.fieldset -->
 
       </section><!-- /.profile-settings -->
@@ -174,10 +181,10 @@
             <p class="profile-plans__country-path">
               Франция, Италия
             </p>
-            <p class="profile-plans__companions">
+            <p class="profile-plans__text">
               3 попутчика
             </p>
-            <p class="profile-plans__date">
+            <p class="profile-plans__text">
               <time datetime="03-26">26 мар</time> - <time datetime="03-29">29 мар</time>
             </p>
             <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
@@ -186,10 +193,10 @@
             <p class="profile-plans__country-path">
               Тайланд, Индонезия
             </p>
-            <p class="profile-plans__companions">
+            <p class="profile-plans__text">
               1 попутчик
             </p>
-            <p class="profile-plans__date">
+            <p class="profile-plans__text">
               <time datetime="07-01">26 июл</time> - <time datetime="07-15">29 июл</time>
             </p>
             <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
@@ -210,25 +217,45 @@
                   вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
               <div class="smart-counter">
-                <p class="smart-counter__title">Ищу попутчиков:</p>
-                <p class="smart-counter__extra">Чел.</p>
+                <div class="smart-counter__title-wrapper">
+                  <p class="smart-counter__title">Ищу попутчиков:</p>
+                  <p class="smart-counter__extra">Чел.</p>
+                </div>
                 <div class="smart-counter__holder">
                   <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
-                  <input type="number" name="companion-count" value="2" placeholder="Количество попутчиков" required min="0">
+                  <input
+                    class="smart-counter__input"
+                    type="number"
+                    name="companion-count"
+                    value="2"
+                    placeholder="Количество попутчиков"
+                    required
+                    min="0"
+                  >
                   <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
                 </div>
               </div><!-- /.smart-counter -->
               <div class="smart-counter">
-                <p class="smart-counter__title">Длительность:</p>
-                <p class="smart-counter__extra">Дн.</p>
+                <div class="smart-counter__title-wrapper">
+                  <p class="smart-counter__title">Длительность:</p>
+                  <p class="smart-counter__extra">Дн.</p>
+                </div>
                 <div class="smart-counter__holder">
                   <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
-                  <input type="number" name="duration" value="2" placeholder="Количество дней" required min="0">
+                  <input
+                    class="smart-counter__input"
+                    type="number"
+                    name="duration"
+                    value="2"
+                    placeholder="Количество дней"
+                    required
+                    min="0"
+                  >
                   <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
                 </div>
               </div><!-- /.smart-counter -->
 
-              <input class="visually-hidden" type="checkbox" id="with-kids">
+              <input class="visually-hidden profile-step__kids-control" type="checkbox" id="with-kids">
               <label class="profile-step__kids-checkbox" for="with-kids">
                 Можно с детьми
               </label>
@@ -242,475 +269,477 @@
               <table class="calendar">
                 <thead class="calendar__days">
                   <tr>
-                    <td class="calendar__day-w">П</td>
-                    <td class="calendar__day-w">в</td>
-                    <td class="calendar__day-w">с</td>
-                    <td class="calendar__day-w">ч</td>
-                    <td class="calendar__day-w">п</td>
-                    <td class="calendar__day-w calendar__day-w_off">с</td>
-                    <td class="calendar__day-w calendar__day-w_off">В</td>
+                    <td class="calendar__td calendar__day-w">П</td>
+                    <td class="calendar__td calendar__day-w">в</td>
+                    <td class="calendar__td calendar__day-w">с</td>
+                    <td class="calendar__td calendar__day-w">ч</td>
+                    <td class="calendar__td calendar__day-w">п</td>
+                    <td class="calendar__td calendar__day-w calendar__day-w_off">с</td>
+                    <td class="calendar__td calendar__day-w calendar__day-w_off">В</td>
                   </tr>
                 </thead>
                 <tbody class="calendar__dates">
                   <tr>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="1-24"
                       >
-                      <label for="1-24">
+                      <label class="calendar__date-label" for="1-24">
                           24
                       </label>
 
                     </td>
-                    <td>
-                        <input
+                    <td class="calendar__td">
+                      <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="1-25"
                       >
-                      <label for="1-25">
+                      <label class="calendar__date-label" for="1-25">
                           25
                       </label>
                     </td>
-                    <td>
-                        <input
+                    <td class="calendar__td">
+                      <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="1-26"
                       >
-                      <label for="1-26">
+                      <label class="calendar__date-label" for="1-26">
                           26
                       </label>
                     </td>
-                    <td><input
+                    <td class="calendar__td">
+                    <input
                       class="visually-hidden calendar__date-checkbox"
                       type="checkbox"
                       disabled
                       id="1-27"
                     >
-                    <label for="1-27">
+                    <label class="calendar__date-label" for="1-27">
                         27
                     </label></td>
-                    <td><input
+                    <td class="calendar__td">
+                    <input
                       class="visually-hidden calendar__date-checkbox"
                       type="checkbox"
                       disabled
                       id="1-28"
                     >
-                    <label for="1-28">
+                    <label class="calendar__date-label" for="1-28">
                         28
                     </label>
                   </td>
-                    <td>
-                        <input
+                    <td class="calendar__td">
+                      <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="1-1"
                       >
-                      <label for="1-1">
+                      <label class="calendar__date-label" for="1-1">
                           1
                       </label>
                     </td>
-                    <td>
-                        <input
+                    <td class="calendar__td">
+                      <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="1-2"
                       >
-                      <label for="1-2">
+                      <label class="calendar__date-label" for="1-2">
                           2
                       </label>
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                        <input
+                    <td class="calendar__td">
+                      <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-3"
                       >
-                      <label for="2-3">
+                      <label class="calendar__date-label" for="2-3">
                           3
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-4"
                       >
-                      <label for="2-4">
+                      <label class="calendar__date-label" for="2-4">
                           4
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-5"
                       >
-                      <label for="2-5">
+                      <label class="calendar__date-label" for="2-5">
                         5
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-6"
                       >
-                      <label for="2-6">
+                      <label class="calendar__date-label" for="2-6">
                         6
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-7"
                       >
-                      <label for="2-7">
+                      <label class="calendar__date-label" for="2-7">
                         7
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-8"
                       >
-                      <label for="2-8">
+                      <label class="calendar__date-label" for="2-8">
                         8
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="2-9"
                       >
-                      <label for="2-9">
+                      <label class="calendar__date-label" for="2-9">
                         9
                       </label>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-10"
                       >
-                      <label for="3-10">
+                      <label class="calendar__date-label" for="3-10">
                         10
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-11"
                       >
-                      <label for="3-11">
+                      <label class="calendar__date-label" for="3-11">
                         11
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-12"
                       >
-                      <label for="3-12">
+                      <label class="calendar__date-label" for="3-12">
                         12
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-13"
                       >
-                      <label for="3-13">
+                      <label class="calendar__date-label" for="3-13">
                         13
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-14"
                       >
-                      <label for="3-14">
+                      <label class="calendar__date-label" for="3-14">
                         14
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-15"
                       >
-                      <label for="3-15">
+                      <label class="calendar__date-label" for="3-15">
                         15
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="3-16"
                       >
-                      <label for="3-16">
+                      <label class="calendar__date-label" for="3-16">
                         16
                       </label>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-17"
                       >
-                      <label for="4-17">
+                      <label class="calendar__date-label" for="4-17">
                         17
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-18"
                       >
-                      <label for="4-18">
+                      <label class="calendar__date-label" for="4-18">
                         18
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-19"
                       >
-                      <label for="4-19">
+                      <label class="calendar__date-label" for="4-19">
                         19
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-20"
                       >
-                      <label for="4-20">
+                      <label class="calendar__date-label" for="4-20">
                         20
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-21"
                       >
-                      <label for="4-21">
+                      <label class="calendar__date-label" for="4-21">
                         21
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-22"
                       >
-                      <label for="4-22">
+                      <label class="calendar__date-label" for="4-22">
                         22
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="4-23"
                       >
-                      <label for="4-23">
+                      <label class="calendar__date-label" for="4-23">
                         23
                       </label>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="5-24"
                       >
-                      <label for="5-24">
+                      <label class="calendar__date-label" for="5-24">
                         24
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
                         id="5-25"
                       >
-                      <label for="5-25">
+                      <label class="calendar__date-label" for="5-25">
                         25
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         checked
                         id="5-26"
                       >
-                      <label for="5-26">
+                      <label class="calendar__date-label" for="5-26">
                         26
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         checked
                         id="5-27"
                       >
-                      <label for="5-27">
+                      <label class="calendar__date-label" for="5-27">
                         27
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         checked
                         id="5-28"
                       >
-                      <label for="5-28">
+                      <label class="calendar__date-label" for="5-28">
                         28
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="5-29"
                       >
-                      <label for="5-29">
+                      <label class="calendar__date-label" for="5-29">
                         29
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                     <input
                       class="visually-hidden calendar__date-checkbox"
                       type="checkbox"
                       id="5-30"
                     >
-                    <label for="5-30">
+                    <label class="calendar__date-label" for="5-30">
                       30
                     </label>
                   </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-31"
                       >
-                      <label for="6-31">
+                      <label class="calendar__date-label" for="6-31">
                         31
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-1"
                       >
-                      <label for="6-1">
+                      <label class="calendar__date-label" for="6-1">
                         1
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-2"
                       >
-                      <label for="6-2">
+                      <label class="calendar__date-label" for="6-2">
                         2
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-3"
                       >
-                      <label for="6-3">
+                      <label class="calendar__date-label" for="6-3">
                         3
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-4"
                       >
-                      <label for="6-4">
+                      <label class="calendar__date-label" for="6-4">
                         4
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-5"
                       >
-                      <label for="6-5">
+                      <label class="calendar__date-label" for="6-5">
                         5
                       </label>
                     </td>
-                    <td>
+                    <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         id="6-6"
                       >
-                      <label for="6-6">
+                      <label class="calendar__date-label" for="6-6">
                         6
                       </label>
                     </td>
@@ -767,123 +796,123 @@
                 <div class="country-picker">
                   <div class="country-picker__alphabet">
                     <span class="visually-hidden">Выбор букв страны</span>
-                    <input class="visually-hidden" name="letter" value="а" type="radio" id="letter-1">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="а" type="radio" id="letter-1">
                     <label class="country-picker__letter" for="letter-1">
                       а
                     </label>
-                    <input class="visually-hidden" name="letter" value="б" type="radio" id="letter-2">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="б" type="radio" id="letter-2">
                     <label class="country-picker__letter" for="letter-2">
                       б
                     </label>
-                    <input class="visually-hidden" name="letter" value="в" type="radio" id="letter-3">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="в" type="radio" id="letter-3">
                     <label class="country-picker__letter" for="letter-3">
                       в
                     </label>
-                    <input class="visually-hidden" name="letter" value="г" type="radio" id="letter-4">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="г" type="radio" id="letter-4">
                     <label class="country-picker__letter" for="letter-4">
                       г
                     </label>
-                    <input class="visually-hidden" name="letter" value="д" type="radio" id="letter-5">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="д" type="radio" id="letter-5">
                     <label class="country-picker__letter" for="letter-5">
                       д
                     </label>
-                    <input class="visually-hidden" name="letter" value="е" type="radio" id="letter-6">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="е" type="radio" id="letter-6">
                     <label class="country-picker__letter" for="letter-6">
                       е
                     </label>
-                    <input class="visually-hidden" name="letter" value="ё" type="radio" id="letter-7">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ё" type="radio" id="letter-7">
                     <label class="country-picker__letter" for="letter-7">
                       ё
                     </label>
-                    <input class="visually-hidden" name="letter" value="ж" type="radio" id="letter-8">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ж" type="radio" id="letter-8">
                     <label class="country-picker__letter" for="letter-8">
                       ж
                     </label>
-                    <input class="visually-hidden" name="letter" value="з" type="radio" id="letter-9">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="з" type="radio" id="letter-9">
                     <label class="country-picker__letter" for="letter-9">
                       з
                     </label>
-                    <input class="visually-hidden" name="letter" value="и" type="radio" id="letter-10">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="и" type="radio" id="letter-10">
                     <label class="country-picker__letter" for="letter-10">
                       и
                     </label>
-                    <input class="visually-hidden" name="letter" value="й" type="radio" id="letter-11">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="й" type="radio" id="letter-11">
                     <label class="country-picker__letter" for="letter-11">
                       й
                     </label>
-                    <input class="visually-hidden" name="letter" value="к" type="radio" id="letter-12">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="к" type="radio" id="letter-12">
                     <label class="country-picker__letter" for="letter-12">
                       к
                     </label>
-                    <input class="visually-hidden" name="letter" value="л" type="radio" id="letter-13">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="л" type="radio" id="letter-13">
                     <label class="country-picker__letter" for="letter-13">
                       л
                     </label>
-                    <input class="visually-hidden" name="letter" value="м" type="radio" id="letter-14">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="м" type="radio" id="letter-14">
                     <label class="country-picker__letter" for="letter-14">
                       м
                     </label>
-                    <input class="visually-hidden" name="letter" value="н" type="radio" id="letter-15">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="н" type="radio" id="letter-15">
                     <label class="country-picker__letter" for="letter-15">
                       н
                     </label>
-                    <input class="visually-hidden" name="letter" value="о" type="radio" id="letter-16">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="о" type="radio" id="letter-16">
                     <label class="country-picker__letter" for="letter-16">
                       о
                     </label>
-                    <input class="visually-hidden" name="letter" value="п" type="radio" id="letter-17">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="п" type="radio" id="letter-17">
                     <label class="country-picker__letter" for="letter-17">
                       п
                     </label>
-                    <input class="visually-hidden" name="letter" value="р" type="radio" id="letter-18">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="р" type="radio" id="letter-18">
                     <label class="country-picker__letter" for="letter-18">
                       р
                     </label>
-                    <input class="visually-hidden" name="letter" value="с" type="radio" id="letter-19">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="с" type="radio" id="letter-19">
                     <label class="country-picker__letter" for="letter-19">
                       с
                     </label>
-                    <input class="visually-hidden" name="letter" value="т" type="radio" id="letter-20">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="т" type="radio" id="letter-20">
                     <label class="country-picker__letter" for="letter-20">
                       т
                     </label>
-                    <input class="visually-hidden" name="letter" value="у" type="radio" id="letter-21">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="у" type="radio" id="letter-21">
                     <label class="country-picker__letter" for="letter-21">
                       у
                     </label>
-                    <input class="visually-hidden" name="letter" value="ф" type="radio" id="letter-22">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ф" type="radio" id="letter-22">
                     <label class="country-picker__letter" for="letter-22">
                       ф
                     </label>
-                    <input class="visually-hidden" name="letter" value="х" type="radio" id="letter-23">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="х" type="radio" id="letter-23">
                     <label class="country-picker__letter" for="letter-23">
                       х
                     </label>
-                    <input class="visually-hidden" name="letter" value="ц" type="radio" id="letter-24">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ц" type="radio" id="letter-24">
                     <label class="country-picker__letter" for="letter-24">
                       ц
                     </label>
-                    <input class="visually-hidden" name="letter" value="ч" type="radio" id="letter-25">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ч" type="radio" id="letter-25">
                     <label class="country-picker__letter" for="letter-25">
                       ч
                     </label>
-                    <input class="visually-hidden" name="letter" value="ш" type="radio" id="letter-26">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ш" type="radio" id="letter-26">
                     <label class="country-picker__letter" for="letter-26">
                       ш
                     </label>
-                    <input class="visually-hidden" name="letter" value="щ" type="radio" id="letter-27">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="щ" type="radio" id="letter-27">
                     <label class="country-picker__letter" for="letter-27">
                       щ
                     </label>
-                    <input class="visually-hidden" name="letter" value="э" type="radio" id="letter-28">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="э" type="radio" id="letter-28">
                     <label class="country-picker__letter" for="letter-28">
                       э
                     </label>
-                    <input class="visually-hidden" name="letter" value="ю" type="radio" id="letter-29">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ю" type="radio" id="letter-29">
                     <label class="country-picker__letter" for="letter-29">
                       ю
                     </label>
-                    <input class="visually-hidden" name="letter" value="я" type="radio" id="letter-30">
+                    <input class="visually-hidden country-picker__letter-control" name="letter" value="я" type="radio" id="letter-30">
                     <label class="country-picker__letter" for="letter-30">
                       я
                     </label>
@@ -899,7 +928,7 @@
                 </div><!-- /.country-picker -->
               </div>
               <div class="country-selector">
-                <button class="country-selector__add-btn" type="button">Добавить страну</button>
+                <button class="country-selector__select-btn country-selector__select-btn_add-element" type="button">Добавить страну</button>
               </div>
 
               <a class="link-btn link-btn_width_230" href="#step-3">следующий шаг</a>
@@ -917,7 +946,7 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Босния и Герцегов</p>
-                  <div class="tooltip-wrapper">
+                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
                     <img
                       class="country-entertainment__country-flag"
                       src="http://placehold.it/35x24"
@@ -940,7 +969,7 @@
               <div class="country-entertainment">
                 <div class="country-entertainment__holder">
                   <p class="country-entertainment__country-name">Чехословакия</p>
-                  <div class="tooltip-wrapper">
+                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
                     <img
                       class="country-entertainment__country-flag"
                       src="http://placehold.it/35x24"
@@ -957,10 +986,7 @@
                   class="country-entertainment__desc"
                   placeholder="План действий"
                   required
-                  name="action-plan-b">Пить пиво и лазить
-                    по старым замкам,
-                    наслаждаться аритектурой
-                    и вот это все.</textarea>
+                  name="action-plan-b">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
               </div>
 
               <button class="link-btn link-btn_width_230" type="submit">Отправить</button>

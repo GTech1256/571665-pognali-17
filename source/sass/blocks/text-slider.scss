@@ -1,0 +1,54 @@
+.text-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+
+  border: 1px solid #cbced9;
+  border-right: none;
+  border-left: none;
+}
+
+.text-slider__time {
+  color: $blue-base;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.text-slider__btn {
+  width: 9px;
+  height: 18px;
+
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    display: block;
+    width: 12px;
+    height: 1px;
+
+    background-color: #b2b2b2;
+
+    transform: rotate(45deg);
+    transform-origin: 0;
+
+    content: "";
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &_increment {
+    margin-right: 6px;
+
+    &::before,
+    &::after {
+      transform-origin: 11px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.country-entertainment {
+  position: relative;
+}
+
+.country-entertainment__holder {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.country-entertainment__country-name {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $blue-base;
+}
+
+.country-entertainment__country-flag-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+
+.country-entertainment__desc {
+  width: 220px;
+  height: 220px;
+  padding: 11px;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+
+  border-radius: 4px;
+  border-color: #cbced9;
+
+  resize: none;
+
+  &::placeholder {
+    color: $text-color;
+    opacity: 0.3;
+  }
+}
