@@ -38,7 +38,7 @@
   border-top: 0;
 }
 
-.visually-hidden:checked + .accordion__body {
+.accordion__body-control:checked + .accordion__body {
   height: auto;
 }
 
@@ -63,6 +63,6 @@
   }
 }
 
-.visually-hidden:checked + .accordion__value::before {
+.accordion__value-control:checked + .accordion__value::before {
   background-color: gray;
 }
