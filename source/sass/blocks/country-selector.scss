@@ -4,9 +4,10 @@
 
   position: relative;
   //TODO: circle on element
-  &::before {
+  /*&::before {
 
   }
+  */
   // arrow to bottom
   &:not(:last-of-type)::after {
     width: 6px;
