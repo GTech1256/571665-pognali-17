@@ -5,8 +5,8 @@
   position: relative;
 
   background: url("../../img/globe-back-mobile@1x.jpg") no-repeat;
-
   background-position: center -223px;
+  background-size: cover;
 
   &::before {
     display: block;
