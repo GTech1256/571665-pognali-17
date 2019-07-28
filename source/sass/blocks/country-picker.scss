@@ -19,7 +19,7 @@
   opacity: 0.3;
 }
 
-.visually-hidden:checked + .country-picker__name-word-part {
+.country-picker__name-word-part-control:checked + .country-picker__name-word-part {
   opacity: 1;
 }
 
@@ -52,7 +52,7 @@
   background-color: #ffffff;
 }
 
-.visually-hidden:checked + .country-picker__letter {
+.country-picker__letter-control:checked + .country-picker__letter {
   color: #ffffff;
 
   background-color: $blue-base;

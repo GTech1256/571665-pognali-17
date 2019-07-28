@@ -38,6 +38,6 @@
   }
 }
 
-.visually-hidden:checked + .profile-step__kids-checkbox::before {
+.profile-step__kids-control:checked + .profile-step__kids-checkbox::before {
   background-color: red; // TODO: set image
 }
