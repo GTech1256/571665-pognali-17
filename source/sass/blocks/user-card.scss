@@ -1,5 +1,7 @@
 .user-card {
   position: relative;
+
+  max-width: 285px;
 }
 
 .user-card__level {
@@ -8,7 +10,7 @@
 
 .user-card__pic {
   display: block;
-  width: 270px;
+  width: 100%;
   height: 270px;
 
   border-radius: 10px 10px 0 0;
@@ -111,5 +113,12 @@
 
   &_active {
     fill: $blue-base;
+  }
+}
+
+
+@media all and (min-width: $tablet-width) {
+  .user-card__pic {
+    height: 285px;
   }
 }

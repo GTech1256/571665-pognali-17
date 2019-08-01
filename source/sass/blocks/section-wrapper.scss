@@ -116,3 +116,16 @@
 .section-wrapper__list-user-card {
   margin-bottom: 21px;
 }
+
+@media all and (min-width: $tablet-width) {
+  .section-wrapper__list-user-card {
+    display: flex;
+
+    justify-content: space-around;
+  }
+
+  .section-wrapper__more {
+    width: 618px;
+    margin: 0 auto;
+  }
+}
