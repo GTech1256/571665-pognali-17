@@ -1,6 +1,13 @@
 .top-bar {
+  // max-width: 100vw;
+  width: $mobile-width; // 100vw;
+  min-height: $mobile-top-bar-height;
   padding: 0 25px;
   padding-top: 27px;
+
+  position: absolute;
+  top: 0;
+  overflow: hidden;
 
   &_open {
     background-color: #ffffff;
@@ -66,3 +73,38 @@
     }
   }
 }
+
+@media #{$media-tablet-more} {
+  .top-bar {
+    width: $tablet-width;
+    min-height: $tablet-top-bar-height;
+    padding: 0 40px;
+    padding-top: 40px;
+  }
+
+  .top-bar__toggle-btn {
+    margin: auto;
+  }
+}
+
+
+@media #{$media-desktop-more} {
+  .top-bar {
+    width: $desktop-width;
+    min-height: $desktop-top-bar-height;
+    background-color: #161c34;
+  }
+
+  .top-bar__top-wrappers {
+    justify-content: flex-start;
+  }
+
+  .page-header__interaction-buttons {
+    margin-left: auto;
+  }
+
+  .top-bar__toggle-btn {
+    display: none;
+  }
+}
+

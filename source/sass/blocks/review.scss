@@ -24,3 +24,30 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@media #{$media-tablet-more} {
+  .review {
+    width: 40%;
+    padding-left: 25px;
+
+    padding-bottom: 181px;
+  }
+
+  .review__text {
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .review__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .review {
+    width: 285px;
+  }
+}

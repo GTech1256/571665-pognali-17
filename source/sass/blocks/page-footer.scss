@@ -39,4 +39,40 @@
 
 .page-footer__dev-by-text {
   margin: 0;
+
+  font-size: 16px;
+  line-height: 29px;
+}
+
+@media #{$media-tablet-more} {
+  .page-footer {
+    display: flex;
+    margin-top: -50px;
+    padding: 49px 40px;
+    padding-bottom: 46px;
+
+    border-radius: 60px 60px 0 0;
+  }
+
+  .page-footer__soc-links {
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+
+  .page-footer__title-img {
+    margin: 0;
+    width: 164px;
+    height: 42px;
+  }
+
+  .page-footer__dev-by-wrapper {
+    border: none;
+  }
+
+  .page-footer__dev-by-text {
+    margin-right: 24px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

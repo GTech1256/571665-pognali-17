@@ -4,11 +4,11 @@
 
   background-color: #edeff6;
 
-  @media screen and (min-width: $tablet-width) {
+  @media #{$media-tablet-more} {
     width: $tablet-width;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @media #{$media-desktop-more} {
     width: $desktop-width;
   }
 }

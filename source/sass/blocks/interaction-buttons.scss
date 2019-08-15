@@ -23,6 +23,14 @@
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
+
+  &_tablet {
+    display: none;
+
+    position: static;
+
+    transform: none;
+  }
 }
 
 .interaction-buttons__button {
@@ -45,5 +53,33 @@
   &_text {
     width: 189px;
     line-height: 40px;
+  }
+}
+
+
+@media #{$media-tablet-more} {
+  .interaction-buttons {
+    display: none;
+  }
+
+  .interaction-buttons__buttons_tablet {
+    display: flex;
+  }
+
+  .interaction-buttons__button_phone,
+  .interaction-buttons__button_email {
+    display: none;
+  }
+
+  .interaction-buttons__button_text {
+    line-height: 50px;
+    height: 50px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .interaction-buttons__button_phone,
+  .interaction-buttons__button_email {
+    display: block;
   }
 }

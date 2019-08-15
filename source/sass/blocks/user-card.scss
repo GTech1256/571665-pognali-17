@@ -105,20 +105,57 @@
 
   fill: #d9d9d9;
 
-  /*
-  &:nth-of-type(1) {
-    margin-right: 11px;
-  }
-  */
-
   &_active {
     fill: $blue-base;
   }
 }
 
 
-@media all and (min-width: $tablet-width) {
+@media #{$media-tablet-more} {
+  .user-card__info {
+    padding: 0 28px;
+
+    border-radius: 0 0 20px 20px;
+  }
+
   .user-card__pic {
     height: 285px;
+
+    border-radius: 20px 20px 0 0;
+  }
+
+  .user-card__countries {
+    margin-bottom: 15px;
+  }
+
+  .user-card__full-name {
+    margin-bottom: 21px;
+  }
+
+  .user-card__user-name-link {
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+
+      left: -22px;
+    }
+  }
+
+  .user-card__tags {
+    margin-bottom: 26px;
+  }
+
+  .user-card__tag {
+    margin: 0 3px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .user-card__transport-preferences {
+    padding-bottom: 20px;
   }
 }
