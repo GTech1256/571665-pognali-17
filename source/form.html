@@ -6,13 +6,13 @@
     <title>Попутчики — Погнали!</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <div class="top-bar top-bar_open"><!-- always on top -->
         <div class="top-bar__top-wrappers">
-          <a class="logo top-bar__logo" href="index.html">
+          <a href="index.html" class="logo top-bar__logo">
             <!-- svg -->
-            <img class="logo__img" src="./img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
+            <img class="logo__img" src="img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
             <!-- /svg -->
           </a>
           <button
@@ -20,7 +20,31 @@
             type="button">
             Открыть меню
           </button>
-        </div>
+          <nav class="page-header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#about-service">О сервисе</a>
+              </li>
+              <li class="nav__item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="nav__item">
+                <a href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+          </nav><!-- /.menu -->
+          <div class="page-header__interaction-buttons">
+            <a class="interaction-button interaction-button_phone" href="tel:555-555-5555">
+              Позвонить нам
+            </a>
+            <a class="interaction-button interaction-button_email" href="mailto:mail@htmlacademy.ru">
+              Написть нам письмо
+            </a>
+            <a class="interaction-button interaction-button_text" href="auth.html">
+              Авторизация
+            </a>
+          </div><!-- /.interaction-buttons__buttons -->
+        </div><!-- /.top-bar__top-wrappers -->
 
         <div class="mobile-menu mobile-menu_open">
           <nav class="mobile-menu__nav">

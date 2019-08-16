@@ -26,3 +26,9 @@
 
   @include cross-before;
 }
+
+@media #{$media-desktop-more} {
+  .companions {
+    padding: 0;
+  }
+}

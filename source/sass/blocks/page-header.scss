@@ -2,7 +2,6 @@
   padding-top: $mobile-top-bar-height;
 
   background-color: #161c36;
-  border-radius: 0 0 30px 30px;
 
   position: relative;
 
@@ -10,6 +9,10 @@
     padding-bottom: 33px;
     border-radius: 0;
   }
+}
+
+.page-header_bordered {
+  border-radius: 0 0 30px 30px;
 }
 
 .page-header__title {
@@ -32,10 +35,13 @@
 @media #{$media-tablet-more} {
   .page-header {
     padding-top: $tablet-top-bar-height;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
 
-    border-radius: 0 0 60px 60px;
     background-color: #182044;
+  }
+
+  .page-header_bordered {
+    border-radius: 0 0 60px 60px;
   }
 
   .page-header__title {
@@ -71,6 +77,10 @@
     padding-top: $desktop-top-bar-height;
 
     background-color: #192144;
+  }
+
+  .page-header__interaction-buttons {
+    margin-left: auto;
   }
 
   .page-header__title {

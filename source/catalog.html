@@ -6,13 +6,13 @@
     <title>Направления — Погнали!</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <div class="top-bar top-bar_open"><!-- always on top -->
         <div class="top-bar__top-wrappers">
-          <a class="logo top-bar__logo" href="index.html">
+          <a href="index.html" class="logo top-bar__logo">
             <!-- svg -->
-            <img class="logo__img" src="./img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
+            <img class="logo__img" src="img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
             <!-- /svg -->
           </a>
           <button
@@ -20,7 +20,31 @@
             type="button">
             Открыть меню
           </button>
-        </div>
+          <nav class="page-header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#about-service">О сервисе</a>
+              </li>
+              <li class="nav__item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="nav__item">
+                <a href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+          </nav><!-- /.menu -->
+          <div class="page-header__interaction-buttons">
+            <a class="interaction-button interaction-button_phone" href="tel:555-555-5555">
+              Позвонить нам
+            </a>
+            <a class="interaction-button interaction-button_email" href="mailto:mail@htmlacademy.ru">
+              Написть нам письмо
+            </a>
+            <a class="interaction-button interaction-button_text" href="auth.html">
+              Авторизация
+            </a>
+          </div><!-- /.interaction-buttons__buttons -->
+        </div><!-- /.top-bar__top-wrappers -->
 
         <div class="mobile-menu mobile-menu_open">
           <nav class="mobile-menu__nav">
@@ -332,749 +356,774 @@
 
 
       </section><!-- /.companions-country-filter -->
+      <div class="page-main__catalog-content-wrapper">
+        <section class="page-main__companions-filter companions-filter">
+          <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <ul class="accordion">
+              <li class="accordion__item">
 
-      <section class="companions-filter">
-        <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <ul class="accordion">
-            <li class="accordion__item">
-
-              <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
-              <label class="accordion__title" for="accordion-1">
-                Хобби
-              </label>
-              <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-1">
-              <div class="accordion__body">
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-1" name="hobby-1">
-                  <label class="accordion__value" for="hobby-1">
-                    Хобби 1
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-2" name="hobby-2">
-                  <label class="accordion__value" for="hobby-2">
-                    Хобби 2
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-3" name="hobby-3">
-                  <label class="accordion__value" for="hobby-3">
-                    Хобби 3
-                  </label>
-              </div>
-            </li><!-- /.accordion__item -->
-            <li class="accordion__item">
-
-              <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
-              <label class="accordion__title" for="accordion-2">
-                Музыка
-              </label>
-              <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-2" checked>
-              <div class="accordion__body">
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="hard-rock" name="hard-rock" checked>
-                  <label class="accordion__value" for="hard-rock">
-                    Тяжелый рок
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="rus-rap" name="rus-rap">
-                  <label class="accordion__value" for="rus-rap">
-                    Русский рэп
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="eurodance" name="eurodance">
-                  <label class="accordion__value" for="eurodance">
-                    Евроденс
-                  </label>
-              </div>
-            </li><!-- /.accordion__item -->
-            <li class="accordion__item">
-              <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
-              <label class="accordion__title" for="accordion-3">
-                Еда
-              </label>
-              <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-3">
-              <div class="accordion__body">
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="food-1" name="food-1" checked>
-                  <label class="accordion__value" for="food-1">
-                    food-1
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="food-2" name="food-2">
-                  <label class="accordion__value" for="food-2">
-                    food-2
-                  </label>
-                  <input class="visually-hidden accordion__value-control" type="checkbox" id="food-3" name="food-3">
-                  <label class="accordion__value" for="food-3">
-                    food-3
-                  </label>
-              </div>
-            </li><!-- /.accordion__item -->
-            <li class="accordion__item">
-              <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
-              <label class="accordion__title" for="accordion-4">
-                Транспорт
-              </label>
-              <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-4" checked>
-              <div class="accordion__body">
-                <input class="visually-hidden accordion__value-control" type="checkbox" id="air-flight" name="air-flight" checked>
-                <label class="accordion__value tooltip-wrapper" for="air-flight">
-                  <img
-                    class="accordion___transport"
-                    src="http://placehold.it/19x21"
-                    alt="Авиаперелет"
-                    width="19"
-                    height="21"
-                  >
-                  <span class="tooltip-wrapper__content">Авиаперелет</span>
+                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <label class="accordion__title" for="accordion-1">
+                  Хобби
                 </label>
-                <input class="visually-hidden accordion__value-control" type="checkbox" id="automobile" name="automobile" checked>
-                <label class="accordion__value tooltip-wrapper" for="automobile">
-                  <img
-                    class="accordion___transport"
-                    src="http://placehold.it/19x21"
-                    alt="Автотранспорт"
-                    width="19"
-                    height="21"
-                  >
-                  <span class="tooltip-wrapper__content">Автотранспорт</span>
-                </label>
-                <input class="visually-hidden accordion__value-control" type="checkbox" id="bicycle" name="bicycle">
-                <label class="accordion__value tooltip-wrapper" for="bicycle">
-                  <img
-                    class="accordion___transport"
-                    src="http://placehold.it/19x21"
-                    alt="Велосипед"
-                    width="19"
-                    height="21"
-                  >
-                  <span class="tooltip-wrapper__content">Велосипед</span>
-                </label>
-                <input class="visually-hidden accordion__value-control" type="checkbox" id="afoot" name="afoot" checked>
-                <label class="accordion__value" for="afoot">
-                  <img
-                    class="accordion___transport"
-                    src="http://placehold.it/19x21"
-                    alt="Пешком"
-                    width="19"
-                    height="21"
-                  >
-                  <span class="tooltip-wrapper__content">Пешком</span>
-                </label>
-              </div><!-- accordion__body -->
-            </li><!-- /.accordion__item -->
-            <li class="accordion__item">
-              <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
-              <label class="accordion__title" for="accordion-5">
-                Левел
-              </label>
-              <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-5" checked>
-              <div class="accordion__body">
-                <label class="accordion__level-label">
-                  <span class="visually-hidden">Левел от</span>
-                  <input
-                    type="number"
-                    class="accordion__level-input"
-                    name="level-from"
-                    required
-                    min="0"
-                    max="100"
-                    value="30"
-                    placeholder="0-100"
-                  >
-                </label>
-                <label class="accordion__level-label">
-                  <span class="visually-hidden">Левел до</span>
-                  <input
-                    type="number"
-                    class="accordion__level-input"
-                    name="level-to"
-                    required
-                    min="0"
-                    max="100"
-                    value="100"
-                    placeholder="0-100"
-                  >
-                </label>
-                <div class="accordion__level-slider">
-                  <span class="visually-hidden">Ползунки диапозона уровней</span>
-                  <button
-                    class="accordion__level-slider-element accordion__level-slider-element_from"
-                    type="button"
-                  >
-                    от 30
-                  </button>
-                  <button
-                    class="accordion__level-slider-element accordion__level-slider-element_to"
-                    type="button"
-                  >
-                    до 100
-                  </button>
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-1">
+                <div class="accordion__body">
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-1" name="hobby-1">
+                    <label class="accordion__value" for="hobby-1">
+                      Хобби 1
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-2" name="hobby-2">
+                    <label class="accordion__value" for="hobby-2">
+                      Хобби 2
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-3" name="hobby-3">
+                    <label class="accordion__value" for="hobby-3">
+                      Хобби 3
+                    </label>
                 </div>
-              </div><!-- accordion__body -->
-            </li><!-- /.accordion__item -->
-          </ul><!-- /.accordion -->
+              </li><!-- /.accordion__item -->
+              <li class="accordion__item">
 
-          <button class="link-btn link-btn_width_230 link-btn_bgc_white" type="submit">
-            Показать
-          </button>
-        </form>
-
-      </section>
-
-
-      <section class="companions">
-        <h2 class="visually-hidden">
-          Список попутчиков
-        </h2>
-        <ul class="companions__list">
-          <li class="companions__profile user-card-filter">
-            <div class="user-card-filter__visual-info">
-                <div class="user-card-filter__pic-wrapper">
-                  <a href="#">
+                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <label class="accordion__title" for="accordion-2">
+                  Музыка
+                </label>
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-2" checked>
+                <div class="accordion__body">
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="hard-rock" name="hard-rock" checked>
+                    <label class="accordion__value" for="hard-rock">
+                      Тяжелый рок
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="rus-rap" name="rus-rap">
+                    <label class="accordion__value" for="rus-rap">
+                      Русский рэп
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="eurodance" name="eurodance">
+                    <label class="accordion__value" for="eurodance">
+                      Евроденс
+                    </label>
+                </div>
+              </li><!-- /.accordion__item -->
+              <li class="accordion__item">
+                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <label class="accordion__title" for="accordion-3">
+                  Еда
+                </label>
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-3">
+                <div class="accordion__body">
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="food-1" name="food-1" checked>
+                    <label class="accordion__value" for="food-1">
+                      food-1
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="food-2" name="food-2">
+                    <label class="accordion__value" for="food-2">
+                      food-2
+                    </label>
+                    <input class="visually-hidden accordion__value-control" type="checkbox" id="food-3" name="food-3">
+                    <label class="accordion__value" for="food-3">
+                      food-3
+                    </label>
+                </div>
+              </li><!-- /.accordion__item -->
+              <li class="accordion__item">
+                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <label class="accordion__title" for="accordion-4">
+                  Транспорт
+                </label>
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-4" checked>
+                <div class="accordion__body">
+                  <input class="visually-hidden accordion__value-control" type="checkbox" id="air-flight" name="air-flight" checked>
+                  <label class="accordion__value tooltip-wrapper" for="air-flight">
                     <img
-                      class="user-card-filter__pic"
-                      src="http://placehold.it/70x70"
-                      alt="Фотография пользователя"
-                      width="70"
-                      height="70"
+                      class="accordion___transport"
+                      src="http://placehold.it/19x21"
+                      alt="Авиаперелет"
+                      width="19"
+                      height="21"
                     >
-                  </a>
-                  <button class="user-card-filter__favorite-wrapper" type="button">
-                    Добавить пользователя в избранные
-                  </button>
-                </div><!-- /.user-card-filter__pic-wrapper -->
-                <div class="user-card-filter__fullname-wrapper">
-                  <p class="user-card-filter__fullname">
+                    <span class="tooltip-wrapper__content">Авиаперелет</span>
+                  </label>
+                  <input class="visually-hidden accordion__value-control" type="checkbox" id="automobile" name="automobile" checked>
+                  <label class="accordion__value tooltip-wrapper" for="automobile">
+                    <img
+                      class="accordion___transport"
+                      src="http://placehold.it/19x21"
+                      alt="Автотранспорт"
+                      width="19"
+                      height="21"
+                    >
+                    <span class="tooltip-wrapper__content">Автотранспорт</span>
+                  </label>
+                  <input class="visually-hidden accordion__value-control" type="checkbox" id="bicycle" name="bicycle">
+                  <label class="accordion__value tooltip-wrapper" for="bicycle">
+                    <img
+                      class="accordion___transport"
+                      src="http://placehold.it/19x21"
+                      alt="Велосипед"
+                      width="19"
+                      height="21"
+                    >
+                    <span class="tooltip-wrapper__content">Велосипед</span>
+                  </label>
+                  <input class="visually-hidden accordion__value-control" type="checkbox" id="afoot" name="afoot" checked>
+                  <label class="accordion__value" for="afoot">
+                    <img
+                      class="accordion___transport"
+                      src="http://placehold.it/19x21"
+                      alt="Пешком"
+                      width="19"
+                      height="21"
+                    >
+                    <span class="tooltip-wrapper__content">Пешком</span>
+                  </label>
+                </div><!-- accordion__body -->
+              </li><!-- /.accordion__item -->
+              <li class="accordion__item">
+                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <label class="accordion__title" for="accordion-5">
+                  Левел
+                </label>
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-5" checked>
+                <div class="accordion__body">
+                  <label class="accordion__level-label">
+                    <span class="visually-hidden">Левел от</span>
+                    <input
+                      type="number"
+                      class="accordion__level-input"
+                      name="level-from"
+                      required
+                      min="0"
+                      max="100"
+                      value="30"
+                      placeholder="0-100"
+                    >
+                  </label>
+                  <label class="accordion__level-label">
+                    <span class="visually-hidden">Левел до</span>
+                    <input
+                      type="number"
+                      class="accordion__level-input"
+                      name="level-to"
+                      required
+                      min="0"
+                      max="100"
+                      value="100"
+                      placeholder="0-100"
+                    >
+                  </label>
+                  <div class="accordion__level-slider">
+                    <span class="visually-hidden">Ползунки диапозона уровней</span>
+                    <button
+                      class="accordion__level-slider-element accordion__level-slider-element_from"
+                      type="button"
+                    >
+                      от 30
+                    </button>
+                    <button
+                      class="accordion__level-slider-element accordion__level-slider-element_to"
+                      type="button"
+                    >
+                      до 100
+                    </button>
+                  </div>
+                </div><!-- accordion__body -->
+              </li><!-- /.accordion__item -->
+            </ul><!-- /.accordion -->
+
+            <button class="link-btn link-btn_width_230 link-btn_bgc_white" type="submit">
+              Показать
+            </button>
+          </form>
+
+        </section>
+
+
+        <section class="companions">
+          <h2 class="visually-hidden">
+            Список попутчиков
+          </h2>
+          <ul class="companions__list">
+            <li class="companions__profile user-card-filter">
+              <div class="user-card-filter__visual-info">
+                  <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      Таня
-                      Фирсова
+                      <img
+                        class="user-card-filter__pic"
+                        src="http://placehold.it/70x70"
+                        alt="Фотография пользователя"
+                        width="70"
+                        height="70"
+                      >
                     </a>
+                  </div><!-- /.user-card-filter__pic-wrapper -->
+                  <div class="user-card-filter__fullname-wrapper">
+                    <p class="user-card-filter__fullname">
+                      <a href="#">
+                        Таня
+                        Фирсова
+                      </a>
+                    </p>
+                    <p class="user-card-filter__popularity">
+                      <button class="user-card-filter__favorite-wrapper" type="button">
+                        Добавить пользователя в избранные
+                      </button>
+                      1,5 м
+                    </p>
+                  </div>
+                  <p class="user-card-filter__online-status">
+                    Пользователь вне сети
                   </p>
-                  <p class="user-card-filter__popularity">
-                    1,5 м
-                  </p>
-                </div>
-                <p class="user-card-filter__online-status">
-                  Пользователь вне сети
-                </p>
-            </div><!-- /.user-card-filter__visual-info -->
-            <p class="user-card-filter__tags">
-              <span class="user-card-filter__tag">#ЗОЖ</span>
-              <span class="user-card-filter__tag">#ПП</span>
-              <span class="user-card-filter__tag">#Фитнес</span>
-              <span class="user-card-filter__tag">#пляж</span>
-              <span class="user-card-filter__tag">#авокадо</span>
-              <span class="user-card-filter__tag">#смузи</span>
-            </p>
-            <div class="user-card-filter__want-visit want-visit">
-              <p class="want-visit__title">
-                хочет посетить:
+              </div><!-- /.user-card-filter__visual-info -->
+              <p class="user-card-filter__tags">
+                <span class="user-card-filter__tag">#ЗОЖ</span>
+                <span class="user-card-filter__tag">#ПП</span>
+                <span class="user-card-filter__tag">#Фитнес</span>
+                <span class="user-card-filter__tag">#пляж</span>
+                <span class="user-card-filter__tag">#авокадо</span>
+                <span class="user-card-filter__tag">#смузи</span>
               </p>
-              <ul class="want-visit__list">
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Шри ланка" width="26" height="18">
-                  <p class="want-visit__country-name">Шри ланка</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Тайланд" width="26" height="18">
-                  <p class="want-visit__country-name">Тайланд</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Сейшелы" width="26" height="18">
-                  <p class="want-visit__country-name">Сейшелы</p>
-                </li>
-              </ul><!-- /.want-visit__list -->
-            </div><!-- /.user-card-filter__want-visit /.want-visit -->
-            <div class="user-card-filter__footer">
-              <div class="user-card-filter___transport-preferences-wrapper">
-                <p class="user-card-filter___transport-preferences-title">транспорт:</p>
-                <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card-filter___transport-preferences-list">
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Авиаперелет"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Авиаперелет
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Автотранспорт"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Автотранспорт
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Велосипед"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Велосипед
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Пешком"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Пешком
-                    </p>
-                  </div>
-                </div><!-- /.user-card-filter___transport-preferences-list -->
-              </div><!-- /.user-card-filter___transport-preferences-wrapper -->
-              <div class="user-card-filter__level round-level">
-                <p class="user-card-filter__level-title">
-                  левел:
+              <div class="user-card-filter__want-visit want-visit">
+                <p class="want-visit__title">
+                  хочет посетить:
                 </p>
-                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
-                <div class="round-level__label">
-                    <p class="round-level__percents round-level__percents_large">
-                      99
-                    </p>
-                </div>
-                <div class="round-level__progress round-level__progress_99">
-
-                    <div class="round-level__pie">
-                      <div class="round-level__left-side round-level__half-circle"></div>
-                      <div class="round-level__right-side round-level__half-circle"></div>
+                <ul class="want-visit__list">
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Шри ланка" width="26" height="18">
+                    <p class="want-visit__country-name">Шри ланка</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Тайланд" width="26" height="18">
+                    <p class="want-visit__country-name">Тайланд</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Сейшелы" width="26" height="18">
+                    <p class="want-visit__country-name">Сейшелы</p>
+                  </li>
+                </ul><!-- /.want-visit__list -->
+              </div><!-- /.user-card-filter__want-visit /.want-visit -->
+              <div class="user-card-filter__footer">
+                <div class="user-card-filter___transport-preferences-wrapper">
+                  <p class="user-card-filter___transport-preferences-title">транспорт:</p>
+                  <span class="visually-hidden">Предпочтения пользователя</span>
+                  <div class="user-card-filter___transport-preferences-list">
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Авиаперелет"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Авиаперелет
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Автотранспорт"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Автотранспорт
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Велосипед"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Велосипед
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Пешком"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Пешком
+                      </p>
+                    </div>
+                  </div><!-- /.user-card-filter___transport-preferences-list -->
+                </div><!-- /.user-card-filter___transport-preferences-wrapper -->
+                <div class="user-card-filter__level round-level">
+                  <p class="user-card-filter__level-title">
+                    левел:
+                  </p>
+                  <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                  <div class="round-level__label">
+                      <p class="round-level__percents round-level__percents_large">
+                        99
+                      </p>
                   </div>
-                </div>
-              </div> <!-- /.user-card-filter__level /.round-level -->
-            </div><!-- /.user-card-filter__footer -->
-            <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
-              позвать!
-            </a>
-          </li><!-- /.companions__profile /.user-card-filter -->
-          <li class="companions__profile user-card-filter">
-            <div class="user-card-filter__visual-info">
-                <div class="user-card-filter__pic-wrapper">
-                  <a href="#">
-                    <img
-                      class="user-card-filter__pic"
-                      src="http://placehold.it/70x70"
-                      alt="Фотография пользователя"
-                      width="70"
-                      height="70"
-                    >
-                  </a>
-                  <button class="user-card-filter__favorite-wrapper" type="button">
-                    Добавить пользователя в избранные
-                  </button>
-                </div><!-- /.user-card-filter__pic-wrapper -->
-                <div class="user-card-filter__fullname-wrapper">
-                  <p class="user-card-filter__fullname">
+                  <div class="round-level__progress round-level__progress_99">
+
+                      <div class="round-level__pie">
+                        <div class="round-level__left-side round-level__half-circle"></div>
+                        <div class="round-level__right-side round-level__half-circle"></div>
+                    </div>
+                  </div>
+                </div> <!-- /.user-card-filter__level /.round-level -->
+              </div><!-- /.user-card-filter__footer -->
+              <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
+                позвать!
+              </a>
+            </li><!-- /.companions__profile /.user-card-filter -->
+            <li class="companions__profile user-card-filter">
+              <div class="user-card-filter__visual-info">
+                  <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      Петя
-                      Демин
+                      <img
+                        class="user-card-filter__pic"
+                        src="http://placehold.it/70x70"
+                        alt="Фотография пользователя"
+                        width="70"
+                        height="70"
+                      >
                     </a>
+                  </div><!-- /.user-card-filter__pic-wrapper -->
+                  <div class="user-card-filter__fullname-wrapper">
+                    <p class="user-card-filter__fullname">
+                      <a href="#">
+                        Петя
+                        Демин
+                      </a>
+                    </p>
+                    <p class="user-card-filter__popularity">
+                      <button class="user-card-filter__favorite-wrapper" type="button">
+                        Добавить пользователя в избранные
+                      </button>
+                      150
+                    </p>
+                  </div>
+                  <p class="user-card-filter__online-status">
+                    Пользователь вне сети
                   </p>
-                  <p class="user-card-filter__popularity">
-                    150
-                  </p>
-                </div>
-                <p class="user-card-filter__online-status">
-                  Пользователь вне сети
-                </p>
-            </div><!-- /.user-card-filter__visual-info -->
-            <p class="user-card-filter__tags">
-              <span class="user-card-filter__tag">#бургер</span>
-              <span class="user-card-filter__tag">#бар</span>
-              <span class="user-card-filter__tag">#футбол</span>
-              <span class="user-card-filter__tag">#концерт</span>
-              <span class="user-card-filter__tag">#крафт</span>
-            </p>
-            <div class="user-card-filter__want-visit want-visit">
-              <p class="want-visit__title">
-                хочет посетить:
+              </div><!-- /.user-card-filter__visual-info -->
+              <p class="user-card-filter__tags">
+                <span class="user-card-filter__tag">#бургер</span>
+                <span class="user-card-filter__tag">#бар</span>
+                <span class="user-card-filter__tag">#футбол</span>
+                <span class="user-card-filter__tag">#концерт</span>
+                <span class="user-card-filter__tag">#крафт</span>
               </p>
-              <ul class="want-visit__list">
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Бельгия" width="26" height="18">
-                  <p class="want-visit__country-name">Бельгия</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Чехия" width="26" height="18">
-                  <p class="want-visit__country-name">Чехия</p>
-                </li>
-              </ul><!-- /.want-visit__list -->
-            </div><!-- /.user-card-filter__want-visit /.want-visit -->
-            <div class="user-card-filter__footer">
-              <div class="user-card-filter___transport-preferences-wrapper">
-                <p class="user-card-filter___transport-preferences-title">транспорт:</p>
-                <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card-filter___transport-preferences-list">
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Авиаперелет
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Автотранспорт"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Автотранспорт
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Велосипед"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Велосипед
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Пешком"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Пешком
-                    </p>
-                  </div>
-                </div><!-- /.user-card-filter___transport-preferences-list -->
-              </div><!-- /.user-card-filter___transport-preferences-wrapper -->
-              <div class="user-card-filter__level round-level">
-                <p class="user-card-filter__level-title">
-                  левел:
+              <div class="user-card-filter__want-visit want-visit">
+                <p class="want-visit__title">
+                  хочет посетить:
                 </p>
-                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
-                <div class="round-level__label">
-                    <p class="round-level__percents round-level__percents_large">
-                      80
-                    </p>
-                </div>
-                <div class="round-level__progress round-level__progress_80">
-
-                    <div class="round-level__pie">
-                      <div class="round-level__left-side round-level__half-circle"></div>
-                      <div class="round-level__right-side round-level__half-circle"></div>
+                <ul class="want-visit__list">
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Бельгия" width="26" height="18">
+                    <p class="want-visit__country-name">Бельгия</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Чехия" width="26" height="18">
+                    <p class="want-visit__country-name">Чехия</p>
+                  </li>
+                </ul><!-- /.want-visit__list -->
+              </div><!-- /.user-card-filter__want-visit /.want-visit -->
+              <div class="user-card-filter__footer">
+                <div class="user-card-filter___transport-preferences-wrapper">
+                  <p class="user-card-filter___transport-preferences-title">транспорт:</p>
+                  <span class="visually-hidden">Предпочтения пользователя</span>
+                  <div class="user-card-filter___transport-preferences-list">
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Авиаперелет
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Автотранспорт"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Автотранспорт
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Велосипед"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Велосипед
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Пешком"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Пешком
+                      </p>
+                    </div>
+                  </div><!-- /.user-card-filter___transport-preferences-list -->
+                </div><!-- /.user-card-filter___transport-preferences-wrapper -->
+                <div class="user-card-filter__level round-level">
+                  <p class="user-card-filter__level-title">
+                    левел:
+                  </p>
+                  <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                  <div class="round-level__label">
+                      <p class="round-level__percents round-level__percents_large">
+                        80
+                      </p>
                   </div>
-                </div>
-              </div> <!-- /.user-card-filter__level /.round-level -->
-            </div><!-- /.user-card-filter__footer -->
-            <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
-              позвать!
-            </a>
-          </li><!-- /.companions__profile /.user-card-filter -->
-          <li class="companions__profile user-card-filter">
-            <div class="user-card-filter__visual-info">
-                <div class="user-card-filter__pic-wrapper">
-                  <a href="#">
-                    <img
-                      class="user-card-filter__pic"
-                      src="http://placehold.it/70x70"
-                      alt="Фотография пользователя"
-                      width="70"
-                      height="70"
-                    >
-                  </a>
-                  <button class="user-card-filter__favorite-wrapper" type="button">
-                    Добавить пользователя в избранные
-                  </button>
-                </div><!-- /.user-card-filter__pic-wrapper -->
-                <div class="user-card-filter__fullname-wrapper">
-                  <p class="user-card-filter__fullname">
+                  <div class="round-level__progress round-level__progress_80">
+
+                      <div class="round-level__pie">
+                        <div class="round-level__left-side round-level__half-circle"></div>
+                        <div class="round-level__right-side round-level__half-circle"></div>
+                    </div>
+                  </div>
+                </div> <!-- /.user-card-filter__level /.round-level -->
+              </div><!-- /.user-card-filter__footer -->
+              <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
+                позвать!
+              </a>
+            </li><!-- /.companions__profile /.user-card-filter -->
+            <li class="companions__profile user-card-filter">
+              <div class="user-card-filter__visual-info">
+                  <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      Марк
-                      Смолов
+                      <img
+                        class="user-card-filter__pic"
+                        src="http://placehold.it/70x70"
+                        alt="Фотография пользователя"
+                        width="70"
+                        height="70"
+                      >
                     </a>
+                  </div><!-- /.user-card-filter__pic-wrapper -->
+                  <div class="user-card-filter__fullname-wrapper">
+                    <p class="user-card-filter__fullname">
+                      <a href="#">
+                        Марк
+                        Смолов
+                      </a>
+                    </p>
+                    <p class="user-card-filter__popularity">
+                      <button class="user-card-filter__favorite-wrapper" type="button">
+                        Добавить пользователя в избранные
+                      </button>
+                      1700
+                    </p>
+                  </div>
+                  <p class="user-card-filter__online-status">
+                    Пользователь вне сети
                   </p>
-                  <p class="user-card-filter__popularity">
-                    1700
-                  </p>
-                </div>
-                <p class="user-card-filter__online-status">
-                  Пользователь вне сети
-                </p>
-            </div><!-- /.user-card-filter__visual-info -->
-            <p class="user-card-filter__tags">
-              <span class="user-card-filter__tag">#рэп</span>
-              <span class="user-card-filter__tag">#тату</span>
-              <span class="user-card-filter__tag">#хайпбист</span>
-              <span class="user-card-filter__tag">#кроссовки</span>
-              <span class="user-card-filter__tag">#суприм</span>
-            </p>
-            <div class="user-card-filter__want-visit want-visit">
-              <p class="want-visit__title">
-                хочет посетить:
+              </div><!-- /.user-card-filter__visual-info -->
+              <p class="user-card-filter__tags">
+                <span class="user-card-filter__tag">#рэп</span>
+                <span class="user-card-filter__tag">#тату</span>
+                <span class="user-card-filter__tag">#хайпбист</span>
+                <span class="user-card-filter__tag">#кроссовки</span>
+                <span class="user-card-filter__tag">#суприм</span>
               </p>
-              <ul class="want-visit__list">
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="США" width="26" height="18">
-                  <p class="want-visit__country-name">США</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Австралия" width="26" height="18">
-                  <p class="want-visit__country-name">Австралия</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Доминикана" width="26" height="18">
-                  <p class="want-visit__country-name">Доминикана</p>
-                </li>
-              </ul><!-- /.want-visit__list -->
-            </div><!-- /.user-card-filter__want-visit /.want-visit -->
-            <div class="user-card-filter__footer">
-              <div class="user-card-filter___transport-preferences-wrapper">
-                <p class="user-card-filter___transport-preferences-title">транспорт:</p>
-                <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card-filter___transport-preferences-list">
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Авиаперелет"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Авиаперелет
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Автотранспорт"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Автотранспорт
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Велосипед"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Велосипед
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Пешком"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Пешком
-                    </p>
-                  </div>
-                </div><!-- /.user-card-filter___transport-preferences-list -->
-              </div><!-- /.user-card-filter___transport-preferences-wrapper -->
-              <div class="user-card-filter__level round-level">
-                <p class="user-card-filter__level-title">
-                  левел:
+              <div class="user-card-filter__want-visit want-visit">
+                <p class="want-visit__title">
+                  хочет посетить:
                 </p>
-                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
-                <div class="round-level__label">
-                    <p class="round-level__percents round-level__percents_large">
-                      25
-                    </p>
-                </div>
-                <div class="round-level__progress round-level__progress_25">
-
-                    <div class="round-level__pie">
-                      <div class="round-level__left-side round-level__half-circle"></div>
-                      <div class="round-level__right-side round-level__half-circle"></div>
+                <ul class="want-visit__list">
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="США" width="26" height="18">
+                    <p class="want-visit__country-name">США</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Австралия" width="26" height="18">
+                    <p class="want-visit__country-name">Австралия</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Доминикана" width="26" height="18">
+                    <p class="want-visit__country-name">Доминикана</p>
+                  </li>
+                </ul><!-- /.want-visit__list -->
+              </div><!-- /.user-card-filter__want-visit /.want-visit -->
+              <div class="user-card-filter__footer">
+                <div class="user-card-filter___transport-preferences-wrapper">
+                  <p class="user-card-filter___transport-preferences-title">транспорт:</p>
+                  <span class="visually-hidden">Предпочтения пользователя</span>
+                  <div class="user-card-filter___transport-preferences-list">
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Авиаперелет"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Авиаперелет
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Автотранспорт"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Автотранспорт
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Велосипед"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Велосипед
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Пешком"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Пешком
+                      </p>
+                    </div>
+                  </div><!-- /.user-card-filter___transport-preferences-list -->
+                </div><!-- /.user-card-filter___transport-preferences-wrapper -->
+                <div class="user-card-filter__level round-level">
+                  <p class="user-card-filter__level-title">
+                    левел:
+                  </p>
+                  <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                  <div class="round-level__label">
+                      <p class="round-level__percents round-level__percents_large">
+                        25
+                      </p>
                   </div>
-                </div>
-              </div> <!-- /.user-card-filter__level /.round-level -->
-            </div><!-- /.user-card-filter__footer -->
-            <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
-              позвать!
-            </a>
-          </li><!-- /.companions__profile /.user-card-filter -->
-          <li class="companions__profile user-card-filter">
-            <div class="user-card-filter__visual-info">
-                <div class="user-card-filter__pic-wrapper">
-                  <a href="#">
-                    <img
-                      class="user-card-filter__pic"
-                      src="http://placehold.it/70x70"
-                      alt="Фотография пользователя"
-                      width="70"
-                      height="70"
-                    >
-                  </a>
-                  <button class="user-card-filter__favorite-wrapper" type="button">
-                    Добавить пользователя в избранные
-                  </button>
-                </div><!-- /.user-card-filter__pic-wrapper -->
-                <div class="user-card-filter__fullname-wrapper">
-                  <p class="user-card-filter__fullname">
+                  <div class="round-level__progress round-level__progress_25">
+
+                      <div class="round-level__pie">
+                        <div class="round-level__left-side round-level__half-circle"></div>
+                        <div class="round-level__right-side round-level__half-circle"></div>
+                    </div>
+                  </div>
+                </div> <!-- /.user-card-filter__level /.round-level -->
+              </div><!-- /.user-card-filter__footer -->
+              <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
+                позвать!
+              </a>
+            </li><!-- /.companions__profile /.user-card-filter -->
+            <li class="companions__profile user-card-filter">
+              <div class="user-card-filter__visual-info">
+                  <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      Ларисап
-                      Роговая
+                      <img
+                        class="user-card-filter__pic"
+                        src="http://placehold.it/70x70"
+                        alt="Фотография пользователя"
+                        width="70"
+                        height="70"
+                      >
                     </a>
+                  </div><!-- /.user-card-filter__pic-wrapper -->
+                  <div class="user-card-filter__fullname-wrapper">
+                    <p class="user-card-filter__fullname">
+                      <a href="#">
+                        Ларисап
+                        Роговая
+                      </a>
+                    </p>
+                    <p class="user-card-filter__popularity">
+                      <button class="user-card-filter__favorite-wrapper" type="button">
+                        Добавить пользователя в избранные
+                      </button>
+                      23
+                    </p>
+                  </div>
+                  <p class="user-card-filter__online-status user-card-filter__online-status_online">
+                    Пользователь в сети
                   </p>
-                  <p class="user-card-filter__popularity">
-                    23
-                  </p>
-                </div>
-                <p class="user-card-filter__online-status user-card-filter__online-status_online">
-                  Пользователь в сети
-                </p>
-            </div><!-- /.user-card-filter__visual-info -->
-            <p class="user-card-filter__tags">
-              <span class="user-card-filter__tag">#образование</span>
-              <span class="user-card-filter__tag">#карьера</span>
-              <span class="user-card-filter__tag">#учеба</span>
-              <span class="user-card-filter__tag">#линкедин</span>
-            </p>
-            <div class="user-card-filter__want-visit want-visit">
-              <p class="want-visit__title">
-                хочет посетить:
+              </div><!-- /.user-card-filter__visual-info -->
+              <p class="user-card-filter__tags">
+                <span class="user-card-filter__tag">#образование</span>
+                <span class="user-card-filter__tag">#карьера</span>
+                <span class="user-card-filter__tag">#учеба</span>
+                <span class="user-card-filter__tag">#линкедин</span>
               </p>
-              <ul class="want-visit__list">
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Великобритания" width="26" height="18">
-                  <p class="want-visit__country-name">Великобритания</p>
-                </li>
-                <li class="want-visit__country-wrapper">
-                  <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Германия" width="26" height="18">
-                  <p class="want-visit__country-name">Германия</p>
-                </li>
-              </ul><!-- /.want-visit__list -->
-            </div><!-- /.user-card-filter__want-visit /.want-visit -->
-            <div class="user-card-filter__footer">
-              <div class="user-card-filter___transport-preferences-wrapper">
-                <p class="user-card-filter___transport-preferences-title">транспорт:</p>
-                <span class="visually-hidden">Предпочтения пользователя</span>
-                <div class="user-card-filter___transport-preferences-list">
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Авиаперелет"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Авиаперелет
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport user-card-filter___transport_active"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь выбрал Автотранспорт"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Автотранспорт
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Велосипед"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Велосипед
-                    </p>
-                  </div>
-                  <div class="tooltip-wrapper">
-                    <img
-                      class="user-card-filter___transport"
-                      src="http://placehold.it/19x21"
-                      alt="Пользователь не выбрал Пешком"
-                      width="19"
-                      height="21"
-                    >
-                    <p class="tooltip-wrapper__content">
-                      Пешком
-                    </p>
-                  </div>
-                </div><!-- /.user-card-filter___transport-preferences-list -->
-              </div><!-- /.user-card-filter___transport-preferences-wrapper -->
-              <div class="user-card-filter__level round-level">
-                <p class="user-card-filter__level-title">
-                  левел:
+              <div class="user-card-filter__want-visit want-visit">
+                <p class="want-visit__title">
+                  хочет посетить:
                 </p>
-                <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
-                <div class="round-level__label">
-                    <p class="round-level__percents round-level__percents_large">
-                      50
-                    </p>
-                </div>
-                <div class="round-level__progress round-level__progress_50">
-
-                    <div class="round-level__pie">
-                      <div class="round-level__left-side round-level__half-circle"></div>
-                      <div class="round-level__right-side round-level__half-circle"></div>
+                <ul class="want-visit__list">
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Великобритания" width="26" height="18">
+                    <p class="want-visit__country-name">Великобритания</p>
+                  </li>
+                  <li class="want-visit__country-wrapper">
+                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Германия" width="26" height="18">
+                    <p class="want-visit__country-name">Германия</p>
+                  </li>
+                </ul><!-- /.want-visit__list -->
+              </div><!-- /.user-card-filter__want-visit /.want-visit -->
+              <div class="user-card-filter__footer">
+                <div class="user-card-filter___transport-preferences-wrapper">
+                  <p class="user-card-filter___transport-preferences-title">транспорт:</p>
+                  <span class="visually-hidden">Предпочтения пользователя</span>
+                  <div class="user-card-filter___transport-preferences-list">
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Авиаперелет"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Авиаперелет
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport user-card-filter___transport_active"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь выбрал Автотранспорт"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Автотранспорт
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Велосипед"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Велосипед
+                      </p>
+                    </div>
+                    <div class="tooltip-wrapper">
+                      <img
+                        class="user-card-filter___transport"
+                        src="http://placehold.it/19x21"
+                        alt="Пользователь не выбрал Пешком"
+                        width="19"
+                        height="21"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Пешком
+                      </p>
+                    </div>
+                  </div><!-- /.user-card-filter___transport-preferences-list -->
+                </div><!-- /.user-card-filter___transport-preferences-wrapper -->
+                <div class="user-card-filter__level round-level">
+                  <p class="user-card-filter__level-title">
+                    левел:
+                  </p>
+                  <!-- https://codepen.io/GTech1256/pen/ewoxQe -->
+                  <div class="round-level__label">
+                      <p class="round-level__percents round-level__percents_large">
+                        50
+                      </p>
                   </div>
-                </div>
-              </div> <!-- /.user-card-filter__level /.round-level -->
-            </div><!-- /.user-card-filter__footer -->
-            <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
-              позвать!
-            </a>
-          </li><!-- /.companions__profile /.user-card-filter -->
-        </ul><!-- /.companions__list -->
-        <a class="companions__show-more-btn" href="new-companions.html" type="button">
-          Показать еще
-        </a>
-      </section><!-- /.companions -->
+                  <div class="round-level__progress round-level__progress_50">
 
-      <div class="slide-controller">
-        <a
-          class="slide-controller__arrow"
-          href="catalog-prev.html"
-          type="button"
-        >
-          Показать предыдущую страницу
-        </a>
-        <a
-          class="slide-controller__arrow slide-controller__arrow_right"
-          href="catalog-next.html"
-          type="button"
-        >
-          Показать следующую страницу
-        </a>
+                      <div class="round-level__pie">
+                        <div class="round-level__left-side round-level__half-circle"></div>
+                        <div class="round-level__right-side round-level__half-circle"></div>
+                    </div>
+                  </div>
+                </div> <!-- /.user-card-filter__level /.round-level -->
+              </div><!-- /.user-card-filter__footer -->
+              <a class="user-card-filter__link-btn link-btn link-btn_width_230" href="user-invite.html">
+                позвать!
+              </a>
+            </li><!-- /.companions__profile /.user-card-filter -->
+          </ul><!-- /.companions__list -->
+          <a class="companions__show-more-btn" href="new-companions.html" type="button">
+            Показать еще
+          </a>
+        </section><!-- /.companions -->
+
+        <!-- MOBILE PAGINATION -->
+        <div class="slide-controller slide-controller_mobile">
+          <a
+          class="slide-controller__arrow slide-controller__arrow_left"
+            href="catalog-prev.html"
+            type="button"
+          >
+            Показать предыдущую страницу
+          </a>
+          <a
+            class="slide-controller__arrow slide-controller__arrow_right"
+            href="catalog-next.html"
+            type="button"
+          >
+            Показать следующую страницу
+          </a>
+        </div><!-- /.page-main__catalog-content-wrapper -->
+
+        <!-- NON MOBILE PAGINATION -->
+        <div class="page-main__slide-controller slide-controller slide-controller_non-mobile">
+          <ul class="slide-controller__pages">
+            <li class="slide-controller__page slide-controller__page_active"><a>1</a></li>
+            <li class="slide-controller__page"><a href="catalog.html">2</a></li>
+            <li class="slide-controller__page"><a href="catalog.html">3</a></li>
+            <li class="slide-controller__page"><a href="catalog.html">4</a></li>
+          </ul>
+          <a
+            class="slide-controller__arrow slide-controller__arrow_left"
+            href="catalog-prev.html"
+            type="button"
+          >
+            Показать предыдущую страницу
+          </a>
+          <a
+            class="slide-controller__arrow slide-controller__arrow_right"
+            href="catalog-next.html"
+            type="button"
+          >
+            Показать следующую страницу
+          </a>
+        </div><!-- /.slide-controller .slide-controller_non-mobile -->
       </div>
-
 
     </main> <!-- /.page-main -->
     <footer class="page-footer">
