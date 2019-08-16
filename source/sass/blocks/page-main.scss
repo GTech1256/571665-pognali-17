@@ -47,8 +47,10 @@
   }
 
   .page-main__companions-filter {
-    order: 1;
     margin-left: auto;
+
+    order: 1;
+    align-self: flex-start;
   }
 
   .page-main__slide-controller {
