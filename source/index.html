@@ -36,14 +36,14 @@
               </li>
             </ul>
           </nav><!-- /.menu -->
-          <div class="page-header__interaction-buttons interaction-buttons__buttons interaction-buttons__buttons_tablet">
-            <a class="interaction-buttons__button interaction-buttons__button_phone" href="tel:555-555-5555">
+          <div class="page-header__interaction-buttons">
+            <a class="interaction-button interaction-button_phone" href="tel:555-555-5555">
               Позвонить нам
             </a>
-            <a class="interaction-buttons__button interaction-buttons__button_email" href="mailto:mail@htmlacademy.ru">
+            <a class="interaction-button interaction-button_email" href="mailto:mail@htmlacademy.ru">
               Написть нам письмо
             </a>
-            <a class="interaction-buttons__button interaction-buttons__button_text" href="auth.html">
+            <a class="interaction-button interaction-button_text" href="auth.html">
               Авторизация
             </a>
           </div><!-- /.interaction-buttons__buttons -->
@@ -113,13 +113,13 @@
         </h2>
         <div class="interaction-buttons"> <!-- background: man with chemodan -->
           <div class="interaction-buttons__buttons"> <!-- margin-bottom: -20px; -->
-              <a class="interaction-buttons__button interaction-buttons__button_phone" href="tel:555-555-5555">
+              <a class="interaction-button interaction-button_phone" href="tel:555-555-5555">
                 Позвонить нам
               </a>
-              <a class="interaction-buttons__button interaction-buttons__button_email" href="mailto:mail@htmlacademy.ru">
+              <a class="interaction-button interaction-button_email" href="mailto:mail@htmlacademy.ru">
                 Написть нам письмо
               </a>
-              <a class="interaction-buttons__button interaction-buttons__button_text" href="auth.html">
+              <a class="interaction-button interaction-button_text" href="auth.html">
                 Авторизация
               </a>
           </div>
@@ -132,7 +132,7 @@
             главный редактор газеты «гаджетлайф»
           </cite>
         </blockquote>
-        <section class="how-use"> <!-- background: linear-gradient(50%) -->
+        <section class="page-header__hot-use how-use"> <!-- background: linear-gradient(50%) -->
           <ol class="how-use__list">
             <li class="how-use__item">
               <p class="how-use__text">Выберите направление</p>
@@ -161,7 +161,7 @@
         </p>
         <p class="section-wrapper__text section-wrapper__text_bold">
             А если найдете кого-то
-            близкого по духу - скорее
+            близкого по духу - <br class="line-break line-break_desktop">скорее
             зовите в совместный трип!
         </p>
         <a class="section-wrapper__more section-wrapper__more_tablet-and-hight" href="form.html">
@@ -258,10 +258,10 @@
               </div>
             </div>
           </li>
-        </ul>
-        <a class="section-wrapper__more section-wrapper__more_top-shadow" href="form.html">
+        </ul><!-- /.section-wrapper__list -->
+        <a class="section-wrapper__more" href="form.html">
           Показать все
-        </a> <!-- /.section-wrapper__list -->
+        </a>
       </section> <!-- /.section-wrapper -->
 
       <section class="section-wrapper section-wrapper_companions">
@@ -611,22 +611,24 @@
                 Остались вопросы?<br class="line-break line-break_mobile">
           Мы с радостью на них ответим!
         </p>
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_phone contacts-paragraph__link_color_yellow"
-            href="tel:8 800 555-86-28"
-          >
-            8 800 555-86-28
-          </a>
-        </p>
-        <p class="contacts-paragraph">
-          <a
-            class="contacts-paragraph__link contacts-paragraph__link_email contacts-paragraph__link_color_yellow"
-            href="emailto:mail@htmlacademy.ru"
-          >
-            mail@htmlacademy.ru
-          </a>
-        </p>
+        <div class="CTA-form__contacts">
+          <p class="contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_phone contacts-paragraph__link_color_yellow"
+              href="tel:8 800 555-86-28"
+            >
+              8 800 555-86-28
+            </a>
+          </p>
+          <p class="contacts-paragraph">
+            <a
+              class="contacts-paragraph__link contacts-paragraph__link_email contacts-paragraph__link_color_yellow"
+              href="emailto:mail@htmlacademy.ru"
+            >
+              mail@htmlacademy.ru
+            </a>
+          </p>
+        </div>
       </section> <!-- /.CTA-form -->
 
       <section class="address">

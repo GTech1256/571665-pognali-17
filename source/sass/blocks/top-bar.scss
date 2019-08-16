@@ -90,12 +90,17 @@
 
 @media #{$media-desktop-more} {
   .top-bar {
-    width: $desktop-width;
+    width: 100%;
     min-height: $desktop-top-bar-height;
+    padding-top: 48px;
+
     background-color: #161c34;
   }
 
   .top-bar__top-wrappers {
+    width: $desktop-content-max-width;
+    margin: 0 auto;
+
     justify-content: flex-start;
   }
 

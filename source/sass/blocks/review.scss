@@ -49,5 +49,13 @@
 @media #{$media-desktop-more} {
   .review {
     width: 285px;
+    padding: 0;
+    padding-top: 13px;
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  .review__author {
+    padding-left: 4px;
   }
 }

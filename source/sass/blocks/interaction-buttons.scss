@@ -33,53 +33,8 @@
   }
 }
 
-.interaction-buttons__button {
-  @include link-btn;
-
-  height: 40px;
-
-  &_phone {
-    font-size: 0;
-    width: 40px;
-    background: #ff8d30 url("../../img/topmenu-phone.svg") center/18px no-repeat;
-  }
-
-  &_email {
-    font-size: 0;
-    width: 40px;
-    background: #ffbd30 url("../../img/topmenu-mail.svg") center/18px no-repeat;
-  }
-
-  &_text {
-    width: 189px;
-    line-height: 40px;
-  }
-}
-
-
 @media #{$media-tablet-more} {
   .interaction-buttons {
     display: none;
-  }
-
-  .interaction-buttons__buttons_tablet {
-    display: flex;
-  }
-
-  .interaction-buttons__button_phone,
-  .interaction-buttons__button_email {
-    display: none;
-  }
-
-  .interaction-buttons__button_text {
-    line-height: 50px;
-    height: 50px;
-  }
-}
-
-@media #{$media-desktop-more} {
-  .interaction-buttons__button_phone,
-  .interaction-buttons__button_email {
-    display: block;
   }
 }

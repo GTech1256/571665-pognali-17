@@ -260,3 +260,42 @@
     }
   }
 }
+
+@media #{$media-desktop-more} {
+  .add-profile__table {
+    width: 1063px;
+    margin: 0 auto;
+    padding-right: 159px;
+  }
+
+  .add-profile__tariffs::before {
+    width: 444px;
+    right: 0;
+    transform: translateX(33%);
+  }
+
+  .add-profile__tariffs::after {
+    display: block;
+    width: 198px;
+    height: 198px;
+    margin-left: auto;
+
+    position: absolute;
+    right: -250px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: url("../../img/rates@1x.png") no-repeat;
+    background-size: cover;
+    content: "";
+  }
+
+  .add-profile__text-btn {
+    width: 1063px;
+    margin: 0 auto;
+
+    &::after {
+      content: none;
+    }
+  }
+}

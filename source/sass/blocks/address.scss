@@ -95,5 +95,14 @@
   .address {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+  }
+
+  .address__text {
+    margin: 0;
+  }
+
+  .address__path-btn::after {
+    margin-left: 20px;
   }
 }

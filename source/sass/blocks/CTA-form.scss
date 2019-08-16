@@ -127,6 +127,8 @@
 
   .CTA-form__form {
     width: 100%;
+    max-width: 1175px;
+    margin: 0 auto;
     height: 81px;
     margin-bottom: 56px;
   }
@@ -154,5 +156,33 @@
 
   .CTA-form__desc_under-form {
     margin-bottom: 42px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .CTA-form__btn {
+    width: auto;
+    padding-left: 38px;
+
+    &::before {
+      margin-right: 105px;
+
+      color: $blue-base;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 81px;
+
+      content: "Регистрация";
+    }
+
+    &::after {
+      margin-right: 35px;
+    }
+  }
+
+  .CTA-form__contacts {
+    display: flex;
+
+    justify-content: space-around;
   }
 }
