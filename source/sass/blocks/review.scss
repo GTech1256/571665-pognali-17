@@ -3,8 +3,6 @@
   padding-top: 45px;
   margin: 0 48px;
   margin-bottom: 27px;
-
-  background: $blue-darken;
 }
 
 .review__text,
@@ -25,4 +23,39 @@
 .review__author {
   font-weight: 700;
   font-style: normal;
+}
+
+@media #{$media-tablet-more} {
+  .review {
+    width: 40%;
+    padding-left: 25px;
+
+    padding-bottom: 181px;
+  }
+
+  .review__text {
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .review__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .review {
+    width: 285px;
+    padding: 0;
+    padding-top: 13px;
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  .review__author {
+    padding-left: 4px;
+  }
 }

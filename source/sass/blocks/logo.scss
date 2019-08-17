@@ -1,0 +1,10 @@
+.logo {
+  display: block;
+}
+
+@media #{$media-desktop-more} {
+  .logo {
+    width: 200px;
+    height: 52px;
+  }
+}

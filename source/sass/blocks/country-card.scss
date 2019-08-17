@@ -48,7 +48,9 @@
 }
 
 .country-card__people {
+  display: flex;
   margin: 0;
+  align-items: center;
 
   font-size: 16px;
   line-height: 22px;
@@ -57,7 +59,6 @@
   opacity: 0.3;
 
   &::before {
-    display: inline-block;
     width: 11px;
     height: 11px;
 
@@ -77,4 +78,75 @@
   flex-shrink: 1;
 
   opacity: 0.3;
+}
+
+@media #{$media-tablet-more} {
+  .country-card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .country-card__pic {
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0 20px 20px 0;
+  }
+
+  .country-card__info {
+    height: 140px;
+    width: 432px;
+  }
+
+  .country-card__info-wrapper {
+    height: inherit;
+    width: inherit;
+    padding: 0 30px;
+    padding-top: 28px;
+    margin: 0;
+
+    flex-direction: column;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .country-card__flag {
+    width: 70px;
+    height: 47px;
+
+    border-radius: 5px;
+
+    left: auto;
+    right: -35px;
+    top: 16px;
+  }
+
+  .country-card__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .country-card__people {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    order: 1;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      margin-right: 9px;
+    }
+  }
+
+  .country-card__description {
+    margin-bottom: 14px;
+
+    font-size: 20px;
+    line-height: 17.68px;
+
+    order: 0;
+  }
 }

@@ -36,3 +36,24 @@
     content: "";
   }
 }
+
+@media #{$media-desktop-more} {
+  .page-main__catalog-content-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .page-main__companions-filter {
+    margin-left: auto;
+
+    order: 1;
+    align-self: flex-start;
+  }
+
+  .page-main__slide-controller {
+    order: 2;
+  }
+}

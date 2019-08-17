@@ -4,6 +4,7 @@
 
 .contacts-paragraph__link {
   display: flex;
+  align-items: center;
 
   position: relative;
 
@@ -48,5 +49,20 @@
 
   &_color_yellow {
     color: $yellow-base;
+  }
+}
+
+@media #{$media-tablet-more} {
+  .contacts-paragraph__link {
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      margin-right: 23px;
+
+      background-size: 27px;
+    }
   }
 }
