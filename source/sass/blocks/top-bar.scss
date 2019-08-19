@@ -17,6 +17,10 @@
     position: fixed;
     z-index: 1000;
   }
+
+  &_pt-small {
+    padding-top: 19px;
+  }
 }
 
 .top-bar__top-wrappers {

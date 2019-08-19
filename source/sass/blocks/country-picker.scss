@@ -19,7 +19,14 @@
   opacity: 0.3;
 }
 
-.country-picker__name-word-part-control:checked + .country-picker__name-word-part {
+.country-picker__name-word-part-control[id$="europe"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="europe"],
+.country-picker__name-word-part-control[id$="europe"]:checked ~ .country-picker .country-picker__name-word-part[for$="europe"],
+.country-picker__name-word-part-control[id$="asian"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="asian"],
+.country-picker__name-word-part-control[id$="asian"]:checked ~ .country-picker .country-picker__name-word-part[for$="asian"],
+.country-picker__name-word-part-control[id$="usa"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="usa"],
+.country-picker__name-word-part-control[id$="usa"]:checked ~ .country-picker .country-picker__name-word-part[for$="usa"],
+.country-picker__name-word-part-control[id$="islands"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="islands"],
+.country-picker__name-word-part-control[id$="islands"]:checked ~ .country-picker .country-picker__name-word-part[for$="islands"] {
   opacity: 1;
 }
 
@@ -91,5 +98,36 @@
 
   &::before {
     transform: rotate(-45deg);
+  }
+}
+
+.country-picker__name-words {
+  display: none;
+}
+
+@media #{$media-tablet-more} {
+  .country-picker__name-words {
+    display: flex;
+  }
+
+  .companions-country-filter__country-picker-control:checked ~ .country-picker {
+    display: flex;
+  }
+
+  .country-picker {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .country-picker__name-words-mobile {
+    display: none;
+  }
+
+  .country-picker__name-word-part {
+    margin-right: 20px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
   }
 }

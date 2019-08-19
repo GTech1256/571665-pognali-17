@@ -1,12 +1,23 @@
 .country-picker-bar {
   display: flex;
   align-items: center;
-  padding-left: 30px;
+}
+
+.country-picker-bar__title {
+  display: flex;
+  margin: 0;
+
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: $blue-nav-text;
 
   &::before {
     display: block;
     width: 15px;
     height: 10px;
+    margin-right: 12px;
 
     background: url("../../img/filter.svg");
 
@@ -14,11 +25,17 @@
   }
 }
 
+.country-picker-bar__toggle-title {
+  display: none;
+  margin: 0;
+}
+
 .country-picker-bar__toggle-element-wrapper {
   display: flex;
   width: 17px;
   justify-content: space-between;
   margin-left: auto;
+  margin-right: 4px;
 
   position: relative;
 }
@@ -48,5 +65,27 @@
     &:nth-child(3) {
       transform: rotate(-45deg);
     }
+  }
+}
+
+@media #{$media-tablet-more} {
+  .country-picker-bar {
+    min-height: 130px;
+    padding: 0;
+
+  }
+
+  .country-picker-bar__toggle-title {
+    display: block;
+  }
+
+  .country-picker-bar__title {
+    display: none;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .country-picker-bar__title {
+    display: flex;
   }
 }

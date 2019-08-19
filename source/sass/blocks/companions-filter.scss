@@ -9,7 +9,11 @@
 
 .companions-filter__title {
   margin: 0;
+  margin-bottom: 23px;
+
   color: $blue-base;
+  font-size: 22.5px;
+  line-height: 22.5px;
 }
 
 @media #{$media-tablet-more} {

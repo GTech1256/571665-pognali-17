@@ -1,6 +1,17 @@
 .companions-country-filter {
-  padding: 0 25px;
+  padding: 10px 25px;
+  padding-top: 32px;
+  margin-top: -20px;
+  margin-bottom: 24px;
 
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
+}
+
+@media #{$media-tablet-more} {
+  .companions-country-filter {
+    padding: 0 74px;
+
+    border-radius: 0 0 60px 60px;
+  }
 }

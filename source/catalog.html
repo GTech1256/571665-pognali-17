@@ -8,7 +8,7 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="top-bar top-bar_open"><!-- always on top -->
+      <div class="top-bar top-bar_pt-small top-bar_open"><!-- always on top -->
         <div class="top-bar__top-wrappers">
           <a href="index.html" class="logo top-bar__logo">
             <!-- svg -->
@@ -111,16 +111,42 @@
         <h1 class="page-main__title">
             Попутчики
         </h1>
+        <a class="page-main__to-index-link" href="index.html">
+          На главную
+        </a>
       </div>
 
       <section class="companions-country-filter">
+          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-europe" checked>
+          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-asian">
+          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-usa">
+          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-islands">
         <input
           class="companions-country-filter__country-picker-control visually-hidden"
           type="checkbox"
           id="country-picker-control"
         >
         <label class="country-picker-bar companions-country-filter__country-picker-bar" for="country-picker-control">
-          Фильтрация по странам
+          <p class="country-picker-bar__title">
+            Фильтрация по странам
+          </p>
+
+          <div class="country-picker__name-words">
+            <label class="country-picker__name-word-part" for="word-part-europe">
+              Европа
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-asian">
+                Азия
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-usa">
+                Америка
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-islands">
+                Острова
+            </label>
+          </div>
+          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</p>
+          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</p>
           <div class="country-picker-bar__toggle-element-wrapper">
             <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
             <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
@@ -129,22 +155,20 @@
         </label>
         <div class="country-picker">
           <span class="visually-hidden">Выбор части света</span>
-          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-europe" checked>
-          <label class="country-picker__name-word-part" for="word-part-europe">
-            Европа
-          </label>
-          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-asian">
-          <label class="country-picker__name-word-part" for="word-part-asian">
-              Азия
-          </label>
-          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-usa">
-          <label class="country-picker__name-word-part" for="word-part-usa">
-              Америка
-          </label>
-          <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-islands">
-          <label class="country-picker__name-word-part" for="word-part-islands">
-              Острова
-          </label>
+          <div class="country-picker__name-words-mobile">
+            <label class="country-picker__name-word-part" for="word-part-europe">
+              Европа
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-asian">
+                Азия
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-usa">
+                Америка
+            </label>
+            <label class="country-picker__name-word-part" for="word-part-islands">
+                Острова
+            </label>
+          </div>
           <table class="country-picker__alphabet">
             <span class="visually-hidden">Выбор букв страны</span>
             <tbody>
@@ -342,14 +366,16 @@
               </tr>
             </tbody>
           </table><!-- /.country-picker__alphabet -->
-          <button class="country-picker__country" type="button">Афганистан</button>
-          <button class="country-picker__country" type="button">Албания</button>
-          <button class="country-picker__country" type="button">Алгерия</button>
-          <button class="country-picker__country" type="button">Андорра</button>
-          <button class="country-picker__country" type="button">Армения</button>
-          <button class="country-picker__country" type="button">Австралия</button>
-          <button class="country-picker__country" type="button">Австрия</button>
-          <button class="country-picker__country" type="button">Азербайджанм</button>
+          <div class="country-picker__country-wrapper">
+            <button class="country-picker__country" type="button">Афганистан</button>
+            <button class="country-picker__country" type="button">Албания</button>
+            <button class="country-picker__country" type="button">Алгерия</button>
+            <button class="country-picker__country" type="button">Андорра</button>
+            <button class="country-picker__country" type="button">Армения</button>
+            <button class="country-picker__country" type="button">Австралия</button>
+            <button class="country-picker__country" type="button">Австрия</button>
+            <button class="country-picker__country" type="button">Азербайджанм</button>
+          </div>
           <button class="country-picker__close-btn" type="button">Свернуть</button>
         </div><!-- /.country-picker -->
 
@@ -362,12 +388,10 @@
           <form action="https://echo.htmlacademy.ru" method="post">
             <ul class="accordion">
               <li class="accordion__item">
-
-                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-1">
                 <label class="accordion__title" for="accordion-1">
                   Хобби
                 </label>
-                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-1">
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-1" name="hobby-1">
                     <label class="accordion__value" for="hobby-1">
@@ -384,12 +408,10 @@
                 </div>
               </li><!-- /.accordion__item -->
               <li class="accordion__item">
-
-                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-2" checked>
                 <label class="accordion__title" for="accordion-2">
                   Музыка
                 </label>
-                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-2" checked>
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hard-rock" name="hard-rock" checked>
                     <label class="accordion__value" for="hard-rock">
@@ -406,11 +428,10 @@
                 </div>
               </li><!-- /.accordion__item -->
               <li class="accordion__item">
-                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-3">
                 <label class="accordion__title" for="accordion-3">
                   Еда
                 </label>
-                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-3">
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="food-1" name="food-1" checked>
                     <label class="accordion__value" for="food-1">
@@ -427,17 +448,17 @@
                 </div>
               </li><!-- /.accordion__item -->
               <li class="accordion__item">
-                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-4" checked>
                 <label class="accordion__title" for="accordion-4">
                   Транспорт
                 </label>
-                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-4" checked>
-                <div class="accordion__body">
+
+                <div class="accordion__body accordion__body_inline">
                   <input class="visually-hidden accordion__value-control" type="checkbox" id="air-flight" name="air-flight" checked>
-                  <label class="accordion__value tooltip-wrapper" for="air-flight">
+                  <label class="accordion__value accordion__value_btn tooltip-wrapper" for="air-flight">
                     <img
-                      class="accordion___transport"
-                      src="http://placehold.it/19x21"
+                      class="accordion___transport accordion___transport_plane"
+                      src="img/plane.svg"
                       alt="Авиаперелет"
                       width="19"
                       height="21"
@@ -445,10 +466,10 @@
                     <span class="tooltip-wrapper__content">Авиаперелет</span>
                   </label>
                   <input class="visually-hidden accordion__value-control" type="checkbox" id="automobile" name="automobile" checked>
-                  <label class="accordion__value tooltip-wrapper" for="automobile">
+                  <label class="accordion__value accordion__value_btn tooltip-wrapper" for="automobile">
                     <img
-                      class="accordion___transport"
-                      src="http://placehold.it/19x21"
+                      class="accordion___transport accordion___transport_bus"
+                      src="img/bus.svg"
                       alt="Автотранспорт"
                       width="19"
                       height="21"
@@ -456,10 +477,10 @@
                     <span class="tooltip-wrapper__content">Автотранспорт</span>
                   </label>
                   <input class="visually-hidden accordion__value-control" type="checkbox" id="bicycle" name="bicycle">
-                  <label class="accordion__value tooltip-wrapper" for="bicycle">
+                  <label class="accordion__value accordion__value_btn tooltip-wrapper" for="bicycle">
                     <img
-                      class="accordion___transport"
-                      src="http://placehold.it/19x21"
+                      class="accordion___transport accordion___transport_bike"
+                      src="img/bike.svg"
                       alt="Велосипед"
                       width="19"
                       height="21"
@@ -467,10 +488,10 @@
                     <span class="tooltip-wrapper__content">Велосипед</span>
                   </label>
                   <input class="visually-hidden accordion__value-control" type="checkbox" id="afoot" name="afoot" checked>
-                  <label class="accordion__value" for="afoot">
+                  <label class="accordion__value accordion__value_btn tooltip-wrapper" for="afoot">
                     <img
-                      class="accordion___transport"
-                      src="http://placehold.it/19x21"
+                      class="accordion___transport accordion___transport_run"
+                      src="img/run.svg"
                       alt="Пешком"
                       width="19"
                       height="21"
@@ -480,11 +501,10 @@
                 </div><!-- accordion__body -->
               </li><!-- /.accordion__item -->
               <li class="accordion__item">
-                <!-- http://jsfiddle.net/m_raffaele/E4acF/ -->
+                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-5" checked>
                 <label class="accordion__title" for="accordion-5">
                   Левел
                 </label>
-                <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-5" checked>
                 <div class="accordion__body">
                   <label class="accordion__level-label">
                     <span class="visually-hidden">Левел от</span>
