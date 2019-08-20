@@ -1,5 +1,5 @@
 .user-card-filter {
-  padding: 15px 0 22px 0;
+  padding: 13px 0 22px 0;
 
   background-color: #ffffff;
   border-radius: 20px;
@@ -9,8 +9,9 @@
   display: block;
   width: 70px;
   height: 70px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  padding-top: 2px;
+  margin-right: 16px;
+  margin-bottom: 15px;
 
   position: relative;
 }
@@ -21,7 +22,7 @@
 
 .user-card-filter__visual-info {
   display: flex;
-  padding-left: 13px;
+  padding-left: 18px;
 
   position: relative;
 }
@@ -32,15 +33,15 @@
   height: 6px;
 
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 22px;
+  top: 10px;
 
   font-size: 0;
 
   background-color: #f97676;
   border-radius: 50%;
 
-  &_user_online::after {
+  &_online {
     background-color: #81e31e;
   }
 }
@@ -48,6 +49,7 @@
 .user-card-filter__fullname {
   width: 80px;
   margin: 0;
+  margin-bottom: 2px;
 
   color: $blue-base;
 
@@ -59,39 +61,48 @@
 .user-card-filter__popularity {
   display: flex;
   margin: 0;
-  margin-left: -35px;
+  margin-left: -37px;
   align-items: center;
 
   color: $blue-darken;
   font-weight: 700;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
 .user-card-filter__favorite-wrapper {
   display: block;
   width: 31px;
   height: 31px;
-  margin-right: 5px;
+  margin-right: 7px;
 
   font-size: 0;
 
   position: relative;
 
-  background-color: #edeff6;
+  background: #edeff6 url("../../img/heart.svg") center/13px 11px no-repeat;
   border: none;
   border-radius: 50%;
+
+  &_active {
+    background: #f9eaea url("../../img/heart-active.svg") center/13px 11px no-repeat;
+  }
 }
 
 .user-card-filter__tags {
   display: flex;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   padding: 0 25px;
+  padding-right: 47px;
+
   flex-wrap: wrap;
 }
 
 .user-card-filter__tag {
+  margin-right: 5px;
+
   font-size: 15px;
   line-height: 18px;
 }
@@ -99,7 +110,8 @@
 .user-card-filter__footer {
   border-top: 1px solid #edeff6;
   display: flex;
-  padding: 0 25px;
+  padding: 0 10px;
+  padding-left: 13px;
 
   justify-content: space-between;
 }
@@ -126,13 +138,17 @@
   display: flex;
 }
 
-.user-card-filter__level-title {
+.user-card-filter__level,
+.user-card-filter___transport-preferences-wrapper {
+  position: relative;
+  top: -17px;
+}
+
+.user-card-filter__level-title,
+.user-card-filter___transport-preferences-title {
   display: inline-block;
   margin: 0;
   padding: 0 13px;
-
-  position: relative;
-  top: -15px;
 
   font-size: 15px;
   line-height: 18px;
@@ -140,8 +156,23 @@
   background-color: #ffffff;
 }
 
+.user-card-filter___transport-preferences-title {
+  margin-bottom: 20px;
+}
+
+.user-card-filter___transport-preferences-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 20px;
+}
+
 .user-card-filter__link-btn {
   margin: 0 auto;
+}
+
+.user-card-filter__want-visit {
+  margin-bottom: 22px;
 }
 
 
