@@ -1,8 +1,9 @@
 /* Shared for all accordion types */
 .accordion {
-  list-style: none;
+  padding: 0 5px;
   margin: 0;
-  padding: 0;
+
+  list-style: none;
 }
 
 .accordion__item {
@@ -151,6 +152,122 @@
     height: 17px;
   }
 }
+
+.accordion__level-input-wrapper {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.accordion__level-label {
+  width: 50%;
+}
+
+.accordion__level-input {
+  width: 100%;
+
+  color: $blue-base;
+  font-size: 15px;
+  line-height: 31px;
+  font-weight: bold;
+  text-align: center;
+  font-family: $font-family;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px 0 0 4px;
+}
+
+// Second input
+.accordion__level-label + .accordion__level-label .accordion__level-input {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.accordion__level-label + .accordion__level-label {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 16px;
+    height: 11px;
+
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+
+    background: linear-gradient(to bottom, #ffffff 5px, #cbced9 5px, #cbced9 6px, #ffffff 6px);
+    content: "";
+  }
+}
+
+// SLIDER
+.accordion__level-slider {
+  height: 2px;
+  padding: 0 10px;
+  margin-bottom: 18px;
+
+  position: relative;
+  left: -10px;
+  right: -10px;
+
+  background-color: $blue-base;
+}
+
+.accordion__level-slider-element {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  font-size: 0;
+
+  background-color: $blue-base;
+
+  border: none;
+  border-radius: 50%;
+}
+
+.accordion__level-slider-element_from {
+  left: 35%;
+
+  &::before {
+    display: block;
+    height: 2px;
+
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    left: -9999px;
+    transform: translateY(-50%);
+
+    background-color: #d2b54e;
+    content: "";
+  }
+}
+
+.accordion__level-slider-element_to {
+  left: 100%;
+
+  &::after {
+    display: block;
+    height: 2px;
+
+    position: absolute;
+    top: 50%;
+    right: -9999px;
+    left: 10px;
+    transform: translateY(-50%);
+
+    background-color: #d2b54e;
+    content: "";
+  }
+}
+
 
 .accordion__value-control:checked + .accordion__value::after {
   opacity: 1;

@@ -506,43 +506,47 @@
                   Левел
                 </label>
                 <div class="accordion__body">
-                  <label class="accordion__level-label">
-                    <span class="visually-hidden">Левел от</span>
-                    <input
-                      type="number"
-                      class="accordion__level-input"
-                      name="level-from"
-                      required
-                      min="0"
-                      max="100"
-                      value="30"
-                      placeholder="0-100"
-                    >
-                  </label>
-                  <label class="accordion__level-label">
-                    <span class="visually-hidden">Левел до</span>
-                    <input
-                      type="number"
-                      class="accordion__level-input"
-                      name="level-to"
-                      required
-                      min="0"
-                      max="100"
-                      value="100"
-                      placeholder="0-100"
-                    >
-                  </label>
+                  <div class="accordion__level-input-wrapper">
+                    <label class="accordion__level-label">
+                      <span class="visually-hidden">Левел от</span>
+                      <input
+                        type="number"
+                        class="accordion__level-input"
+                        name="level-from"
+                        required
+                        min="0"
+                        max="100"
+                        value="30"
+                        placeholder="0-100"
+                      >
+                    </label>
+                    <label class="accordion__level-label">
+                      <span class="visually-hidden">Левел до</span>
+                      <input
+                        type="number"
+                        class="accordion__level-input"
+                        name="level-to"
+                        required
+                        min="0"
+                        max="100"
+                        value="100"
+                        placeholder="0-100"
+                      >
+                    </label>
+                  </div>
                   <div class="accordion__level-slider">
                     <span class="visually-hidden">Ползунки диапозона уровней</span>
                     <button
                       class="accordion__level-slider-element accordion__level-slider-element_from"
                       type="button"
+                      data-value="30"
                     >
                       от 30
                     </button>
                     <button
                       class="accordion__level-slider-element accordion__level-slider-element_to"
                       type="button"
+                      data-value="100"
                     >
                       до 100
                     </button>
