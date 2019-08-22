@@ -112,6 +112,7 @@
   display: flex;
   padding: 0 10px;
   padding-left: 13px;
+  margin-bottom: 2px;
 
   justify-content: space-between;
 }
@@ -157,14 +158,24 @@
 }
 
 .user-card-filter___transport-preferences-title {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .user-card-filter___transport-preferences-list {
   display: flex;
   flex-wrap: wrap;
 
-  padding-left: 20px;
+  padding-left: 12px;
+}
+
+.user-card-filter___transport {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+
+  background-color: #edeff6;
+  border-radius: 50%;
 }
 
 .user-card-filter__link-btn {

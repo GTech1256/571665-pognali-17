@@ -390,28 +390,26 @@
               <li class="accordion__item">
                 <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-1">
                 <label class="accordion__title" for="accordion-1">
-                  Хобби
-                </label>
+                  Хобби</label>
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-1" name="hobby-1">
                     <label class="accordion__value" for="hobby-1">
-                      Хобби 1
+                      Спортзал
                     </label>
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-2" name="hobby-2">
                     <label class="accordion__value" for="hobby-2">
-                      Хобби 2
+                      Кальян
                     </label>
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hobby-3" name="hobby-3">
                     <label class="accordion__value" for="hobby-3">
-                      Хобби 3
+                      Диван
                     </label>
                 </div>
               </li><!-- /.accordion__item -->
               <li class="accordion__item">
                 <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-2" checked>
                 <label class="accordion__title" for="accordion-2">
-                  Музыка
-                </label>
+                  Музыка</label>
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="hard-rock" name="hard-rock" checked>
                     <label class="accordion__value" for="hard-rock">
@@ -430,28 +428,26 @@
               <li class="accordion__item">
                 <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-3">
                 <label class="accordion__title" for="accordion-3">
-                  Еда
-                </label>
+                  Еда</label>
                 <div class="accordion__body">
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="food-1" name="food-1" checked>
                     <label class="accordion__value" for="food-1">
-                      food-1
+                      Мясоед
                     </label>
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="food-2" name="food-2">
                     <label class="accordion__value" for="food-2">
-                      food-2
+                      Сидит на ПП
                     </label>
                     <input class="visually-hidden accordion__value-control" type="checkbox" id="food-3" name="food-3">
                     <label class="accordion__value" for="food-3">
-                      food-3
+                      Веган-сыроед
                     </label>
                 </div>
               </li><!-- /.accordion__item -->
-              <li class="accordion__item">
+              <li class="accordion__item accordion__item_btns">
                 <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-4" checked>
                 <label class="accordion__title" for="accordion-4">
-                  Транспорт
-                </label>
+                  Транспорт</label>
 
                 <div class="accordion__body accordion__body_inline">
                   <input class="visually-hidden accordion__value-control" type="checkbox" id="air-flight" name="air-flight" checked>
@@ -503,8 +499,7 @@
               <li class="accordion__item">
                 <input class="visually-hidden accordion__body-control" type="checkbox" id="accordion-5" checked>
                 <label class="accordion__title" for="accordion-5">
-                  Левел
-                </label>
+                  Левел</label>
                 <div class="accordion__body">
                   <div class="accordion__level-input-wrapper">
                     <label class="accordion__level-label">
@@ -534,28 +529,30 @@
                       >
                     </label>
                   </div>
-                  <div class="accordion__level-slider">
-                    <span class="visually-hidden">Ползунки диапозона уровней</span>
-                    <button
-                      class="accordion__level-slider-element accordion__level-slider-element_from"
-                      type="button"
-                      data-value="30"
-                    >
-                      от 30
-                    </button>
-                    <button
-                      class="accordion__level-slider-element accordion__level-slider-element_to"
-                      type="button"
-                      data-value="100"
-                    >
-                      до 100
-                    </button>
+                  <div class="accordion__level-slider-wrapper">
+                    <div class="accordion__level-slider">
+                      <span class="visually-hidden">Ползунки диапозона уровней</span>
+                      <button
+                        class="accordion__level-slider-element accordion__level-slider-element_from"
+                        type="button"
+                        data-value="30"
+                      >
+                        от 30
+                      </button>
+                      <button
+                        class="accordion__level-slider-element accordion__level-slider-element_to"
+                        type="button"
+                        data-value="100"
+                      >
+                        до 100
+                      </button>
+                    </div>
                   </div>
                 </div><!-- accordion__body -->
               </li><!-- /.accordion__item -->
             </ul><!-- /.accordion -->
 
-            <button class="link-btn link-btn_width_230 link-btn_bgc_white" type="submit">
+            <button class="accordion__btn link-btn link-btn_width_230 link-btn_bgc_white" type="submit">
               Показать
             </button>
           </form>

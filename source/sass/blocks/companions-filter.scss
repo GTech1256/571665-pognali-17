@@ -21,8 +21,14 @@
 @media #{$media-tablet-more} {
   .companions-filter {
     width: 688px;
+    padding: 33px 29px;
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+  .companions-filter__title {
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 

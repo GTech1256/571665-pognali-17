@@ -110,10 +110,6 @@
     display: flex;
   }
 
-  .companions-country-filter__country-picker-control:checked ~ .country-picker {
-    display: flex;
-  }
-
   .country-picker {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -124,7 +120,7 @@
   }
 
   .country-picker__name-word-part {
-    margin-right: 20px;
+    margin-right: 25px;
 
     font-size: 20px;
     line-height: 24px;

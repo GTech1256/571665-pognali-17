@@ -11,7 +11,13 @@
 @media #{$media-tablet-more} {
   .companions-country-filter {
     padding: 0 74px;
+    padding-top: 23px;
+    margin-bottom: 46px;
 
     border-radius: 0 0 60px 60px;
+  }
+
+  .companions-country-filter__country-picker-control:checked ~ .country-picker {
+    display: flex;
   }
 }

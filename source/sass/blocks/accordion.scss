@@ -268,11 +268,185 @@
   }
 }
 
-
 .accordion__value-control:checked + .accordion__value::after {
   opacity: 1;
 }
 
 .accordion__value-control:checked + .accordion__value .accordion___transport {
   opacity: 1;
+}
+
+@media #{$media-tablet-more} {
+  .accordion {
+    padding: 47px 5px;
+    padding-bottom: 15px;
+    margin-bottom: 36px;
+
+    border: 1px solid #f3c72b;
+    border-right: none;
+    border-left: none;
+  }
+
+  .accordion__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    align-items: center;
+
+    border: none;
+  }
+
+  .accordion__title {
+    width: 120px;
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: medium;
+
+    &::after {
+      display: inline;
+
+      position: static;
+
+      border: none;
+
+      content: ":";
+    }
+  }
+
+  .accordion__body {
+    display: flex;
+    width: 500px;
+    height: auto;
+    padding: 0;
+
+    align-items: center;
+  }
+
+  .accordion__value {
+    width: 175px;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    white-space: nowrap;
+
+    &:last-child {
+      width: 150px;
+    }
+
+    &:nth-child(2) {
+      padding-left: 8px;
+
+      &::after {
+        left: 14px;
+      }
+    }
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+
+      top: 7px;
+      left: 7px;
+    }
+  }
+
+  .accordion__item_btns .accordion__value_btn {
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .accordion__item_btns {
+    margin-bottom: 14px;
+  }
+
+  .accordion__level-slider {
+    width: 100%;
+    height: 3px;
+    padding: 0 25px;
+    margin: auto 0;
+  }
+
+  .accordion__level-slider-wrapper {
+    display: flex;
+    width: 280px;
+    height: 15px;
+    padding-right: 3px;
+    margin-left: 7px;
+
+    overflow: hidden;
+  }
+
+  .accordion__level-slider-element {
+    width: 13px;
+    height: 13px;
+  }
+
+  .accordion__level-slider-element_from::before {
+    height: 4px;
+    right: 13px;
+  }
+
+  .accordion__level-slider-element_to::after {
+    height: 4px;
+    left: 13px;
+  }
+
+  .accordion__level-slider-element_from {
+    left: 28%;
+  }
+
+  .accordion__level-input-wrapper {
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
+
+    order: 1;
+  }
+
+  .accordion__level-input {
+    font-size: 20px;
+    line-height: 45px;
+  }
+
+  .accordion__body-control:checked ~ .accordion__body {
+    padding: 0;
+  }
+
+  .accordion___transport_plane {
+    width: 19px;
+    height: 21px;
+  }
+
+  .accordion___transport_bus {
+    width: 17px;
+    height: 21px;
+  }
+
+  .accordion___transport_bike {
+    width: 24px;
+    height: 21px;
+  }
+
+  .accordion___transport_run {
+    width: 20px;
+    height: 21px;
+  }
+
+  .accordion__btn {
+    width: 98%;
+    height: 50px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
