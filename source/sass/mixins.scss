@@ -30,7 +30,7 @@
     margin: auto;
     margin-right: 0;
 
-    border: 7px solid #1d2e5b;
+    border: 10px solid #1d2e5b;
 
     border-left-width: 10px;
 
@@ -47,7 +47,7 @@
 
   &::after {
     border-left-width: 0;
-    border-right-width: 7px;
+    border-right-width: 11px;
   }
 }
 

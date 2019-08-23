@@ -48,3 +48,34 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+@media #{$media-tablet-more} {
+  .want-visit {
+    padding-left: 26px;
+    margin: 0;
+  }
+
+  .want-visit__list {
+    display: flex;
+    margin-top: -13px;
+  }
+
+  .want-visit__title {
+    margin-left: 44px;
+  }
+
+  .want-visit__country-flag {
+    width: 35px;
+    height: 24px;
+    margin-right: 9px;
+  }
+
+  .want-visit__country-wrapper {
+    margin-right: 27px;
+  }
+
+  .want-visit__country-name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
