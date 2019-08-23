@@ -57,23 +57,28 @@
 
   transform: rotate(0deg);
 
-  transition: opacity 0.3s, width 0.3s, transform 0.3s;
+  // transition: transform 0.3s, width 0s 0.3s, border-radius 0s 0.3s;
+}
 
-  &_close {
-    width: 17px;
-    height: 2px;
-
-    position: absolute;
-    transform: rotate(45deg);
-
-    &:nth-child(2) {
-      opacity: 0;
-    }
-
-    &:nth-child(3) {
-      transform: rotate(-45deg);
-    }
+.companions-country-filter__country-picker-control:checked ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element {
+  &:nth-child(2) {
+    display: none;
   }
+
+  &:first-child,
+  &:last-child {
+    height: 2px;
+    width: 24px;
+
+    border-radius: 0;
+  }
+
+  &:last-child {
+    position: relative;
+    left: -24px;
+    transform: rotate(-90deg);
+  }
+
 }
 
 @media #{$media-tablet-more} {
@@ -97,6 +102,7 @@
 
   .companions-country-filter__country-picker-control:checked ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-title_hide {
     display: block;
+    margin-right: 57px;
   }
 
   .companions-country-filter__country-picker-control:not(:checked) ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-title_show {
