@@ -1,13 +1,16 @@
 .companions-country-filter {
+  min-width: $mobile-width;
+  max-width: $mobile-width;
   padding: 10px 25px;
   padding-top: 32px;
   margin-top: -20px;
   margin-bottom: 24px;
 
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  // right: 0;
   z-index: 5;
+  transform: translateX(-50%);
 
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
@@ -15,6 +18,8 @@
 
 @media #{$media-tablet-more} {
   .companions-country-filter {
+    min-width: $tablet-width;
+    max-width: $tablet-width;
     padding: 0 74px;
 
     padding-top: 53px;
@@ -23,5 +28,16 @@
 
     border-radius: 0 0 60px 60px;
   }
+}
 
+@media #{$media-desktop-more} {
+  .companions-country-filter {
+    min-width: auto;
+    max-width: none;
+
+    position: static;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
 }

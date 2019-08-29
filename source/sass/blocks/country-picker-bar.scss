@@ -117,5 +117,6 @@
 @media #{$media-desktop-more} {
   .country-picker-bar__title {
     display: flex;
+    margin-right: 50px;
   }
 }
