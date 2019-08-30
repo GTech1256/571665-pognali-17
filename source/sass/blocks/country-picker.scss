@@ -3,7 +3,7 @@
   padding: 0 25px;
 }
 
-.companions-country-filter__country-picker-control:checked ~ .country-picker {
+.companions-country-filter__country-picker-control_active ~ .country-picker {
   display: block;
 }
 
@@ -148,7 +148,7 @@
     flex-wrap: wrap;
   }
 
-  .companions-country-filter__country-picker-control:checked ~ .country-picker {
+  .companions-country-filter__country-picker-control_active ~ .country-picker {
     display: flex;
   }
 

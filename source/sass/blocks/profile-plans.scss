@@ -112,15 +112,9 @@
 
     flex-wrap: wrap;
   }
-
-
 }
 
 @media #{$media-desktop-more} {
-  .profile-plans__element {
-    // justify-content: space-between;
-  }
-
   .profile-plans__country-path {
     width: 626px;
   }

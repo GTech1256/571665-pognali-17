@@ -66,7 +66,7 @@
           <p class="mobile-menu__contacts-paragraph contacts-paragraph">
             <a
               class="contacts-paragraph__link contacts-paragraph__link_phone"
-              href="tel:8 800 555-86-28"
+              href="tel:8800555-86-28"
             >
               8 800 555-86-28
             </a>
@@ -117,21 +117,22 @@
       </div>
 
       <section class="companions-country-filter">
+        <h2 class="visually-hidden">Неполная фильтрация</h2>
         <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-europe" checked>
         <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-asian">
         <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-usa">
         <input class="visually-hidden country-picker__name-word-part-control" type="checkbox" id="word-part-islands">
-        <input
+        <span
           class="companions-country-filter__country-picker-control visually-hidden"
-          type="checkbox"
-          id="country-picker-control"
         >
-        <label class="country-picker-bar companions-country-filter__country-picker-bar" for="country-picker-control">
-          <p class="country-picker-bar__title">
+        <!-- temporary only for js -->
+        </span>
+        <div class="country-picker-bar companions-country-filter__country-picker-bar">
+          <span class="country-picker-bar__title">
             Фильтрация по странам
-          </p>
+          </span>
 
-          <div class="country-picker__name-words">
+          <span class="country-picker__name-words">
             <label class="country-picker__name-word-part" for="word-part-europe">
               Европа
             </label>
@@ -144,15 +145,15 @@
             <label class="country-picker__name-word-part" for="word-part-islands">
                 Острова
             </label>
-          </div>
+          </span>
           <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</p>
           <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</p>
-          <div class="country-picker-bar__toggle-element-wrapper">
+          <span class="country-picker-bar__toggle-element-wrapper">
             <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
             <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
             <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-          </div>
-        </label>
+          </span>
+        </div>
         <div class="country-picker">
           <span class="visually-hidden">Выбор части света</span>
           <div class="country-picker__name-words-mobile">
@@ -547,11 +548,11 @@
             <button class="country-picker__country" type="button">Азербайджанм</button>
           </div>
 
-          <label class="country-picker__close-btn-wrapper" for="country-picker-control">
-            <p class="country-picker__close-btn">
+          <button class="country-picker__close-btn-wrapper" type="button">
+            <span class="country-picker__close-btn">
               Свернуть
-            </p>
-          </label>
+            </span>
+          </button>
         </div><!-- /.country-picker -->
       </section><!-- /.companions-country-filter -->
       <div class="page-main__catalog-content-wrapper">
@@ -1282,7 +1283,7 @@
               </a>
             </li><!-- /.companions__profile /.user-card-filter -->
           </ul><!-- /.companions__list -->
-          <a class="companions__show-more-btn" href="new-companions.html" type="button">
+          <a class="companions__show-more-btn" href="new-companions.html">
             Показать еще
           </a>
         </section><!-- /.companions -->
@@ -1292,14 +1293,12 @@
           <a
           class="slide-controller__arrow slide-controller__arrow_left"
             href="catalog-prev.html"
-            type="button"
           >
             Показать предыдущую страницу
           </a>
           <a
             class="slide-controller__arrow slide-controller__arrow_right"
             href="catalog-next.html"
-            type="button"
           >
             Показать следующую страницу
           </a>
@@ -1316,14 +1315,12 @@
           <a
             class="slide-controller__arrow slide-controller__arrow_left"
             href="catalog-prev.html"
-            type="button"
           >
             Показать предыдущую страницу
           </a>
           <a
             class="slide-controller__arrow slide-controller__arrow_right"
             href="catalog-next.html"
-            type="button"
           >
             Показать следующую страницу
           </a>
