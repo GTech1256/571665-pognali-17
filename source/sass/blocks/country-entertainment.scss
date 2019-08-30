@@ -1,4 +1,6 @@
 .country-entertainment {
+  max-width: 875px;
+
   position: relative;
 }
 
@@ -40,5 +42,12 @@
   &::placeholder {
     color: $text-color;
     opacity: 0.3;
+  }
+}
+
+@media #{$media-tablet-more} {
+  .country-entertainment__desc {
+    width: 100%;
+    max-width: 730px;
   }
 }

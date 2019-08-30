@@ -15,10 +15,13 @@
   line-height: 50px;
   text-align: center;
 
+  /*
+  NOPE
   @media #{$media-tablet-more} {
     font-size: 20px;
     width: 148px;
   }
+  */
 }
 
 @mixin triangle-arrow-right {
