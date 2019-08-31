@@ -15,3 +15,16 @@
   bottom: 0;
   left: 0;
 }
+
+
+@media #{$media-tablet-more} {
+  .map {
+    height: 562px;
+  }
+
+  .map__pic,
+  .map__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
