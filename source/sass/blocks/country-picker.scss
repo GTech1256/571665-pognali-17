@@ -3,7 +3,7 @@
   padding: 0 25px;
 }
 
-.companions-country-filter__country-picker-control:checked ~ .country-picker {
+.companions-country-filter__country-picker-control_active ~ .country-picker {
   display: block;
 }
 
@@ -19,22 +19,56 @@
   opacity: 0.3;
 }
 
-.country-picker__name-word-part-control:checked + .country-picker__name-word-part {
+.country-picker__sub-letter-country {
+  display: none;
+
+  color: $text-color;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+
+  background-color: transparent;
+  border: none;
+}
+
+.country-picker__name-word-part-control[id$="europe"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="europe"],
+.country-picker__name-word-part-control[id$="europe"]:checked ~ .country-picker .country-picker__name-word-part[for$="europe"],
+.country-picker__name-word-part-control[id$="asian"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="asian"],
+.country-picker__name-word-part-control[id$="asian"]:checked ~ .country-picker .country-picker__name-word-part[for$="asian"],
+.country-picker__name-word-part-control[id$="usa"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="usa"],
+.country-picker__name-word-part-control[id$="usa"]:checked ~ .country-picker .country-picker__name-word-part[for$="usa"],
+.country-picker__name-word-part-control[id$="islands"]:checked ~ .country-picker-bar .country-picker__name-word-part[for$="islands"],
+.country-picker__name-word-part-control[id$="islands"]:checked ~ .country-picker .country-picker__name-word-part[for$="islands"] {
   opacity: 1;
 }
 
 .country-picker__alphabet {
   border: 1px solid #cbced9;
-  border-collapse: collapse;
+  // border-collapse: collapse;
 }
 
-.country-picker__tr {
-  height: 42px;
+.country-picker__alphabet-body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
 }
 
-.country-picker__td {
-  width: 45px;
+.country-picker__letter-wrapper {
   height: 42px;
+  width: 43px;
+
+
+  border-right: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+  background-color: #ffffff;
+
+  &:nth-child(5n) {
+    border-right: none;
+  }
+
+  &:nth-last-child(-n+5) {
+    border-bottom: none;
+  }
 }
 
 .country-picker__letter {
@@ -49,7 +83,9 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: #ffffff;
+  // background-color: #ffffff;
+
+  cursor: pointer;
 }
 
 .country-picker__letter-control:checked + .country-picker__letter {
@@ -67,29 +103,169 @@
   border: none;
 }
 
-.country-picker__close-btn {
-  display: block;
+.country-picker__close-btn-wrapper {
+  display: flex;
   width: 100%;
   height: 40px;
-
-  line-height: 40px;
-  font-size: 17px;
-  font-weight: 700;
 
   background-color: #d6daed;
   border: none;
   border-radius: 20px;
+}
+
+.country-picker__close-btn {
+  display: block;
+  margin: auto;
+
+  line-height: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 
   @include cross-before;
 
   &::before,
   &::after {
-    left: 55px;
+    // left: 55px;
 
     transform: rotate(45deg);
   }
 
   &::before {
     transform: rotate(-45deg);
+  }
+}
+
+.country-picker__name-words {
+  display: none;
+}
+
+@media #{$media-tablet-more} {
+  .country-picker {
+    padding: 0;
+
+    flex-wrap: wrap;
+  }
+
+  .companions-country-filter__country-picker-control_active ~ .country-picker {
+    display: flex;
+  }
+
+  .country-picker__alphabet {
+    margin-left: -22px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    border: none;
+  }
+
+  .country-picker__name-words {
+    display: flex;
+  }
+
+  .country-picker__name-words-mobile {
+    display: none;
+  }
+
+  .country-picker__name-word-part {
+    margin-right: 25px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .country-picker__alphabet-body {
+    width: 385px;
+  }
+
+  .country-picker__letter-wrapper {
+    display: flex;
+    height: auto;
+    width: auto;
+
+    flex-wrap: wrap;
+
+    background-color: transparent;
+    border: none;
+  }
+
+
+  .country-picker__letter-wrapper_on-table-hidden {
+    display: none;
+  }
+
+  .country-picker__letter-control:checked + .country-picker__letter,
+  .country-picker__letter {
+    display: block;
+    width: 76px;
+    height: auto;
+
+    color: $blue-nav-text;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+
+    background-color: transparent;
+
+    opacity: 0.2;
+  }
+
+  .country-picker__letter-control:checked + .country-picker__letter {
+    opacity: 1;
+  }
+
+  .country-picker__country {
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .country-picker__close-btn-wrapper {
+    height: 100px;
+    margin-bottom: 74px;
+
+    color: $blue-base;
+    line-height: 100px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .country-picker__alphabet {
+    margin: 0;
+  }
+
+  .country-picker__country-wrapper {
+    display: none;
+  }
+
+  .country-picker__alphabet-body {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+
+  .country-picker__letter-wrapper {
+    display: flex;
+    width: calc(100% / 6);
+    margin-bottom: 75px;
+    flex-direction: column;
+  }
+
+  .country-picker__letter-wrapper_on-table-hidden,
+  .country-picker__letter-wrapper_on-desktop-hidden {
+    display: none;
+  }
+
+  .country-picker__sub-letter-country {
+    display: block;
+  }
+
+  .country-picker__letter {
+    margin-bottom: 20px;
+
+    text-align: left;
+    pointer-events: none;
+    opacity: 1;
   }
 }

@@ -1,7 +1,7 @@
 .slide-controller {
   display: flex;
   padding: 0 25px;
-  padding-bottom: 50px;
+  margin-bottom: 46px;
 
   &_non-mobile {
     display: none;
@@ -11,6 +11,7 @@
     margin-bottom: 62px;
 
     padding: 25px 28px;
+    padding-right: 32px;
     border-radius: 20px;
     background-color: #ffffff;
   }
@@ -87,6 +88,10 @@
     width: 15px;
     border: none;
     background: none;
+  }
+
+  .slide-controller__arrow_left {
+    margin-right: 28px;
   }
 }
 

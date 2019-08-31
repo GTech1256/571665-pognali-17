@@ -15,10 +15,13 @@
   line-height: 50px;
   text-align: center;
 
+  /*
+  NOPE
   @media #{$media-tablet-more} {
     font-size: 20px;
     width: 148px;
   }
+  */
 }
 
 @mixin triangle-arrow-right {
@@ -30,7 +33,7 @@
     margin: auto;
     margin-right: 0;
 
-    border: 7px solid #1d2e5b;
+    border: 10px solid #1d2e5b;
 
     border-left-width: 10px;
 
@@ -47,7 +50,7 @@
 
   &::after {
     border-left-width: 0;
-    border-right-width: 7px;
+    border-right-width: 11px;
   }
 }
 

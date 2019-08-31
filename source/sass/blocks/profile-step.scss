@@ -41,3 +41,77 @@
 .profile-step__kids-control:checked + .profile-step__kids-checkbox::before {
   background-color: red; // TODO: set image
 }
+
+
+@media #{$media-tablet-more} {
+  .profile-step__controls {
+    display: flex;
+  }
+
+  .profile-step__next-step-btn {
+    @include triangle-arrow-right;
+
+    display: inline-block;
+    width: 285px;
+    height: 81px;
+    padding-left: 34px;
+    padding-right: 36px;
+
+    line-height: 81px;
+    text-align: left;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    // triangle-arrow-right fix
+    &::after {
+      position: absolute;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .profile-step__prev-step-btn {
+    @include triangle-arrow-left;
+
+    display: inline-block;
+    margin: auto 0;
+    margin-left: auto;
+
+    position: relative;
+
+    // triangle-arrow-right fix
+    &::after {
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media #{$media-desktop-more} {
+  .profile-step__controllers-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profile-step__kids-checkbox {
+    order: 1;
+
+    &::before {
+      margin-left: auto;
+    }
+  }
+
+  .profile-step__smart-counter,
+  .profile-step__kids-checkbox {
+    width: 50%;
+  }
+
+  .profile-step__smart-counter:nth-child(2) {
+    order: 2;
+  }
+}

@@ -3,6 +3,7 @@
 @import "./fonts.scss";
 
 /* blocks import */
+@import "./blocks/round-level.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/line-break.scss";
 @import "./blocks/nav.scss";
@@ -66,7 +67,7 @@ html {
 body {
   margin: 0;
   color: $text-color;
-  font: 400 15px/30px "BloggerSans", "Tahoma", sans-serif;
+  font: 400 15px/30px $font-family;
 }
 
 img {

@@ -1,5 +1,7 @@
-.smart-counter__title-wrapper {
+.smart-counter {
   display: flex;
+
+  flex-wrap: wrap;
 }
 
 .smart-counter__title,
@@ -82,4 +84,22 @@
 
   border: 1px solid #cbced9;
   border-radius: 4px;
+}
+
+@media #{$media-desktop-more} {
+  .smart-counter {
+    width: 533px;
+  }
+
+  .smart-counter__title {
+    width: 220px;
+  }
+
+  .smart-counter__extra {
+    order: 1;
+  }
+
+  .smart-counter__holder {
+    width: 182px;
+  }
 }
