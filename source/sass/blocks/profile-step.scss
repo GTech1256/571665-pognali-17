@@ -95,7 +95,23 @@
 @media #{$media-desktop-more} {
   .profile-step__controllers-wrapper {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .profile-step__kids-checkbox {
+    order: 1;
+
+    &::before {
+      margin-left: auto;
+    }
+  }
+
+  .profile-step__smart-counter,
+  .profile-step__kids-checkbox {
+    width: 50%;
+  }
+
+  .profile-step__smart-counter:nth-child(2) {
+    order: 2;
   }
 }
