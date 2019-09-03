@@ -86,6 +86,14 @@
     padding-top: 40px;
   }
 
+  .top-bar__toggle-btn_type_close {
+    &::before,
+    &::after {
+      height: 2px;
+      transform-origin: 7px 1px;
+    }
+  }
+
   .top-bar__logo {
     width: 190px;
     height: 42px;

@@ -12,8 +12,9 @@
 
 .mobile-menu__soc {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 107px;
+  width: 114px;
   margin: 0 auto;
   padding-bottom: 38px;
 }
@@ -73,6 +74,10 @@
     padding-left: 57px;
   }
 
+  .mobile-menu_open {
+    padding-bottom: 52px;
+  }
+
   .mobile-menu__nav {
     padding-top: 86px;
   }
@@ -91,5 +96,42 @@
 
   .mobile-menu__link-btn {
     display: none;
+  }
+
+  .mobile-menu__contacts-paragraph:last-of-type {
+    margin-bottom: 130px;
+  }
+
+  .mobile-menu__soc {
+    width: auto;
+    margin: 0;
+    padding-left: 26px;
+
+    justify-content: flex-start;
+  }
+
+  .mobile-menu__link {
+    margin-right: 35px;
+  }
+
+  .mobile-menu__link_fb {
+    width: 14px;
+    height: 28px;
+
+    background-size: 14px 28px;
+  }
+
+  .mobile-menu__link_vk {
+    width: 31px;
+    height: 16px;
+
+    background-size: 31px 16px;
+  }
+
+  .mobile-menu__link_inst {
+    width: 24px;
+    height: 24px;
+
+    background-size: 24px 24px;
   }
 }
