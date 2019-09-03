@@ -126,7 +126,7 @@
 .add-profile__tariff-price {
   display: block;
 
-  font-style: 16px;
+  font-size: 16px;
   line-height: 18px;
 }
 
@@ -134,7 +134,7 @@
   .add-profile {
     padding: 0 40px;
     padding-top: 66px;
-    padding-bottom: 48px;
+    padding-bottom: 49px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -162,10 +162,14 @@
   }
 
   .add-profile__tariff-item {
-    margin-bottom: 3px;
-    margin-right: 35px;
+    margin-bottom: 1px;
+    margin-right: 29px;
 
     line-height: 60px;
+  }
+
+  .add-profile__tariff-item:last-child {
+    padding-bottom: 1px;
   }
 
   .add-profile__tariff-description::before {
@@ -205,7 +209,7 @@
   .add-profile__tariffs {
     padding: 0;
     padding-left: 89px;
-    margin-bottom: 19px;
+    margin-bottom: 15px;
 
     &::before {
       display: block;
@@ -213,7 +217,7 @@
 
       position: absolute;
       top: -44px;
-      right: 0;
+      right: -4px;
       bottom: -44px;
       z-index: 0;
 
@@ -262,15 +266,31 @@
 }
 
 @media #{$media-desktop-more} {
+  .add-profile {
+    padding-top: 100px;
+    padding-bottom: 167px;
+  }
+
   .add-profile__table {
-    width: 1063px;
+    width: 87%;
     margin: 0 auto;
-    padding-right: 159px;
+    margin-bottom: 14px;
+    // padding-right: 159px;
+  }
+
+  .add-profile__title {
+    margin-bottom: 136px;
+  }
+
+  .add-profile__tariffs {
+    margin-right: 243px;
   }
 
   .add-profile__tariffs::before {
     width: 444px;
-    right: 0;
+    top: -52px;
+    right: 17px;
+    bottom: -48px;
     transform: translateX(33%);
   }
 
@@ -281,7 +301,7 @@
     margin-left: auto;
 
     position: absolute;
-    right: -250px;
+    right: -242px;
     top: 50%;
     transform: translateY(-50%);
 
@@ -291,8 +311,8 @@
   }
 
   .add-profile__text-btn {
-    width: 1063px;
-    margin: 0 auto;
+    padding-left: 91px;
+
 
     &::after {
       content: none;

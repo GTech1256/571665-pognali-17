@@ -101,6 +101,10 @@
 }
 
 @media #{$media-tablet-more} {
+  .page-main__map {
+    height: 562px;
+  }
+
   .page-main__catalog-content-wrapper {
     padding-top: 182px;
   }
@@ -126,5 +130,9 @@
 
   .page-main__slide-controller {
     order: 2;
+  }
+
+  .page-main__map {
+    height: 498px;
   }
 }

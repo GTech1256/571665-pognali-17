@@ -1,7 +1,8 @@
 .page-header {
   padding-top: $mobile-top-bar-height;
 
-  background-color: #161c34;
+
+  background: linear-gradient(#161c35 763px, #192144 763px);
 
   position: relative;
 
@@ -35,6 +36,8 @@
 @media #{$media-tablet-more} {
   .page-header {
     padding-top: $tablet-top-bar-height;
+
+    background: transparent;
   }
 
   .page-header_tablet-light {
@@ -47,7 +50,7 @@
 
   .page-header__title {
     padding: 0 180px;
-    padding-top: 66px;
+    padding-top: 24px;
     margin-bottom: 44px;
 
     font-size: 60px;
@@ -61,7 +64,7 @@
 
 @media #{$media-between-tablet-desktop} {
   .page-header__desktop-wrapper {
-    background: url("../../img/traveller-illustration-tablet@1x.png") no-repeat 60% 320px,
+    background: url("../../img/traveller-illustration-tablet@1x.png") no-repeat 72% 271px,
       url("../../img/globe-back-tablet@1x.jpg") left 293px no-repeat;
     border-radius: 0 0 60px 60px;
   }
