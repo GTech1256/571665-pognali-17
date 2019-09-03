@@ -3,6 +3,7 @@
 // -- vars
 $bg-color: rgba(0, 0, 0, 0.6);
 $default-size: 60px;
+$small-size: 45px;
 $label-font-size: $default-size / 4;
 $label-font-size-redo: $default-size * 4;
 $progress-color: #ff8d30;
@@ -27,7 +28,9 @@ $progress-color: #ff8d30;
       .round-level__right-side {
         display: none;
       }
-    } @else {
+    }
+
+    @else {
       clip: rect(auto, auto, auto, auto);
 
       .round-level__right-side {
@@ -44,7 +47,9 @@ $progress-color: #ff8d30;
     @if $progress <= 50 {
       background: $bg-color;
       transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
-    } @else {
+    }
+
+    @else {
       background: $color;
       transform: rotate((100 - $progress) / 100 * 360deg);
     }
@@ -56,6 +61,8 @@ $progress-color: #ff8d30;
 .round-level {
   @include size($default-size, $default-size);
 
+  position: relative;
+
   &.progress-99 {
     @include draw-progress(97);
   }
@@ -63,24 +70,52 @@ $progress-color: #ff8d30;
   &.progress-80 {
     @include draw-progress(82);
   }
+
+  &.progress-25 {
+    @include draw-progress(25);
+  }
+
+  &.progress-50 {
+    @include draw-progress(50);
+  }
+}
+
+.round-level_small {
+  @include size($small-size, $small-size);
 }
 
 .round-level__pie {
   @include size(100%, 100%);
-  clip: rect(0, $default-size, $default-size, $default-size / 2);
-  left: 0;
+
   position: absolute;
   top: 0;
+  left: 0;
 
-  .round-level__half-circle {
-    @include size(100%, 100%);
-    border: 3px solid #3498db;
-    border-radius: 50%;
-    clip: rect(0, $default-size / 2, $default-size, 0);
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
+  clip: rect(0, $default-size, $default-size, $default-size / 2);
+  // transform: rotate(-15deg);
+}
+
+.round-level_small .round-level__pie {
+  clip: rect(0, $small-size, $small-size, $small-size / 2);
+}
+
+.round-level__half-circle {
+  @include size(100%, 100%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: 3px solid #3498db;
+  border-radius: 50%;
+
+  clip: rect(0, $default-size / 2, $default-size, 0);
+}
+
+.round-level_small .round-level__half-circle {
+  border: 2px solid #3498db;
+
+  clip: rect(0, $small-size / 2, $small-size, 0);
 }
 
 .round-level__label {
@@ -101,6 +136,11 @@ $progress-color: #ff8d30;
   border-radius: 50%;
 }
 
+.round-level_small .round-level__label {
+  background: transparent;
+  border: none;
+}
+
 .round-level__percents {
   width: 31px;
   padding-bottom: 2px;
@@ -112,6 +152,12 @@ $progress-color: #ff8d30;
   font-weight: bold;
 
   border-bottom: 1px solid rgba(#ffffff, 0.3);
+}
+
+.round-level__percents_large {
+  color: $blue-base;
+
+  border: none;
 }
 
 .round-level__subtext {

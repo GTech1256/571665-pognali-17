@@ -70,6 +70,10 @@
   }
 }
 
+.page-main__catalog-content-wrapper {
+  padding-top: 76px;
+}
+
 @media #{$media-tablet-less} {
   .page-main__to-index-link {
     display: none;
