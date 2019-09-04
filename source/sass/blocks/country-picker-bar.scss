@@ -60,6 +60,10 @@
   // transition: transform 0.3s, width 0s 0.3s, border-radius 0s 0.3s;
 }
 
+.companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element-wrapper {
+  transform: rotate(45deg);
+}
+
 .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element {
   &:nth-child(2) {
     display: none;
@@ -68,9 +72,10 @@
   &:first-child,
   &:last-child {
     height: 2px;
-    width: 24px;
+    width: 17px;
 
     border-radius: 0;
+    transform-origin: 12px -2px;
   }
 
   &:last-child {
