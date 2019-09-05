@@ -163,14 +163,17 @@
   }
 
   .country-picker__alphabet {
-    margin-left: -22px;
-    margin-right: 100px;
-    margin-bottom: 100px;
+    margin-top: -10px;
+    margin-right: 79px;
+    margin-bottom: 57px;
+    margin-left: -20px;
+
     border: none;
   }
 
   .country-picker__name-words {
     display: flex;
+    padding-top: 5px;
   }
 
   .country-picker__name-words-mobile {
@@ -208,21 +211,31 @@
   .country-picker__letter-control:checked + .country-picker__letter,
   .country-picker__letter {
     display: block;
-    width: 76px;
+    width: 77px;
     height: auto;
 
     color: $blue-nav-text;
     font-size: 60px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 83px;
 
     background-color: transparent;
+    border: none;
 
     opacity: 0.2;
   }
 
+  .country-picker__letter-wrapper:nth-child(5n) .country-picker__letter {
+    border: none;
+  }
+
   .country-picker__letter-control:checked + .country-picker__letter {
     opacity: 1;
+  }
+
+  .country-picker__country-wrapper {
+    margin: 0;
+    padding-top: 1px;
   }
 
   .country-picker__country {
@@ -232,17 +245,31 @@
   }
 
   .country-picker__close-btn-wrapper {
+    width: 100%;
     height: 100px;
+    margin: 0 auto;
     margin-bottom: 74px;
 
     color: $blue-base;
     line-height: 100px;
   }
+
+  .country-picker__close-btn {
+    padding-left: 35px;
+
+    font-size: 20px;
+  }
 }
 
 @media #{$media-desktop-more} {
+  .companions-country-filter {
+    margin-bottom: 77px;
+  }
+
   .country-picker__alphabet {
     margin: 0;
+    margin-top: -13px;
+    padding-left: 66px;
   }
 
   .country-picker__country-wrapper {
@@ -251,14 +278,15 @@
 
   .country-picker__alphabet-body {
     width: 100%;
-    justify-content: space-around;
+    margin-bottom: 35px;
   }
 
 
   .country-picker__letter-wrapper {
     display: flex;
-    width: calc(100% / 6);
-    margin-bottom: 75px;
+    width: 185px;
+    margin-right: 24px;
+    margin-bottom: 51px;
     flex-direction: column;
   }
 
@@ -269,10 +297,11 @@
 
   .country-picker__sub-letter-country {
     display: block;
+    padding: 0;
   }
 
   .country-picker__letter {
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 
     text-align: left;
     pointer-events: none;

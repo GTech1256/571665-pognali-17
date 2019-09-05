@@ -105,12 +105,16 @@
 }
 
 @media #{$media-tablet-more} {
+  .page-main__title-wrapper {
+    padding: 113px 123px 0 127px;
+  }
+
   .page-main__map {
     height: 562px;
   }
 
   .page-main__catalog-content-wrapper {
-    padding-top: 182px;
+    padding-top: 183px;
   }
 }
 

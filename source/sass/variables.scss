@@ -17,9 +17,9 @@ $desktop-content-max-width: 1320px;
 
 $mobile-top-bar-height:  58px;
 $tablet-top-bar-height:  132px;
-$desktop-top-bar-height: 90px;
+$desktop-top-bar-height: 100px;
 
-$media-mobile-less:   "screen and (min-width:" + $mobile-width + ")";
+$media-mobile-less:   "screen and (max-width:" + $mobile-width + ")";
 $media-tablet-more:   "screen and (min-width:" + $tablet-width + ")";
 $media-desktop-more:  "screen and (min-width:" + $desktop-width + ")";
 $media-tablet-less:   "screen and (max-width:" + $tablet-width + ")";

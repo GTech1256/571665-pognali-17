@@ -28,6 +28,8 @@
   }
 
   .companions-filter__title {
+    margin-bottom: 40px;
+
     font-size: 30px;
     line-height: 30px;
   }
@@ -35,7 +37,15 @@
 
 @media #{$media-desktop-more} {
   .companions-filter {
-    margin: 0;
     width: 285px;
+    padding: 43px;
+    padding-top: 44px;
+    padding-left: 47px;
+    margin: 0;
+  }
+
+  .companions-filter__title {
+    padding: 0;
+    margin-bottom: 21px;
   }
 }
