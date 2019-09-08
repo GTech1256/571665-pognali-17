@@ -6,6 +6,8 @@
 
 .user-card__level {
   position: absolute;
+  top: 16px;
+  left: 17px;
 }
 
 .user-card__pic {
@@ -96,7 +98,7 @@
 
 .user-card__transport-preferences {
   display: flex;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
   justify-content: center;
 }
 
@@ -112,6 +114,11 @@
 
 
 @media #{$media-tablet-more} {
+  .user-card__level {
+    top: 20px;
+    left: 21px;
+  }
+
   .user-card__info {
     padding: 0 28px;
 
@@ -125,11 +132,12 @@
   }
 
   .user-card__countries {
+    margin-top: -11px;
     margin-bottom: 15px;
   }
 
   .user-card__full-name {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   .user-card__user-name-link {
@@ -140,6 +148,7 @@
       width: 7px;
       height: 7px;
 
+      top: 55%;
       left: -22px;
     }
   }
@@ -156,6 +165,13 @@
   }
 
   .user-card__transport-preferences {
-    padding-bottom: 20px;
+    padding-bottom: 19px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .user-card__level {
+    top: 23px;
+    left: 23px;
   }
 }

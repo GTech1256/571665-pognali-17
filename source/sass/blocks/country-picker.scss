@@ -1,6 +1,7 @@
 .country-picker {
   display: none;
-  padding: 0 25px;
+  padding: 25px;
+  padding-bottom: 17px;
 }
 
 .companions-country-filter__country-picker-control_active ~ .country-picker {
@@ -9,14 +10,24 @@
 
 .country-picker__name-word-part {
   display: block;
+  margin-bottom: 5px;
 
   line-height: 22px;
   font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
 
   color: $blue-nav-text;
 
   opacity: 0.3;
+}
+
+.country-picker__name-words-mobile {
+  margin-bottom: 21px;
+}
+
+.country-picker__alphabet {
+  margin-bottom: 22px;
 }
 
 .country-picker__sub-letter-country {
@@ -42,11 +53,6 @@
   opacity: 1;
 }
 
-.country-picker__alphabet {
-  border: 1px solid #cbced9;
-  // border-collapse: collapse;
-}
-
 .country-picker__alphabet-body {
   display: flex;
   flex-wrap: wrap;
@@ -54,21 +60,8 @@
 }
 
 .country-picker__letter-wrapper {
-  height: 42px;
-  width: 43px;
-
-
-  border-right: 1px solid #cbced9;
-  border-bottom: 1px solid #cbced9;
-  background-color: #ffffff;
-
-  &:nth-child(5n) {
-    border-right: none;
-  }
-
-  &:nth-last-child(-n+5) {
-    border-bottom: none;
-  }
+  height: 41px;
+  width: 44px;
 }
 
 .country-picker__letter {
@@ -83,21 +76,36 @@
   text-align: center;
   text-transform: uppercase;
 
-  // background-color: #ffffff;
+  background-color: #ffffff;
+
+  border: 1px solid #cbced9;
+  border-right: none;
 
   cursor: pointer;
+}
+
+.country-picker__letter-wrapper:nth-child(5n) .country-picker__letter {
+  border-right: 1px solid #cbced9;
 }
 
 .country-picker__letter-control:checked + .country-picker__letter {
   color: #ffffff;
 
   background-color: $blue-base;
+  border: none;
+}
+
+.country-picker__country-wrapper {
+  margin-bottom: 23px;
 }
 
 .country-picker__country {
   display: block;
+  padding: 0;
 
   color: #444444;
+  font-size: 16px;
+  line-height: 22px;
 
   background-color: transparent;
   border: none;
@@ -105,8 +113,10 @@
 
 .country-picker__close-btn-wrapper {
   display: flex;
-  width: 100%;
+  width: 270px;
   height: 40px;
+  padding: 0;
+  margin-left: -25px;
 
   background-color: #d6daed;
   border: none;
@@ -127,7 +137,7 @@
 
   &::before,
   &::after {
-    // left: 55px;
+    left: -5px;
 
     transform: rotate(45deg);
   }
@@ -153,14 +163,17 @@
   }
 
   .country-picker__alphabet {
-    margin-left: -22px;
-    margin-right: 100px;
-    margin-bottom: 100px;
+    margin-top: -10px;
+    margin-right: 79px;
+    margin-bottom: 57px;
+    margin-left: -20px;
+
     border: none;
   }
 
   .country-picker__name-words {
     display: flex;
+    padding-top: 5px;
   }
 
   .country-picker__name-words-mobile {
@@ -198,21 +211,31 @@
   .country-picker__letter-control:checked + .country-picker__letter,
   .country-picker__letter {
     display: block;
-    width: 76px;
+    width: 77px;
     height: auto;
 
     color: $blue-nav-text;
     font-size: 60px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 83px;
 
     background-color: transparent;
+    border: none;
 
     opacity: 0.2;
   }
 
+  .country-picker__letter-wrapper:nth-child(5n) .country-picker__letter {
+    border: none;
+  }
+
   .country-picker__letter-control:checked + .country-picker__letter {
     opacity: 1;
+  }
+
+  .country-picker__country-wrapper {
+    margin: 0;
+    padding-top: 1px;
   }
 
   .country-picker__country {
@@ -222,17 +245,31 @@
   }
 
   .country-picker__close-btn-wrapper {
+    width: 100%;
     height: 100px;
+    margin: 0 auto;
     margin-bottom: 74px;
 
     color: $blue-base;
     line-height: 100px;
   }
+
+  .country-picker__close-btn {
+    padding-left: 35px;
+
+    font-size: 20px;
+  }
 }
 
 @media #{$media-desktop-more} {
+  .companions-country-filter {
+    margin-bottom: 77px;
+  }
+
   .country-picker__alphabet {
     margin: 0;
+    margin-top: -13px;
+    padding-left: 66px;
   }
 
   .country-picker__country-wrapper {
@@ -241,14 +278,15 @@
 
   .country-picker__alphabet-body {
     width: 100%;
-    justify-content: space-around;
+    margin-bottom: 35px;
   }
 
 
   .country-picker__letter-wrapper {
     display: flex;
-    width: calc(100% / 6);
-    margin-bottom: 75px;
+    width: 185px;
+    margin-right: 24px;
+    margin-bottom: 51px;
     flex-direction: column;
   }
 
@@ -259,10 +297,11 @@
 
   .country-picker__sub-letter-country {
     display: block;
+    padding: 0;
   }
 
   .country-picker__letter {
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 
     text-align: left;
     pointer-events: none;

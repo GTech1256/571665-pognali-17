@@ -8,7 +8,7 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="top-bar top-bar_open"><!-- always on top -->
+      <div class="top-bar top-bar_open top-bar_pt-small"><!-- always on top -->
         <div class="top-bar__top-wrappers">
           <a href="index.html" class="logo top-bar__logo">
             <!-- svg -->
@@ -23,7 +23,7 @@
           <nav class="page-header__nav nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#about-service">О сервисе</a>
+                <a href="index.html#about-service">О сервисе</a>
               </li>
               <li class="nav__item">
                 <a href="form.html">Направления</a>
@@ -106,7 +106,7 @@
       </div><!-- /.top-bar -->
     </header><!-- /.page-header -->
     <main class="page-main">
-      <div class="page-main__title-wrapper">
+      <div class="page-main__title-wrapper page-main__title-wrapper_inner-page">
         <h1 class="page-main__title">
             Направления
         </h1>
@@ -114,10 +114,20 @@
       <section class="profile-settings">
         <h2 class="visually-hidden">Настройки профиля</h2>
         <div class="profile-settings__head">
-          <div class="profile-settings__level" data-user-level="80">
-            <!-- TODO: level -->
-            Уровень: 80
-          </div>
+          <div class="profile-settings__round-level round-level round-level_large progress-80">
+            <div class="round-level__label round-level__label_no-bg">
+              <p class="round-level__percents round-level__percents_dark-blue">
+                80
+              </p>
+              <p class="round-level__subtext">
+                level
+              </p>
+            </div>
+            <div class="round-level__pie">
+              <div class="round-level__left-side round-level__half-circle"></div>
+              <div class="round-level__right-side round-level__half-circle"></div>
+            </div>
+          </div> <!-- /.user-card-filter__round-level -->
           <fieldset class="fieldset fieldset_on-table-show">
               <legend class="fieldset__title fieldset__title_bottom">Транспорт</legend>
               <span class="visually-hidden">Ваш выбор транспорта для путешествия</span>
@@ -386,7 +396,7 @@
               1 попутчик
             </p>
             <p class="profile-plans__dates">
-              <time datetime="07-01">26 июл</time> - <time datetime="07-15">29 июл</time>
+              <time datetime="07-01">1 июл</time> - <time datetime="07-15">15 июл</time>
             </p>
             <a class="profile-plans__change-link" href="change-plan.html">Изменить</a>
           </li>
@@ -395,14 +405,14 @@
 
       <section class="profile-add-plan">
         <h2 class="profile-add-plan__title">
-          Добавить план
+          Добавить план:
         </h2>
         <form action="https://echo.htmlacademy.ru" method="POST">
-          <section class="profile-step" id="step-1">
+          <section class="profile-step profile-step_one" id="step-1">
               <p class="profile-step__title">Шаг 1.</p>
               <h3 class="profile-step__title">Даты пребывания</h3>
               <p class="profile-step__desc">
-                  Укажите предпочтительное количество попутчиков, которых
+                  Укажите предпочтительное количество попутчиков, которых<br class="line-break line-break_tablet line-break_desktop">
                   вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
               <div class="profile-step__controllers-wrapper">
@@ -441,7 +451,12 @@
                   </div>
                 </div><!-- /.smart-counter -->
 
-                <input class="visually-hidden profile-step__kids-control" type="checkbox" id="with-kids">
+                <input
+                  class="visually-hidden profile-step__kids-control"
+                  type="checkbox"
+                  id="with-kids"
+                  checked
+                >
                 <label class="profile-step__kids-checkbox" for="with-kids">
                   Можно с детьми
                 </label>
@@ -455,17 +470,29 @@
               <table class="calendar">
                 <thead class="calendar__days">
                   <tr>
-                    <td class="calendar__td calendar__day-w">П</td>
-                    <td class="calendar__td calendar__day-w">в</td>
-                    <td class="calendar__td calendar__day-w">с</td>
-                    <td class="calendar__td calendar__day-w">ч</td>
-                    <td class="calendar__td calendar__day-w">п</td>
-                    <td class="calendar__td calendar__day-w calendar__day-w_off">с</td>
-                    <td class="calendar__td calendar__day-w calendar__day-w_off">В</td>
+                    <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">н</span></td>
+                    <td class="calendar__td calendar__day-w">В<span class="calendar__day-w-additional-letter">т</span></td>
+                    <td class="calendar__td calendar__day-w">С<span class="calendar__day-w-additional-letter">р</span></td>
+                    <td class="calendar__td calendar__day-w">Ч<span class="calendar__day-w-additional-letter">т</span></td>
+                    <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">т</span></td>
+                    <td class="calendar__td calendar__day-w calendar__day-w_off">С<span class="calendar__day-w-additional-letter">б</span></td>
+                    <td class="calendar__td calendar__day-w calendar__day-w_off">В<span class="calendar__day-w-additional-letter">с</span></td>
                   </tr>
                 </thead>
                 <tbody class="calendar__dates">
                   <tr>
+                    <td class="calendar__td">
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-23"
+                      >
+                      <label class="calendar__date-label" for="1-23">
+                          23
+                      </label>
+
+                    </td>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -501,26 +528,27 @@
                       </label>
                     </td>
                     <td class="calendar__td">
-                    <input
-                      class="visually-hidden calendar__date-checkbox"
-                      type="checkbox"
-                      disabled
-                      id="1-27"
-                    >
-                    <label class="calendar__date-label" for="1-27">
-                        27
-                    </label></td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-27"
+                      >
+                      <label class="calendar__date-label" for="1-27">
+                          27
+                      </label>
+                    </td>
                     <td class="calendar__td">
-                    <input
-                      class="visually-hidden calendar__date-checkbox"
-                      type="checkbox"
-                      disabled
-                      id="1-28"
-                    >
-                    <label class="calendar__date-label" for="1-28">
-                        28
-                    </label>
-                  </td>
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        disabled
+                        id="1-28"
+                      >
+                      <label class="calendar__date-label" for="1-28">
+                          28
+                      </label>
+                    </td>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -529,22 +557,22 @@
                         id="1-1"
                       >
                       <label class="calendar__date-label" for="1-1">
-                          1
+                          1<span class="calendar__mounth-name">мар</span>
                       </label>
                     </td>
+                  </tr>
+                  <tr>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
-                        id="1-2"
+                        id="2-2"
                       >
-                      <label class="calendar__date-label" for="1-2">
+                      <label class="calendar__date-label" for="2-2">
                           2
                       </label>
                     </td>
-                  </tr>
-                  <tr>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -611,19 +639,19 @@
                         8
                       </label>
                     </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-9"
-                      >
-                      <label class="calendar__date-label" for="2-9">
-                        9
-                      </label>
-                    </td>
                   </tr>
                   <tr>
+                    <td class="calendar__td">
+                        <input
+                          class="visually-hidden calendar__date-checkbox"
+                          type="checkbox"
+                          disabled
+                          id="3-9"
+                        >
+                        <label class="calendar__date-label" for="3-9">
+                          9
+                        </label>
+                      </td>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -690,19 +718,19 @@
                         15
                       </label>
                     </td>
-                    <td class="calendar__td">
+                  </tr>
+                  <tr>
+                  <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
-                        id="3-16"
+                        id="4-16"
                       >
-                      <label class="calendar__date-label" for="3-16">
+                      <label class="calendar__date-label" for="4-16">
                         16
                       </label>
                     </td>
-                  </tr>
-                  <tr>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -769,19 +797,19 @@
                         22
                       </label>
                     </td>
+                  </tr>
+                  <tr>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
-                        id="4-23"
+                        id="5-23"
                       >
-                      <label class="calendar__date-label" for="4-23">
+                      <label class="calendar__date-label" for="5-23">
                         23
                       </label>
                     </td>
-                  </tr>
-                  <tr>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -811,7 +839,7 @@
                         checked
                         id="5-26"
                       >
-                      <label class="calendar__date-label" for="5-26">
+                      <label class="calendar__date-label calendar__date-label_first-date" for="5-26">
                         26
                       </label>
                     </td>
@@ -833,7 +861,7 @@
                         checked
                         id="5-28"
                       >
-                      <label class="calendar__date-label" for="5-28">
+                      <label class="calendar__date-label calendar__date-label_last-date" for="5-28">
                         28
                       </label>
                     </td>
@@ -847,18 +875,18 @@
                         29
                       </label>
                     </td>
-                    <td class="calendar__td">
-                    <input
-                      class="visually-hidden calendar__date-checkbox"
-                      type="checkbox"
-                      id="5-30"
-                    >
-                    <label class="calendar__date-label" for="5-30">
-                      30
-                    </label>
-                  </td>
                   </tr>
                   <tr>
+                    <td class="calendar__td">
+                      <input
+                        class="visually-hidden calendar__date-checkbox"
+                        type="checkbox"
+                        id="6-30"
+                      >
+                      <label class="calendar__date-label" for="6-30">
+                        30
+                      </label>
+                    </td>
                     <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
@@ -876,7 +904,7 @@
                         id="6-1"
                       >
                       <label class="calendar__date-label" for="6-1">
-                        1
+                        1<span class="calendar__mounth-name">апр</span>
                       </label>
                     </td>
                     <td class="calendar__td">
@@ -919,247 +947,44 @@
                         5
                       </label>
                     </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-6"
-                      >
-                      <label class="calendar__date-label" for="6-6">
-                        6
-                      </label>
-                    </td>
                   </tr>
                 </tbody>
               </table>
 
-              <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-2">следующий шаг</a>
+              <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-2">Следующий шаг</a>
 
           </section><!-- /.profile-step -->
 
-          <section class="profile-step" id="step-2">
+          <section class="profile-step profile-step_two" id="step-2">
               <p class="profile-step__title">Шаг 2.</p>
               <h3 class="profile-step__title">Маршрут</h3>
               <p class="profile-step__desc">
-                  Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
+                  Укажите страны, которые вы хотели по посетить. <br class="line-break line-break_tablet line-break_desktop">Это может быть одна или сразу несколько.
               </p>
-
-              <div class="country-selector">
-                <button class="country-selector__select-btn" type="button">Босния и греция</button>
-                <div class="tooltip-wrapper">
-                  <img
-                    class="country-selector__flag"
-                    src="http://placehold.it/35x24"
-                    alt="Флаг Боснии и Греции"
-                    width="35"
-                    height="24"
-                  >
-                  <p class="tooltip-wrapper__content">
-                    Босния и Греция
-                  </p>
-                </div>
-                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
-              </div>
-              <div class="country-selector">
-                <button class="country-selector__select-btn" type="button">Чехословакия</button>
-                <div class="tooltip-wrapper">
-                  <img
-                    class="country-selector__flag"
-                    src="http://placehold.it/35x24"
-                    alt="флаг Чехословакии"
-                    width="35"
-                    height="24"
-                  >
-                  <p class="tooltip-wrapper__content">
-                    Чехословакия
-                  </p>
-                </div>
-                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
-              </div>
-              <div class="country-selector">
-                <button class="country-selector__select-btn" type="button">Выберите страну</button>
-                <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
-                <div class="country-picker">
-                  <div class="country-picker__alphabet">
-                    <span class="visually-hidden">Выбор букв страны</span>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="а" type="radio" id="letter-1">
-                    <label class="country-picker__letter" for="letter-1">
-                      а
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="б" type="radio" id="letter-2">
-                    <label class="country-picker__letter" for="letter-2">
-                      б
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="в" type="radio" id="letter-3">
-                    <label class="country-picker__letter" for="letter-3">
-                      в
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="г" type="radio" id="letter-4">
-                    <label class="country-picker__letter" for="letter-4">
-                      г
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="д" type="radio" id="letter-5">
-                    <label class="country-picker__letter" for="letter-5">
-                      д
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="е" type="radio" id="letter-6">
-                    <label class="country-picker__letter" for="letter-6">
-                      е
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ё" type="radio" id="letter-7">
-                    <label class="country-picker__letter" for="letter-7">
-                      ё
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ж" type="radio" id="letter-8">
-                    <label class="country-picker__letter" for="letter-8">
-                      ж
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="з" type="radio" id="letter-9">
-                    <label class="country-picker__letter" for="letter-9">
-                      з
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="и" type="radio" id="letter-10">
-                    <label class="country-picker__letter" for="letter-10">
-                      и
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="й" type="radio" id="letter-11">
-                    <label class="country-picker__letter" for="letter-11">
-                      й
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="к" type="radio" id="letter-12">
-                    <label class="country-picker__letter" for="letter-12">
-                      к
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="л" type="radio" id="letter-13">
-                    <label class="country-picker__letter" for="letter-13">
-                      л
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="м" type="radio" id="letter-14">
-                    <label class="country-picker__letter" for="letter-14">
-                      м
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="н" type="radio" id="letter-15">
-                    <label class="country-picker__letter" for="letter-15">
-                      н
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="о" type="radio" id="letter-16">
-                    <label class="country-picker__letter" for="letter-16">
-                      о
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="п" type="radio" id="letter-17">
-                    <label class="country-picker__letter" for="letter-17">
-                      п
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="р" type="radio" id="letter-18">
-                    <label class="country-picker__letter" for="letter-18">
-                      р
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="с" type="radio" id="letter-19">
-                    <label class="country-picker__letter" for="letter-19">
-                      с
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="т" type="radio" id="letter-20">
-                    <label class="country-picker__letter" for="letter-20">
-                      т
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="у" type="radio" id="letter-21">
-                    <label class="country-picker__letter" for="letter-21">
-                      у
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ф" type="radio" id="letter-22">
-                    <label class="country-picker__letter" for="letter-22">
-                      ф
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="х" type="radio" id="letter-23">
-                    <label class="country-picker__letter" for="letter-23">
-                      х
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ц" type="radio" id="letter-24">
-                    <label class="country-picker__letter" for="letter-24">
-                      ц
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ч" type="radio" id="letter-25">
-                    <label class="country-picker__letter" for="letter-25">
-                      ч
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ш" type="radio" id="letter-26">
-                    <label class="country-picker__letter" for="letter-26">
-                      ш
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="щ" type="radio" id="letter-27">
-                    <label class="country-picker__letter" for="letter-27">
-                      щ
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="э" type="radio" id="letter-28">
-                    <label class="country-picker__letter" for="letter-28">
-                      э
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="ю" type="radio" id="letter-29">
-                    <label class="country-picker__letter" for="letter-29">
-                      ю
-                    </label>
-                    <input class="visually-hidden country-picker__letter-control" name="letter" value="я" type="radio" id="letter-30">
-                    <label class="country-picker__letter" for="letter-30">
-                      я
-                    </label>
-                  </div><!-- /.country-picker__alphabet -->
-                  <p class="country-picker__country">Афганистан</p>
-                  <p class="country-picker__country">Албания</p>
-                  <p class="country-picker__country">Алгерия</p>
-                  <p class="country-picker__country">Андорра</p>
-                  <p class="country-picker__country">Армения</p>
-                  <p class="country-picker__country">Австралия</p>
-                  <p class="country-picker__country">Австрия</p>
-                  <p class="country-picker__country">Азербайджанм</p>
-                </div><!-- /.country-picker -->
-              </div>
-              <div class="country-selector">
-                <button class="country-selector__select-btn country-selector__select-btn_add-element" type="button">Добавить страну</button>
-              </div>
-              <div class="profile-step__controls">
-                <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-3">следующий шаг</a>
-                <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-1">на шаг назад</a>
-              </div>
-          </section><!-- /.profile-step -->
-
-          <section class="profile-step" id="step-3">
-              <p class="profile-step__title">Шаг 3.</p>
-              <h3 class="profile-step__title">Развлечения</h3>
-              <p class="profile-step__desc">
-                  Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-              </p>
-
-              <div class="country-entertainment">
-                <div class="country-entertainment__holder">
-                  <p class="country-entertainment__country-name">Босния и Герцегов</p>
-                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+              <div class="country-selector__wrapper">
+                <div class="country-selector country-selector_selected">
+                  <button class="country-selector__select-btn" type="button">Босния и герцеговина</button>
+                  <div class="tooltip-wrapper">
                     <img
-                      class="country-entertainment__country-flag"
+                      class="country-selector__flag"
                       src="http://placehold.it/35x24"
-                      alt="Флаг Боснии и Герцегов"
+                      alt="Флаг Боснии и герцеговина"
                       width="35"
                       height="24"
                     >
                     <p class="tooltip-wrapper__content">
-                      Босния и Герцегов
+                      Босния и Греция
                     </p>
                   </div>
+                  <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
                 </div>
-                <textarea
-                  class="country-entertainment__desc"
-                  placeholder="План действий"
-                  required
-                  name="action-plan-a"></textarea>
-              </div>
-
-              <div class="country-entertainment">
-                <div class="country-entertainment__holder">
-                  <p class="country-entertainment__country-name">Чехословакия</p>
-                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+                <div class="country-selector country-selector_selected">
+                  <button class="country-selector__select-btn" type="button">Чехословакия</button>
+                  <div class="tooltip-wrapper">
                     <img
-                      class="country-entertainment__country-flag"
+                      class="country-selector__flag"
                       src="http://placehold.it/35x24"
-                      alt="Флаг Чехословакии"
+                      alt="флаг Чехословакии"
                       width="35"
                       height="24"
                     >
@@ -1167,16 +992,211 @@
                       Чехословакия
                     </p>
                   </div>
+                  <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
                 </div>
-                <textarea
-                  class="country-entertainment__desc"
-                  placeholder="План действий"
-                  required
-                  name="action-plan-b">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                <div class="country-selector">
+                  <button class="country-selector__select-btn" type="button">Выберите страну</button>
+                  <button class="country-selector__cancel-btn" type="button">Удалить страну</button>
+                  <div class="country-picker">
+                    <div class="country-picker__alphabet">
+                      <span class="visually-hidden">Выбор букв страны</span>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="а" type="radio" id="letter-1">
+                      <label class="country-picker__letter" for="letter-1">
+                        а
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="б" type="radio" id="letter-2">
+                      <label class="country-picker__letter" for="letter-2">
+                        б
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="в" type="radio" id="letter-3">
+                      <label class="country-picker__letter" for="letter-3">
+                        в
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="г" type="radio" id="letter-4">
+                      <label class="country-picker__letter" for="letter-4">
+                        г
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="д" type="radio" id="letter-5">
+                      <label class="country-picker__letter" for="letter-5">
+                        д
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="е" type="radio" id="letter-6">
+                      <label class="country-picker__letter" for="letter-6">
+                        е
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ё" type="radio" id="letter-7">
+                      <label class="country-picker__letter" for="letter-7">
+                        ё
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ж" type="radio" id="letter-8">
+                      <label class="country-picker__letter" for="letter-8">
+                        ж
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="з" type="radio" id="letter-9">
+                      <label class="country-picker__letter" for="letter-9">
+                        з
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="и" type="radio" id="letter-10">
+                      <label class="country-picker__letter" for="letter-10">
+                        и
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="й" type="radio" id="letter-11">
+                      <label class="country-picker__letter" for="letter-11">
+                        й
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="к" type="radio" id="letter-12">
+                      <label class="country-picker__letter" for="letter-12">
+                        к
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="л" type="radio" id="letter-13">
+                      <label class="country-picker__letter" for="letter-13">
+                        л
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="м" type="radio" id="letter-14">
+                      <label class="country-picker__letter" for="letter-14">
+                        м
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="н" type="radio" id="letter-15">
+                      <label class="country-picker__letter" for="letter-15">
+                        н
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="о" type="radio" id="letter-16">
+                      <label class="country-picker__letter" for="letter-16">
+                        о
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="п" type="radio" id="letter-17">
+                      <label class="country-picker__letter" for="letter-17">
+                        п
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="р" type="radio" id="letter-18">
+                      <label class="country-picker__letter" for="letter-18">
+                        р
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="с" type="radio" id="letter-19">
+                      <label class="country-picker__letter" for="letter-19">
+                        с
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="т" type="radio" id="letter-20">
+                      <label class="country-picker__letter" for="letter-20">
+                        т
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="у" type="radio" id="letter-21">
+                      <label class="country-picker__letter" for="letter-21">
+                        у
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ф" type="radio" id="letter-22">
+                      <label class="country-picker__letter" for="letter-22">
+                        ф
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="х" type="radio" id="letter-23">
+                      <label class="country-picker__letter" for="letter-23">
+                        х
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ц" type="radio" id="letter-24">
+                      <label class="country-picker__letter" for="letter-24">
+                        ц
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ч" type="radio" id="letter-25">
+                      <label class="country-picker__letter" for="letter-25">
+                        ч
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ш" type="radio" id="letter-26">
+                      <label class="country-picker__letter" for="letter-26">
+                        ш
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="щ" type="radio" id="letter-27">
+                      <label class="country-picker__letter" for="letter-27">
+                        щ
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="э" type="radio" id="letter-28">
+                      <label class="country-picker__letter" for="letter-28">
+                        э
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="ю" type="radio" id="letter-29">
+                      <label class="country-picker__letter" for="letter-29">
+                        ю
+                      </label>
+                      <input class="visually-hidden country-picker__letter-control" name="letter" value="я" type="radio" id="letter-30">
+                      <label class="country-picker__letter" for="letter-30">
+                        я
+                      </label>
+                    </div><!-- /.country-picker__alphabet -->
+                    <p class="country-picker__country">Афганистан</p>
+                    <p class="country-picker__country">Албания</p>
+                    <p class="country-picker__country">Алгерия</p>
+                    <p class="country-picker__country">Андорра</p>
+                    <p class="country-picker__country">Армения</p>
+                    <p class="country-picker__country">Австралия</p>
+                    <p class="country-picker__country">Австрия</p>
+                    <p class="country-picker__country">Азербайджанм</p>
+                  </div><!-- /.country-picker -->
+                </div>
+                <div class="country-selector">
+                  <button class="country-selector__select-btn country-selector__select-btn_add-element" type="button">Добавить страну</button>
+                </div>
+              </div><!-- /.country-selector__wrapper -->
+              <div class="profile-step__controls">
+                <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-3">Следующий шаг</a>
+                <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-1">На шаг назад</a>
+              </div>
+          </section><!-- /.profile-step -->
+
+          <section class="profile-step profile-step_three" id="step-3">
+              <p class="profile-step__title">Шаг 3.</p>
+              <h3 class="profile-step__title">Развлечения</h3>
+              <p class="profile-step__desc">
+                  Наконец, расскажите о своих планах времяпровождения.<br class="line-break line-break_desktop"> Можно писать в свободной форме и ставить тэги.
+              </p>
+              <div class="country-entertainment__wrapper">
+                <div class="country-entertainment">
+                  <div class="country-entertainment__holder">
+                    <p class="country-entertainment__country-name">Босния и герцеговина</p>
+                    <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+                      <img
+                        class="country-entertainment__country-flag"
+                        src="http://placehold.it/35x24"
+                        alt="Флаг Боснии и Герцеговина"
+                        width="35"
+                        height="24"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Босния и Герцегов
+                      </p>
+                    </div>
+                  </div>
+                  <textarea
+                    class="country-entertainment__desc"
+                    placeholder="План действий"
+                    required
+                    name="action-plan-a"></textarea>
+                </div>
+
+                <div class="country-entertainment">
+                  <div class="country-entertainment__holder">
+                    <p class="country-entertainment__country-name">Чехословакия</p>
+                    <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+                      <img
+                        class="country-entertainment__country-flag"
+                        src="http://placehold.it/35x24"
+                        alt="Флаг Чехословакии"
+                        width="35"
+                        height="24"
+                      >
+                      <p class="tooltip-wrapper__content">
+                        Чехословакия
+                      </p>
+                    </div>
+                  </div>
+                  <textarea
+                    class="country-entertainment__desc"
+                    placeholder="План действий"
+                    required
+                    name="action-plan-b">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                </div>
               </div>
               <div class="profile-step__controls">
                 <button class="profile-step__next-step-btn link-btn link-btn_width_230" type="submit">Отправить</button>
-                <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-2">на шаг назад</a>
+                <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-2">На шаг назад</a>
               </div>
           </section><!-- /.profile-step -->
         </form>
@@ -1185,7 +1205,7 @@
 
 
     </main><!-- /.page-index -->
-    <footer class="page-footer">
+    <footer class="page-footer page-footer_negative-up">
       <img
         class="page-footer__title-img"
         src="img/logo-mobile-blue@1x.png"

@@ -86,8 +86,28 @@
     padding-top: 40px;
   }
 
+  .top-bar__toggle-btn_type_close {
+    &::before,
+    &::after {
+      height: 2px;
+      transform-origin: 7px 1px;
+    }
+  }
+
+  .top-bar__logo {
+    width: 190px;
+    height: 42px;
+  }
+
   .top-bar__toggle-btn {
+    width: 25px;
+    height: 11px;
     margin: auto;
+
+    &::before {
+      margin: 0;
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -96,9 +116,17 @@
   .top-bar {
     width: 100%;
     min-height: $desktop-top-bar-height;
-    padding-top: 48px;
+    padding-top: 49px;
 
     background-color: #161c34;
+  }
+
+  .top-bar__logo {
+    width: 205px;
+    height: 50px;
+    margin-right: 35px;
+
+    border: 1px solid red;
   }
 
   .top-bar__top-wrappers {

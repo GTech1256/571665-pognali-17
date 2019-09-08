@@ -60,6 +60,10 @@
   // transition: transform 0.3s, width 0s 0.3s, border-radius 0s 0.3s;
 }
 
+.companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element-wrapper {
+  transform: rotate(45deg);
+}
+
 .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element {
   &:nth-child(2) {
     display: none;
@@ -68,9 +72,10 @@
   &:first-child,
   &:last-child {
     height: 2px;
-    width: 24px;
+    width: 17px;
 
     border-radius: 0;
+    transform-origin: 12px -2px;
   }
 
   &:last-child {
@@ -103,9 +108,21 @@
     display: block;
   }
 
+  .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element-wrapper {
+    margin-top: 2px;
+    margin-right: -2px;
+  }
+
+  .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element:first-child,
+  .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-element:last-child {
+    width: 24px;
+
+    transform-origin: center;
+  }
+
   .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-title_hide {
     display: block;
-    margin-right: 57px;
+    margin-right: 60px;
   }
 
   .companions-country-filter__country-picker-control_active ~ .companions-country-filter__country-picker-bar .country-picker-bar__toggle-title_show {
@@ -118,8 +135,26 @@
 }
 
 @media #{$media-desktop-more} {
+  .country-picker-bar {
+    padding-left: 20px;
+    padding-right: 65px;
+  }
+
   .country-picker-bar__title {
     display: flex;
-    margin-right: 50px;
+    margin-right: 34px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+      margin-right: 20px;
+    }
+
+    &::after {
+      content: ":";
+    }
   }
 }

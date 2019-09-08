@@ -63,5 +63,14 @@
 @media #{$media-desktop-more} {
   .companions {
     padding: 0;
+    margin-bottom: 73px;
+  }
+
+  .companions__list {
+    margin-bottom: 35px;
+  }
+
+  .companions__show-more-btn {
+    padding-right: 65px;
   }
 }

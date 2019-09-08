@@ -88,6 +88,11 @@
     width: 15px;
     border: none;
     background: none;
+
+    &::after {
+      border-top-width: 10px;
+      border-bottom-width: 10px;
+    }
   }
 
   .slide-controller__arrow_left {
@@ -99,5 +104,8 @@
   .slide-controller_non-mobile {
     max-width: 950px;
     margin-left: 0;
+    margin-bottom: 77px;
+
+    padding-right: 42px;
   }
 }

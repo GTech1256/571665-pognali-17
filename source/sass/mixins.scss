@@ -14,14 +14,6 @@
   font-weight: 700;
   line-height: 50px;
   text-align: center;
-
-  /*
-  NOPE
-  @media #{$media-tablet-more} {
-    font-size: 20px;
-    width: 148px;
-  }
-  */
 }
 
 @mixin triangle-arrow-right {
@@ -33,7 +25,7 @@
     margin: auto;
     margin-right: 0;
 
-    border: 10px solid #1d2e5b;
+    border: 7px solid #1d2e5b;
 
     border-left-width: 10px;
 
@@ -60,18 +52,25 @@
 
   position: relative;
 
+  @include cross();
+
+  &::before,
+  &::after {
+    left: -10px;
+  }
+}
+
+@mixin cross($width: 18px, $height: 2px, $color: $blue-base) {
   &::before,
   &::after {
     display: block;
-    width: 18px;
-    height: 2px;
+    width: $width;
+    height: $height;
 
     position: absolute;
     top: 50%;
-    left: -10px;
 
-    background-color: $blue-base;
-
+    background-color: $color;
     content: "";
   }
 

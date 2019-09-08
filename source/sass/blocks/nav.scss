@@ -31,7 +31,13 @@
 }
 
 @media #{$media-desktop-more} {
+  .nav {
+    padding-top: 2px;
+  }
+
   .nav__item {
+    margin-right: 39px;
+
     font-size: 20px;
     line-height: 30px;
   }

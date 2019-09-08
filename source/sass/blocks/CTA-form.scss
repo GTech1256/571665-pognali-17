@@ -12,7 +12,7 @@
 
 .CTA-form__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   text-align: center;
   font-size: 24px;
@@ -44,6 +44,7 @@
 }
 
 .CTA-form__form {
+  max-width: 1173px;
   margin-bottom: 27px;
   display: block;
   width: 270px;
@@ -112,14 +113,14 @@
   }
 
   .CTA-form__title {
-    margin-bottom: 59px;
+    margin-bottom: 58px;
 
     font-size: 45px;
     line-height: 45px;
   }
 
   .CTA-form__desc {
-    margin-bottom: 65px;
+    margin-bottom: 67px;
 
     font-size: 28px;
     line-height: 33px;
@@ -127,10 +128,9 @@
 
   .CTA-form__form {
     width: 100%;
-    max-width: 1175px;
     margin: 0 auto;
     height: 81px;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
 
   .CTA-form__input {
@@ -160,9 +160,22 @@
 }
 
 @media #{$media-desktop-more} {
+  .CTA-form {
+    padding-top: 152px;
+    padding-bottom: 104px;
+  }
+
+  .CTA-form__desc {
+    margin-bottom: 60px;
+  }
+
+  .CTA-form__desc_under-form {
+    margin-bottom: 45px;
+  }
+
   .CTA-form__btn {
     width: auto;
-    padding-left: 38px;
+    padding-left: 36px;
 
     &::before {
       margin-right: 105px;
@@ -176,13 +189,18 @@
     }
 
     &::after {
-      margin-right: 35px;
+      margin-right: 30px;
     }
+  }
+
+  .CTA-form__form {
+    margin-bottom: 65px;
   }
 
   .CTA-form__contacts {
     display: flex;
-
-    justify-content: space-around;
+    max-width: 865px;
+    margin: auto;
+    justify-content: space-between;
   }
 }

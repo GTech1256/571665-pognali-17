@@ -79,3 +79,29 @@
     line-height: 30px;
   }
 }
+
+@media #{$media-desktop-more} {
+  .want-visit {
+    max-height: 150px;
+    padding: 0;
+    padding-top: 45px;
+
+    overflow: auto;
+  }
+
+  .want-visit__title {
+    display: none;
+  }
+
+  .want-visit__list {
+
+    padding: 0;
+    margin: 0;
+
+    flex-direction: column;
+  }
+
+  .want-visit__country-flag {
+    margin-right: 18px;
+  }
+}
