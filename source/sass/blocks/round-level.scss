@@ -2,8 +2,11 @@
 
 // -- vars
 $bg-color: rgba(0, 0, 0, 0.6);
+
+$large-size: 100px;
 $default-size: 60px;
 $small-size: 45px;
+
 $label-font-size: $default-size / 4;
 $label-font-size-redo: $default-size * 4;
 $progress-color: #ff8d30;
@@ -120,6 +123,10 @@ $progress-color: #ff8d30;
 
   background: $bg-color;
   border-radius: 50%;
+
+  &_no-bg {
+    background: transparent;
+  }
 }
 
 .round-level__percents {
@@ -133,6 +140,14 @@ $progress-color: #ff8d30;
   font-weight: bold;
 
   border-bottom: 1px solid rgba(#ffffff, 0.3);
+
+  &_blue {
+    color: $blue-base;
+  }
+
+  &_dark-blue {
+    color: $blue-darken;
+  }
 }
 
 .round-level__subtext {
@@ -142,17 +157,49 @@ $progress-color: #ff8d30;
 }
 
 .round-level_small .round-level__percents {
-  color: $blue-base;
-
   border-color: #e5e5e5;
 }
 
 .round-level_small .round-level__label {
   color: #e5e5e5;
-
-  background: transparent;
 }
 
+.round-level_large {
+  @include size($large-size, $large-size);
+}
+
+.round-level_large .round-level__pie {
+  clip: rect(0, $large-size, $large-size, $large-size / 2);
+  top: -1px;
+}
+
+.round-level_large .round-level__half-circle {
+  border-width: 3px;
+
+  clip: rect(0, $large-size / 2, $large-size, 0);
+}
+
+.round-level_large .round-level__label {
+  padding-top: 21px;
+}
+
+.round-level_large .round-level__percents {
+  width: 49px;
+  margin-bottom: 5px;
+
+  font-size: 38px;
+  line-height: 35px;
+
+  border-color: #cbced9;
+  border-width: 2px;
+}
+
+.round-level_large .round-level__subtext {
+  width: auto;
+  font-size: 18px;
+
+  color: $text-color;
+}
 
 @media #{$media-tablet-less} {
   .round-level_small {
@@ -179,5 +226,23 @@ $progress-color: #ff8d30;
 
   .round-level_small .round-level__label {
     border: none;
+  }
+}
+
+@media #{$media-tablet-more} {
+  .round-level_large {
+    width: 94px;
+    height: 94px;
+  }
+
+  .round-level_large .round-level__label {
+    padding-top: 18px;
+  }
+}
+
+@media #{$media-desktop-more} {
+  .round-level__percents_dark-blue,
+  .round-level_large .round-level__subtext {
+    color: #ffffff;
   }
 }
