@@ -11,7 +11,9 @@ $orange-text:   #ff8d30;
 $font-family: "BloggerSans", "Tahoma", sans-serif;
 
 $mobile-width:  320px;
+$mobile-width-max:  767px;
 $tablet-width:  768px;
+$tablet-width-max:  1439px;
 $desktop-width: 1440px;
 $desktop-content-max-width: 1320px;
 
@@ -22,10 +24,9 @@ $desktop-top-bar-height: 100px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$media-mobile-less:   "screen and (max-width:" + $mobile-width + ")";
 $media-tablet-more:   "screen and (min-width:" + $tablet-width + ")";
 $media-desktop-more:  "screen and (min-width:" + $desktop-width + ")";
-$media-tablet-less:   "screen and (max-width:" + $tablet-width + ")";
-$media-desktop-less:  "screen and (max-width:" + $desktop-width + ")";
+$media-tablet-less:   "screen and (max-width:" + $mobile-width-max + ")";
+$media-desktop-less:  "screen and (max-width:" + $tablet-width-max + ")";
 
-$media-between-tablet-desktop:   "screen and (min-width:" + $tablet-width + ") and (max-width:" + $desktop-width + ")";
+$media-between-tablet-desktop:   "screen and (min-width:" + $tablet-width + ") and (max-width:" + $tablet-width-max + ")";
