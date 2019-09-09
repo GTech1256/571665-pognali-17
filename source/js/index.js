@@ -3,6 +3,14 @@ var menuBurger = document.querySelector('.top-bar__toggle-btn');
 var topBar = document.querySelector('.top-bar');
 var logo = document.querySelector('.logo__img');
 
+// form.html controls
+var activeClassAddFormInCountrySelector = 'country-selector_show-add-form';
+
+var countrySelectorWithAddForm = document.querySelector('.country-selector__with-add-form');
+var buttonInCountrySelectorWithAddForm = document.querySelector('.country-selector__with-add-form .country-selector__select-btn');
+var countriesInAddFormOfCountrySelector = document.querySelectorAll('.country-selector__add-form-country');
+var lettersInAddFormOfCountrySelector = document.querySelectorAll('.country-selector__add-form-letter');
+
 // catalog.html controls
 var countryPickerBar = document.querySelector('.country-picker-bar');
 var countryPickerBtn = document.querySelector('.country-picker__close-btn-wrapper');
@@ -22,6 +30,18 @@ function isScrollOnTop() {
   return window.scrollY == 0;
 }
 
+function revertAddFormInCountrySelector(evt) {
+  evt.preventDefault();
+  console.log('11')
+  // CLOSE
+  if (countrySelectorWithAddForm.classList.contains(activeClassAddFormInCountrySelector)) {
+    countrySelectorWithAddForm.classList.remove(activeClassAddFormInCountrySelector)
+    return
+  }
+
+  // OPEN
+  countrySelectorWithAddForm.classList.add(activeClassAddFormInCountrySelector)
+}
 function revertCatalogBar(evt) {
 
   var isNotClearClick = evt.path.some(function (node) {
@@ -108,4 +128,16 @@ document.addEventListener('scroll', function(evt) {
 if (countryPickerBar) {
   countryPickerBar.addEventListener('click', revertCatalogBar);
   countryPickerBtn.addEventListener('click', revertCatalogBar);
+}
+
+if (buttonInCountrySelectorWithAddForm) {
+  buttonInCountrySelectorWithAddForm.addEventListener('click', revertAddFormInCountrySelector);
+
+  for (var j = 0; j <= countriesInAddFormOfCountrySelector.length; j++) {
+    countriesInAddFormOfCountrySelector[j].addEventListener('click', revertAddFormInCountrySelector);
+  }
+
+  for (var k = 0; j <= lettersInAddFormOfCountrySelector.length; j++) {
+    lettersInAddFormOfCountrySelector[k].addEventListener('click', function(evt) { evt.preventDefault(); });
+  }
 }
