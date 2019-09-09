@@ -90,12 +90,12 @@
 
   position: relative;
 
-  background: #edeff6 url("../../img/heart.svg") center/13px 11px no-repeat;
+  background: #edeff6 url("../img/heart.svg") center/13px 11px no-repeat;
   border: none;
   border-radius: 50%;
 
   &_active {
-    background: #f9eaea url("../../img/heart-active.svg") center/13px 11px no-repeat;
+    background: #f9eaea url("../img/heart-active.svg") center/13px 11px no-repeat;
   }
 }
 

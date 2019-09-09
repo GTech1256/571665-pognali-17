@@ -4,14 +4,14 @@
 
   position: relative;
 
-  background: url("../../img/globe-back-mobile@1x.jpg") no-repeat;
+  background: url("../img/globe-back-mobile@1x.jpg") no-repeat;
   background-position: center -223px;
   background-size: cover;
 
   &::before {
     display: block;
     height: inherit;
-    background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat 79px 0;
+    background: url("../img/traveller-illustration-mobile@1x.png") no-repeat 79px 0;
     content: "";
   }
 }

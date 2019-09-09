@@ -2,6 +2,10 @@
   display: block;
 }
 
+.logo__wrapper_hidden {
+  display: none;
+}
+
 @media #{$media-desktop-more} {
   .logo {
     width: 200px;

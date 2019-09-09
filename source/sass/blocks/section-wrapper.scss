@@ -33,7 +33,7 @@
       left: 0;
       z-index: 0;
 
-      background: url("../../img/about-mobile@1x.png") 60% no-repeat;
+      background: url("../img/about-mobile@1x.png") 60% no-repeat;
       content: "";
     }
 
@@ -71,7 +71,7 @@
     }
 
     &::after {
-      background: url("../../img/smolov-back-desktop@1x.png") 86% 5.5% no-repeat;
+      background: url("../img/smolov-back-desktop@1x.png") 86% 5.5% no-repeat;
     }
   }
 
@@ -199,7 +199,7 @@
     }
 
     &_directions {
-      background-image: url("../../img/flags-back@1x.png");
+      background-image: url("../img/flags-back@1x.png");
       background-repeat: no-repeat;
       background-position: 91.6% 82px;
     }
@@ -212,7 +212,7 @@
   }
 
   .section-wrapper_service.section-wrapper_special-background::after {
-    background-image: url("../../img/about-tablet@1x.png");
+    background-image: url("../img/about-tablet@1x.png");
     background-position: 98% 47px;
   }
 
@@ -238,7 +238,7 @@
   }
 
   .section-wrapper_companions::after {
-    background: url("../../img/rogovaya-back-desktop@1x.png") 84.5% 136px no-repeat;
+    background: url("../img/rogovaya-back-desktop@1x.png") 84.5% 136px no-repeat;
   }
 
   .section-wrapper_companions .section-wrapper__text {
@@ -263,7 +263,7 @@
       left: -35px;
       z-index: -1;
 
-      background: url("../../img/smolov-back-desktop@1x.png");
+      background: url("../img/smolov-back-desktop@1x.png");
       border-radius: 10px;
 
       content: "";
@@ -399,7 +399,7 @@
   }
 
   .section-wrapper_service.section-wrapper_special-background::after {
-    background: url("../../img/about-desktop@1x.png") no-repeat 92.7% 14px;
+    background: url("../img/about-desktop@1x.png") no-repeat 92.7% 14px;
   }
 
   .section-wrapper__more {
