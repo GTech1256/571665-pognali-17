@@ -121,11 +121,11 @@
 
 @media #{$media-desktop-more} {
   .top-bar {
-    width: 100%;
+    width: $desktop-width;
     min-height: $desktop-top-bar-height;
     padding-top: 49px;
 
-    background-color: #161c34;
+    // background-color: #161c34;
   }
 
   .top-bar__logo {
