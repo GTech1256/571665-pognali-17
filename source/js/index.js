@@ -18,6 +18,10 @@ var logoPaths = {
   close: 'img/logo-mobile-white@1x.png'
 }
 
+function isScrollOnTop() {
+  return window.scrollY == 0;
+}
+
 function revertCatalogBar(evt) {
 
   var isNotClearClick = evt.path.some(function (node) {
@@ -54,8 +58,12 @@ function revertMobileMenu() {
     mobileMenu.classList.remove(activeClassOfMobileMenu);
     menuBurger.classList.remove(menuBurgerTypeClose);
     topBar.classList.remove(activeClassOfTopBar);
-    topBar.classList.remove(fixedClassOfTopBar);
     logo.src = logoPaths.close;
+
+    if(isScrollOnTop()) {
+      topBar.classList.remove(fixedClassOfTopBar);
+    }
+
     return
   }
 
@@ -63,18 +71,38 @@ function revertMobileMenu() {
   mobileMenu.classList.add(activeClassOfMobileMenu);
   menuBurger.classList.add(menuBurgerTypeClose);
   topBar.classList.add(activeClassOfTopBar);
-  topBar.classList.add(fixedClassOfTopBar);
   logo.src = logoPaths.open;
+  topBar.classList.add(fixedClassOfTopBar);
+/*
+  if(isScrollOnTop()) {
+
+  }
+  */
 }
 
 menuBurger.classList.remove('top-bar__toggle-btn_hidden');
 revertMobileMenu()
 
-
+// --EVENTS--
 menuBurger.addEventListener('click', function (evt) {
   evt.preventDefault();
 
   revertMobileMenu();
+})
+
+document.addEventListener('scroll', function(evt) {
+  var isFixedTopBar = topBar.classList.contains(fixedClassOfTopBar)
+  var isOpenTopBar = topBar.classList.contains(activeClassOfTopBar)
+
+  if (!isScrollOnTop() && !isFixedTopBar) {
+    topBar.classList.add(fixedClassOfTopBar)
+    return;
+  }
+
+  if (isScrollOnTop() && isFixedTopBar && !isOpenTopBar) {
+    topBar.classList.remove(fixedClassOfTopBar)
+    return;
+  }
 })
 
 if (countryPickerBar) {

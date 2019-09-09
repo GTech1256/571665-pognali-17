@@ -16,6 +16,8 @@
   &_position-fixed {
     position: fixed;
     z-index: 1000;
+
+    background-color: #ffffff;
   }
 
   &_pt-small {
@@ -76,6 +78,11 @@
       transform: rotate(-45deg);
     }
   }
+}
+
+.top-bar_position-fixed .top-bar__toggle-btn::after,
+.top-bar_position-fixed .top-bar__toggle-btn::before {
+  background-color: #cccccc;
 }
 
 @media #{$media-tablet-more} {
