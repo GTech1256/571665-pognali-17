@@ -19,6 +19,9 @@ $mobile-top-bar-height:  58px;
 $tablet-top-bar-height:  132px;
 $desktop-top-bar-height: 100px;
 
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
 $media-mobile-less:   "screen and (max-width:" + $mobile-width + ")";
 $media-tablet-more:   "screen and (min-width:" + $tablet-width + ")";
 $media-desktop-more:  "screen and (min-width:" + $desktop-width + ")";
