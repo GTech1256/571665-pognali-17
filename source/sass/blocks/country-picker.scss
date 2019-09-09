@@ -299,9 +299,10 @@
 
   .country-picker__letter-wrapper {
     display: flex;
-    width: 185px;
-    margin-right: 24px;
     margin-bottom: 51px;
+
+    flex-basis: 16%;
+    flex-grow: 1;
     flex-direction: column;
   }
 
