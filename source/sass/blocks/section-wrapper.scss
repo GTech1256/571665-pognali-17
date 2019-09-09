@@ -65,10 +65,12 @@
   }
 
   &_companions {
-    padding-top: 98px;
+    padding-top: 99px;
     margin-top: -30px;
 
     background: #192144;
+
+    overflow: hidden;
 
     // OVERIDE &_special-background
     &::before {
@@ -77,6 +79,11 @@
 
     &::after {
       background: url("../img/smolov-back-desktop@1x.png") 86% 5.5% no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-size: 143px;
+      }
     }
   }
 
@@ -183,6 +190,31 @@
   margin-bottom: 20px;
 }
 
+.section-wrapper_companions .section-wrapper__item:first-child {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 71px;
+    height: 71px;
+
+    position: absolute;
+    top: -36px;
+    left: -35px;
+    z-index: -1;
+
+    background: url("../img/rogovaya-back-mobile@1x.png");
+    border-radius: 10px;
+
+    content: "";
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-mobile@1x.png");
+      background-size: 71px;
+    }
+  }
+}
+
 @media #{$media-tablet-more} {
   .section-wrapper {
     padding-left: 75px;
@@ -249,6 +281,11 @@
 
   .section-wrapper_companions::after {
     background: url("../img/rogovaya-back-desktop@1x.png") 84.5% 136px no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 285px;
+    }
   }
 
   .section-wrapper_companions .section-wrapper__text {
@@ -277,6 +314,11 @@
       border-radius: 10px;
 
       content: "";
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-size: 143px;
+      }
     }
   }
 
