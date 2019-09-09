@@ -47,6 +47,7 @@
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: -0.4px;
 }
 
 @media #{$media-tablet-more} {
@@ -72,11 +73,13 @@
 
   .want-visit__country-wrapper {
     margin-right: 27px;
+    margin-bottom: 6px;
   }
 
   .want-visit__country-name {
     font-size: 20px;
     line-height: 30px;
+    letter-spacing: -0.4px;
   }
 }
 
@@ -84,7 +87,7 @@
   .want-visit {
     max-height: 150px;
     padding: 0;
-    padding-top: 45px;
+    padding-top: 47px;
 
     // overflow: auto;
   }
