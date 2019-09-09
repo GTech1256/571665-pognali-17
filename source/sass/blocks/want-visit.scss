@@ -86,7 +86,7 @@
     padding: 0;
     padding-top: 45px;
 
-    overflow: auto;
+    // overflow: auto;
   }
 
   .want-visit__title {
@@ -94,11 +94,13 @@
   }
 
   .want-visit__list {
-
+    max-height: 134px;
     padding: 0;
     margin: 0;
 
     flex-direction: column;
+
+    overflow-y: auto;
   }
 
   .want-visit__country-flag {
