@@ -16,6 +16,8 @@
   &_position-fixed {
     position: fixed;
     z-index: 1000;
+
+    background-color: #ffffff;
   }
 
   &_pt-small {
@@ -78,6 +80,11 @@
   }
 }
 
+.top-bar_position-fixed .top-bar__toggle-btn::after,
+.top-bar_position-fixed .top-bar__toggle-btn::before {
+  background-color: #cccccc;
+}
+
 @media #{$media-tablet-more} {
   .top-bar {
     width: $tablet-width;
@@ -114,19 +121,17 @@
 
 @media #{$media-desktop-more} {
   .top-bar {
-    width: 100%;
+    width: $desktop-width;
     min-height: $desktop-top-bar-height;
     padding-top: 49px;
 
-    background-color: #161c34;
+    // background-color: #161c34;
   }
 
   .top-bar__logo {
     width: 205px;
     height: 50px;
     margin-right: 35px;
-
-    border: 1px solid red;
   }
 
   .top-bar__top-wrappers {

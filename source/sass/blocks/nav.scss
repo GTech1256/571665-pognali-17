@@ -41,4 +41,12 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .top-bar_position-fixed .nav::before {
+    background-color: $blue-nav-text;
+  }
+
+  .top-bar_position-fixed .nav__item {
+    color: $blue-nav-text;
+  }
 }

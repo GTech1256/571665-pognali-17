@@ -11,9 +11,30 @@
       <div class="top-bar top-bar_pt-small top-bar_open"><!-- always on top -->
         <div class="top-bar__top-wrappers">
           <a href="index.html" class="logo top-bar__logo">
-            <!-- svg -->
-            <img class="logo__img" src="img/logo-mobile-blue@1x.png" alt="Логотип: 'Погнали?'" width="100" height="19">
-            <!-- /svg -->
+            <!-- static -->
+            <picture class="logo__wrapper logo__wrapper_white">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img
+                class="logo__img"
+                src="img/logo-mobile-white@1x.png"
+                srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+                alt="Логотип: 'Погнали?'"
+                sizes="(max-width: 767px) 100px, (min-width: 768px) 164px, (min-width: 1440px) 200px"
+              >
+            </picture>
+              <!-- float -->
+            <picture class="logo__wrapper logo__wrapper_blue">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img
+                class="logo__img"
+                src="img/logo-mobile-blue@1x.png"
+                srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
+                alt="Логотип: 'Погнали?'"
+                sizes="(max-width: 767px) 100px, (min-width: 768px) 164px, (min-width: 1440px) 200px"
+              >
+            </picture>
           </a>
           <button
             class="top-bar__toggle-btn top-bar__toggle-btn_hidden top-bar__toggle-btn_type_close"
@@ -755,13 +776,17 @@
               <div class="user-card-filter__visual-info">
                   <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      <img
-                        class="user-card-filter__pic"
-                        src="http://placehold.it/70x70"
-                        alt="Фотография пользователя"
-                        width="70"
-                        height="70"
-                      >
+                      <picture>
+                        <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                        <img
+                          class="user-card-filter__pic"
+                          src="img/firsova-mobile@1x.jpg"
+                          srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x"
+                          alt="Фотография пользователя"
+                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
+                        >
+                      </picture>
                     </a>
                   </div><!-- /.user-card-filter__pic-wrapper -->
                   <div class="user-card-filter__fullname-wrapper">
@@ -796,15 +821,15 @@
                 </p>
                 <ul class="want-visit__list">
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Шри ланка" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-sri-lanka.svg" alt="Шри ланка" width="26" height="18">
                     <p class="want-visit__country-name">Шри ланка</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Тайланд" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-thailand.svg" alt="Тайланд" width="26" height="18">
                     <p class="want-visit__country-name">Тайланд</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Сейшелы" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-seychelles.svg" alt="Сейшелы" width="26" height="18">
                     <p class="want-visit__country-name">Сейшелы</p>
                   </li>
                 </ul><!-- /.want-visit__list -->
@@ -933,13 +958,17 @@
               <div class="user-card-filter__visual-info">
                   <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      <img
-                        class="user-card-filter__pic"
-                        src="http://placehold.it/70x70"
-                        alt="Фотография пользователя"
-                        width="70"
-                        height="70"
-                      >
+                      <picture>
+                        <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                        <img
+                          class="user-card-filter__pic"
+                          src="img/demin-mobile@1x.jpg"
+                          srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x"
+                          alt="Фотография пользователя"
+                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
+                        >
+                      </picture>
                     </a>
                   </div><!-- /.user-card-filter__pic-wrapper -->
                   <div class="user-card-filter__fullname-wrapper">
@@ -973,11 +1002,11 @@
                 </p>
                 <ul class="want-visit__list">
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Бельгия" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-belgium.svg" alt="Бельгия" width="26" height="18">
                     <p class="want-visit__country-name">Бельгия</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Чехия" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-czech.svg" alt="Чехия" width="26" height="18">
                     <p class="want-visit__country-name">Чехия</p>
                   </li>
                 </ul><!-- /.want-visit__list -->
@@ -1106,13 +1135,17 @@
               <div class="user-card-filter__visual-info">
                   <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      <img
-                        class="user-card-filter__pic"
-                        src="http://placehold.it/70x70"
-                        alt="Фотография пользователя"
-                        width="70"
-                        height="70"
-                      >
+                      <picture>
+                        <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                        <img
+                          class="user-card-filter__pic"
+                          src="img/smolov-mobile@1x.jpg"
+                          srcset="img/smolov-mobile@1x.jpg 1x, img/smolov-mobile@2x.jpg 2x"
+                          alt="Фотография пользователя"
+                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
+                        >
+                      </picture>
                     </a>
                   </div><!-- /.user-card-filter__pic-wrapper -->
                   <div class="user-card-filter__fullname-wrapper">
@@ -1146,15 +1179,15 @@
                 </p>
                 <ul class="want-visit__list">
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="США" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-usa.svg" alt="США" width="26" height="18">
                     <p class="want-visit__country-name">США</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Австралия" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-australia.svg" alt="Австралия" width="26" height="18">
                     <p class="want-visit__country-name">Австралия</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Доминикана" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-dominica.svg" alt="Доминикана" width="26" height="18">
                     <p class="want-visit__country-name">Доминикана</p>
                   </li>
                 </ul><!-- /.want-visit__list -->
@@ -1283,13 +1316,17 @@
               <div class="user-card-filter__visual-info">
                   <div class="user-card-filter__pic-wrapper">
                     <a href="#">
-                      <img
-                        class="user-card-filter__pic"
-                        src="http://placehold.it/70x70"
-                        alt="Фотография пользователя"
-                        width="70"
-                        height="70"
-                      >
+                    <picture>
+                        <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                        <img
+                          class="user-card-filter__pic"
+                          src="img/rogovaya-mobile@1x.jpg"
+                          srcset="img/rogovaya-mobile@1x.jpg 1x, img/rogovaya-mobile@2x.jpg 2x"
+                          alt="Фотография пользователя"
+                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
+                        >
+                      </picture>
                     </a>
                   </div><!-- /.user-card-filter__pic-wrapper -->
                   <div class="user-card-filter__fullname-wrapper">
@@ -1322,11 +1359,11 @@
                 </p>
                 <ul class="want-visit__list">
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Великобритания" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-united-kingdom.svg" alt="Великобритания" width="26" height="18">
                     <p class="want-visit__country-name">Великобритания</p>
                   </li>
                   <li class="want-visit__country-wrapper">
-                    <img class="want-visit__country-flag" src="http://placehold.it/26x18" alt="Германия" width="26" height="18">
+                    <img class="want-visit__country-flag" src="img/flag-germany.svg" alt="Германия" width="26" height="18">
                     <p class="want-visit__country-name">Германия</p>
                   </li>
                 </ul><!-- /.want-visit__list -->

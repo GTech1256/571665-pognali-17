@@ -8,7 +8,8 @@
 
 .profile-settings__head {
   display: flex;
-  margin-bottom: 19px;
+  padding-left: 2px;
+  margin-bottom: 9px;
 
   justify-content: space-around;
 }
@@ -36,8 +37,9 @@
 
   .profile-settings__head {
     width: 100%;
-    margin-bottom: 51px;
+    padding: 0;
     padding-top: 41px;
+    margin-bottom: 42px;
 
     justify-content: space-between;
   }

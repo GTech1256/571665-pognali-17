@@ -33,8 +33,13 @@
       left: 0;
       z-index: 0;
 
-      background: url("../../img/about-mobile@1x.png") 60% no-repeat;
+      background: url("../img/about-mobile@1x.png") 60% no-repeat;
       content: "";
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-mobile@2x.png");
+        background-size: 292px 352px;
+      }
     }
 
     .section-wrapper__title,
@@ -60,10 +65,12 @@
   }
 
   &_companions {
-    padding-top: 98px;
+    padding-top: 99px;
     margin-top: -30px;
 
     background: #192144;
+
+    overflow: hidden;
 
     // OVERIDE &_special-background
     &::before {
@@ -71,7 +78,12 @@
     }
 
     &::after {
-      background: url("../../img/smolov-back-desktop@1x.png") 86% 5.5% no-repeat;
+      background: url("../img/smolov-back-desktop@1x.png") 86% 5.5% no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-size: 143px;
+      }
     }
   }
 
@@ -178,6 +190,31 @@
   margin-bottom: 20px;
 }
 
+.section-wrapper_companions .section-wrapper__item:first-child {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 71px;
+    height: 71px;
+
+    position: absolute;
+    top: -36px;
+    left: -35px;
+    z-index: -1;
+
+    background: url("../img/rogovaya-back-mobile@1x.png");
+    border-radius: 10px;
+
+    content: "";
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-mobile@1x.png");
+      background-size: 71px;
+    }
+  }
+}
+
 @media #{$media-tablet-more} {
   .section-wrapper {
     padding-left: 75px;
@@ -199,9 +236,14 @@
     }
 
     &_directions {
-      background-image: url("../../img/flags-back@1x.png");
+      background-image: url("../img/flags-back@1x.png");
       background-repeat: no-repeat;
       background-position: 91.6% 82px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/flags-back@2x.png");
+        background-size: 289px 575px;
+      }
     }
 
     &_companions {
@@ -212,8 +254,13 @@
   }
 
   .section-wrapper_service.section-wrapper_special-background::after {
-    background-image: url("../../img/about-tablet@1x.png");
+    background-image: url("../img/about-tablet@1x.png");
     background-position: 98% 47px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+      background-size: 376px 548px;
+    }
   }
 
   .section-wrapper_service .section-wrapper__text:last-of-type {
@@ -238,7 +285,12 @@
   }
 
   .section-wrapper_companions::after {
-    background: url("../../img/rogovaya-back-desktop@1x.png") 84.5% 136px no-repeat;
+    background: url("../img/rogovaya-back-desktop@1x.png") 84.5% 136px no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 285px;
+    }
   }
 
   .section-wrapper_companions .section-wrapper__text {
@@ -263,10 +315,15 @@
       left: -35px;
       z-index: -1;
 
-      background: url("../../img/smolov-back-desktop@1x.png");
+      background: url("../img/smolov-back-desktop@1x.png");
       border-radius: 10px;
 
       content: "";
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-size: 143px;
+      }
     }
   }
 
@@ -399,7 +456,12 @@
   }
 
   .section-wrapper_service.section-wrapper_special-background::after {
-    background: url("../../img/about-desktop@1x.png") no-repeat 92.7% 14px;
+    background: url("../img/about-desktop@1x.png") no-repeat 92.7% 14px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+      background-size: 630px 665px;
+    }
   }
 
   .section-wrapper__more {

@@ -34,7 +34,8 @@
 
 .fieldset__tags {
   width: 100%;
-  padding: 12px 23px;
+  padding: 14px 23px;
+  padding-bottom: 10px;
 
   font-family: $font-family;
   font-size: 16px;
@@ -85,7 +86,7 @@
     min-height: 95px;
     padding-top: 23px;
 
-    align-self: center;
+    align-self: baseline;
   }
 
   .fieldset_on-table-hide {
