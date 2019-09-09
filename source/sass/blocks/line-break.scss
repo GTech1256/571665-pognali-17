@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media #{$media-mobile-less} {
+@media #{$media-tablet-less} {
   .line-break_mobile {
     display: block;
   }
