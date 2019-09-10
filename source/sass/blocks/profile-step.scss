@@ -5,9 +5,55 @@
   background-color: #ffffff;
   border-radius: 10px;
 
+  position: relative;
+
   &_two,
   &_three {
     padding-bottom: 12px;
+  }
+}
+
+.profile-step__steps-on-table {
+  display: none;
+
+  padding: 0;
+  padding-top: 8px;
+  margin: 0;
+
+  list-style: none;
+}
+
+.profile-step__step-on-table {
+  display: flex;
+  padding: 0;
+  margin-bottom: 14px;
+
+  color: #8d8d8d;
+
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  &::before {
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin-right: 37px;
+
+    background-color: #d9d9da;
+    border-radius: 50%;
+
+    content: "";
+  }
+
+  &_active {
+    color: #000000;
+
+    &::before {
+      background-color: $blue-base;
+    }
   }
 }
 
@@ -289,5 +335,17 @@
   .profile-step_three {
     padding-bottom: 105px;
     margin-bottom: 67px;
+  }
+
+  .profile-step__head {
+    display: flex;
+  }
+
+  .profile-step__head-left {
+    width: 772px;
+  }
+
+  .profile-step__steps-on-table {
+    display: block;
   }
 }

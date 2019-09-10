@@ -380,561 +380,584 @@
       <section class="profile-add-plan">
         <h2 class="profile-add-plan__title">
           Добавить план:
+          <span class="profile-add-plan__title-dots">
+            <span class="profile-add-plan__title-dot profile-add-plan__title-dot_active"></span>
+            <span class="profile-add-plan__title-dot"></span>
+            <span class="profile-add-plan__title-dot"></span>
+          </span>
         </h2>
         <form action="https://echo.htmlacademy.ru" method="POST">
           <section class="profile-step profile-step_one" id="step-1">
-              <p class="profile-step__title">Шаг 1.</p>
-              <h3 class="profile-step__title">Даты пребывания</h3>
-              <p class="profile-step__desc">
-                  Укажите предпочтительное количество попутчиков, которых<br class="line-break line-break_tablet line-break_desktop">
-                  вы хотели бы позвать в поездку и ее предполагаемую длительность.
-              </p>
-              <div class="profile-step__controllers-wrapper">
-                <div class="profile-step__smart-counter smart-counter">
-                  <p class="smart-counter__title">Ищу попутчиков:</p>
-                  <p class="smart-counter__extra">Чел.</p>
-                  <div class="smart-counter__holder">
-                    <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
-                    <input
-                      class="smart-counter__input"
-                      type="number"
-                      name="companion-count"
-                      value="2"
-                      placeholder="Количество попутчиков"
-                      required
-                      min="0"
-                    >
-                    <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
-                  </div>
-                </div><!-- /.smart-counter -->
-                <div class="profile-step__smart-counter smart-counter">
-                  <p class="smart-counter__title">Длительность:</p>
-                  <p class="smart-counter__extra">Дн.</p>
-                  <div class="smart-counter__holder">
-                    <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
-                    <input
-                      class="smart-counter__input"
-                      type="number"
-                      name="duration"
-                      value="2"
-                      placeholder="Количество дней"
-                      required
-                      min="0"
-                    >
-                    <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
-                  </div>
-                </div><!-- /.smart-counter -->
-
-                <input
-                  class="visually-hidden profile-step__kids-control"
-                  type="checkbox"
-                  id="with-kids"
-                  checked
-                >
-                <label class="profile-step__kids-checkbox" for="with-kids">
-                  Можно с детьми
-                </label>
+            <div class="profile-step__head">
+              <div class="profile-step__head-left">
+                <p class="profile-step__title">Шаг 1.</p>
+                <h3 class="profile-step__title">Даты пребывания</h3>
+                <p class="profile-step__desc">
+                    Укажите предпочтительное количество попутчиков, которых<br class="line-break line-break_tablet line-break_desktop">
+                    вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                </p>
               </div>
-              <div class="text-slider">
-                <button class="text-slider__btn text-slider__btn_decrement" type="button">Предыдущий месяц</button>
-                <time class="text-slider__time" datetime="2019-03">Март 2019</time>
-                <button class="text-slider__btn text-slider__btn_increment" type="button">Следующий месяц</button>
-              </div><!-- /.text-slider-->
+              <ul class="profile-step__steps-on-table">
+                <li class="profile-step__step-on-table profile-step__step-on-table_active">даты</li>
+                <li class="profile-step__step-on-table">маршрут</li>
+                <li class="profile-step__step-on-table">развлечения</li>
+              </ul>
+            </div>
+            <div class="profile-step__controllers-wrapper">
+              <div class="profile-step__smart-counter smart-counter">
+                <p class="smart-counter__title">Ищу попутчиков:</p>
+                <p class="smart-counter__extra">Чел.</p>
+                <div class="smart-counter__holder">
+                  <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
+                  <input
+                    class="smart-counter__input"
+                    type="number"
+                    name="companion-count"
+                    value="2"
+                    placeholder="Количество попутчиков"
+                    required
+                    min="0"
+                  >
+                  <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
+                </div>
+              </div><!-- /.smart-counter -->
+              <div class="profile-step__smart-counter smart-counter">
+                <p class="smart-counter__title">Длительность:</p>
+                <p class="smart-counter__extra">Дн.</p>
+                <div class="smart-counter__holder">
+                  <button class="smart-counter__btn smart-counter__btn_decrement" type="button">Убавить</button>
+                  <input
+                    class="smart-counter__input"
+                    type="number"
+                    name="duration"
+                    value="2"
+                    placeholder="Количество дней"
+                    required
+                    min="0"
+                  >
+                  <button class="smart-counter__btn smart-counter__btn_increment" type="button">Прибавить</button>
+                </div>
+              </div><!-- /.smart-counter -->
 
-              <table class="calendar">
-                <thead class="calendar__days">
-                  <tr>
-                    <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">н</span></td>
-                    <td class="calendar__td calendar__day-w">В<span class="calendar__day-w-additional-letter">т</span></td>
-                    <td class="calendar__td calendar__day-w">С<span class="calendar__day-w-additional-letter">р</span></td>
-                    <td class="calendar__td calendar__day-w">Ч<span class="calendar__day-w-additional-letter">т</span></td>
-                    <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">т</span></td>
-                    <td class="calendar__td calendar__day-w calendar__day-w_off">С<span class="calendar__day-w-additional-letter">б</span></td>
-                    <td class="calendar__td calendar__day-w calendar__day-w_off">В<span class="calendar__day-w-additional-letter">с</span></td>
-                  </tr>
-                </thead>
-                <tbody class="calendar__dates">
-                  <tr>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-23"
-                      >
-                      <label class="calendar__date-label" for="1-23">
-                          23
-                      </label>
+              <input
+                class="visually-hidden profile-step__kids-control"
+                type="checkbox"
+                id="with-kids"
+                checked
+              >
+              <label class="profile-step__kids-checkbox" for="with-kids">
+                Можно с детьми
+              </label>
+            </div>
+            <div class="text-slider">
+              <button class="text-slider__btn text-slider__btn_decrement" type="button">Предыдущий месяц</button>
+              <time class="text-slider__time" datetime="2019-03">Март 2019</time>
+              <button class="text-slider__btn text-slider__btn_increment" type="button">Следующий месяц</button>
+            </div><!-- /.text-slider-->
 
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-24"
-                      >
-                      <label class="calendar__date-label" for="1-24">
-                          24
-                      </label>
+            <table class="calendar">
+              <thead class="calendar__days">
+                <tr>
+                  <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">н</span></td>
+                  <td class="calendar__td calendar__day-w">В<span class="calendar__day-w-additional-letter">т</span></td>
+                  <td class="calendar__td calendar__day-w">С<span class="calendar__day-w-additional-letter">р</span></td>
+                  <td class="calendar__td calendar__day-w">Ч<span class="calendar__day-w-additional-letter">т</span></td>
+                  <td class="calendar__td calendar__day-w">П<span class="calendar__day-w-additional-letter">т</span></td>
+                  <td class="calendar__td calendar__day-w calendar__day-w_off">С<span class="calendar__day-w-additional-letter">б</span></td>
+                  <td class="calendar__td calendar__day-w calendar__day-w_off">В<span class="calendar__day-w-additional-letter">с</span></td>
+                </tr>
+              </thead>
+              <tbody class="calendar__dates">
+                <tr>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-23"
+                    >
+                    <label class="calendar__date-label" for="1-23">
+                        23
+                    </label>
 
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-25"
-                      >
-                      <label class="calendar__date-label" for="1-25">
-                          25
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-26"
-                      >
-                      <label class="calendar__date-label" for="1-26">
-                          26
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-27"
-                      >
-                      <label class="calendar__date-label" for="1-27">
-                          27
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-28"
-                      >
-                      <label class="calendar__date-label" for="1-28">
-                          28
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="1-1"
-                      >
-                      <label class="calendar__date-label" for="1-1">
-                          1<span class="calendar__mounth-name">мар</span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-2"
-                      >
-                      <label class="calendar__date-label" for="2-2">
-                          2
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-3"
-                      >
-                      <label class="calendar__date-label" for="2-3">
-                          3
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-4"
-                      >
-                      <label class="calendar__date-label" for="2-4">
-                          4
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-5"
-                      >
-                      <label class="calendar__date-label" for="2-5">
-                        5
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-6"
-                      >
-                      <label class="calendar__date-label" for="2-6">
-                        6
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-7"
-                      >
-                      <label class="calendar__date-label" for="2-7">
-                        7
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="2-8"
-                      >
-                      <label class="calendar__date-label" for="2-8">
-                        8
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="calendar__td">
-                        <input
-                          class="visually-hidden calendar__date-checkbox"
-                          type="checkbox"
-                          disabled
-                          id="3-9"
-                        >
-                        <label class="calendar__date-label" for="3-9">
-                          9
-                        </label>
-                      </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-10"
-                      >
-                      <label class="calendar__date-label" for="3-10">
-                        10
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-11"
-                      >
-                      <label class="calendar__date-label" for="3-11">
-                        11
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-12"
-                      >
-                      <label class="calendar__date-label" for="3-12">
-                        12
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-13"
-                      >
-                      <label class="calendar__date-label" for="3-13">
-                        13
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-14"
-                      >
-                      <label class="calendar__date-label" for="3-14">
-                        14
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="3-15"
-                      >
-                      <label class="calendar__date-label" for="3-15">
-                        15
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-24"
+                    >
+                    <label class="calendar__date-label" for="1-24">
+                        24
+                    </label>
+
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-25"
+                    >
+                    <label class="calendar__date-label" for="1-25">
+                        25
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-26"
+                    >
+                    <label class="calendar__date-label" for="1-26">
+                        26
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-27"
+                    >
+                    <label class="calendar__date-label" for="1-27">
+                        27
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-28"
+                    >
+                    <label class="calendar__date-label" for="1-28">
+                        28
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="1-1"
+                    >
+                    <label class="calendar__date-label" for="1-1">
+                        1<span class="calendar__mounth-name">мар</span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-2"
+                    >
+                    <label class="calendar__date-label" for="2-2">
+                        2
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-3"
+                    >
+                    <label class="calendar__date-label" for="2-3">
+                        3
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-4"
+                    >
+                    <label class="calendar__date-label" for="2-4">
+                        4
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-5"
+                    >
+                    <label class="calendar__date-label" for="2-5">
+                      5
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-6"
+                    >
+                    <label class="calendar__date-label" for="2-6">
+                      6
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-7"
+                    >
+                    <label class="calendar__date-label" for="2-7">
+                      7
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="2-8"
+                    >
+                    <label class="calendar__date-label" for="2-8">
+                      8
+                    </label>
+                  </td>
+                </tr>
+                <tr>
                   <td class="calendar__td">
                       <input
                         class="visually-hidden calendar__date-checkbox"
                         type="checkbox"
                         disabled
-                        id="4-16"
+                        id="3-9"
                       >
-                      <label class="calendar__date-label" for="4-16">
-                        16
+                      <label class="calendar__date-label" for="3-9">
+                        9
                       </label>
                     </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-17"
-                      >
-                      <label class="calendar__date-label" for="4-17">
-                        17
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-18"
-                      >
-                      <label class="calendar__date-label" for="4-18">
-                        18
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-19"
-                      >
-                      <label class="calendar__date-label" for="4-19">
-                        19
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-20"
-                      >
-                      <label class="calendar__date-label" for="4-20">
-                        20
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-21"
-                      >
-                      <label class="calendar__date-label" for="4-21">
-                        21
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="4-22"
-                      >
-                      <label class="calendar__date-label" for="4-22">
-                        22
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="5-23"
-                      >
-                      <label class="calendar__date-label" for="5-23">
-                        23
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="5-24"
-                      >
-                      <label class="calendar__date-label" for="5-24">
-                        24
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        disabled
-                        id="5-25"
-                      >
-                      <label class="calendar__date-label" for="5-25">
-                        25
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        checked
-                        id="5-26"
-                      >
-                      <label class="calendar__date-label calendar__date-label_first-date" for="5-26">
-                        26
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        checked
-                        id="5-27"
-                      >
-                      <label class="calendar__date-label" for="5-27">
-                        27
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        checked
-                        id="5-28"
-                      >
-                      <label class="calendar__date-label calendar__date-label_last-date" for="5-28">
-                        28
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="5-29"
-                      >
-                      <label class="calendar__date-label" for="5-29">
-                        29
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-30"
-                      >
-                      <label class="calendar__date-label" for="6-30">
-                        30
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-31"
-                      >
-                      <label class="calendar__date-label" for="6-31">
-                        31
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-1"
-                      >
-                      <label class="calendar__date-label" for="6-1">
-                        1<span class="calendar__mounth-name">апр</span>
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-2"
-                      >
-                      <label class="calendar__date-label" for="6-2">
-                        2
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-3"
-                      >
-                      <label class="calendar__date-label" for="6-3">
-                        3
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-4"
-                      >
-                      <label class="calendar__date-label" for="6-4">
-                        4
-                      </label>
-                    </td>
-                    <td class="calendar__td">
-                      <input
-                        class="visually-hidden calendar__date-checkbox"
-                        type="checkbox"
-                        id="6-5"
-                      >
-                      <label class="calendar__date-label" for="6-5">
-                        5
-                      </label>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-10"
+                    >
+                    <label class="calendar__date-label" for="3-10">
+                      10
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-11"
+                    >
+                    <label class="calendar__date-label" for="3-11">
+                      11
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-12"
+                    >
+                    <label class="calendar__date-label" for="3-12">
+                      12
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-13"
+                    >
+                    <label class="calendar__date-label" for="3-13">
+                      13
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-14"
+                    >
+                    <label class="calendar__date-label" for="3-14">
+                      14
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="3-15"
+                    >
+                    <label class="calendar__date-label" for="3-15">
+                      15
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-16"
+                    >
+                    <label class="calendar__date-label" for="4-16">
+                      16
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-17"
+                    >
+                    <label class="calendar__date-label" for="4-17">
+                      17
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-18"
+                    >
+                    <label class="calendar__date-label" for="4-18">
+                      18
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-19"
+                    >
+                    <label class="calendar__date-label" for="4-19">
+                      19
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-20"
+                    >
+                    <label class="calendar__date-label" for="4-20">
+                      20
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-21"
+                    >
+                    <label class="calendar__date-label" for="4-21">
+                      21
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="4-22"
+                    >
+                    <label class="calendar__date-label" for="4-22">
+                      22
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="5-23"
+                    >
+                    <label class="calendar__date-label" for="5-23">
+                      23
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="5-24"
+                    >
+                    <label class="calendar__date-label" for="5-24">
+                      24
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      disabled
+                      id="5-25"
+                    >
+                    <label class="calendar__date-label" for="5-25">
+                      25
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      checked
+                      id="5-26"
+                    >
+                    <label class="calendar__date-label calendar__date-label_first-date" for="5-26">
+                      26
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      checked
+                      id="5-27"
+                    >
+                    <label class="calendar__date-label" for="5-27">
+                      27
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      checked
+                      id="5-28"
+                    >
+                    <label class="calendar__date-label calendar__date-label_last-date" for="5-28">
+                      28
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="5-29"
+                    >
+                    <label class="calendar__date-label" for="5-29">
+                      29
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-30"
+                    >
+                    <label class="calendar__date-label" for="6-30">
+                      30
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-31"
+                    >
+                    <label class="calendar__date-label" for="6-31">
+                      31
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-1"
+                    >
+                    <label class="calendar__date-label" for="6-1">
+                      1<span class="calendar__mounth-name">апр</span>
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-2"
+                    >
+                    <label class="calendar__date-label" for="6-2">
+                      2
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-3"
+                    >
+                    <label class="calendar__date-label" for="6-3">
+                      3
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-4"
+                    >
+                    <label class="calendar__date-label" for="6-4">
+                      4
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <input
+                      class="visually-hidden calendar__date-checkbox"
+                      type="checkbox"
+                      id="6-5"
+                    >
+                    <label class="calendar__date-label" for="6-5">
+                      5
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-2">Следующий шаг</a>
+            <a class="profile-step__next-step-btn link-btn link-btn_width_230" href="#step-2">Следующий шаг</a>
 
           </section><!-- /.profile-step -->
 
           <section class="profile-step profile-step_two" id="step-2">
-              <p class="profile-step__title">Шаг 2.</p>
-              <h3 class="profile-step__title">Маршрут</h3>
-              <p class="profile-step__desc">
-                  Укажите страны, которые вы хотели по посетить. <br class="line-break line-break_tablet line-break_desktop">Это может быть одна или сразу несколько.
-              </p>
+              <div class="profile-step__head">
+                <div class="profile-step__head-left">
+                  <p class="profile-step__title">Шаг 2.</p>
+                  <h3 class="profile-step__title">Маршрут</h3>
+                  <p class="profile-step__desc">
+                      Укажите страны, которые вы хотели по посетить. <br class="line-break line-break_tablet line-break_desktop">Это может быть одна или сразу несколько.
+                  </p>
+                </div>
+                <ul class="profile-step__steps-on-table">
+                  <li class="profile-step__step-on-table">даты</li>
+                  <li class="profile-step__step-on-table profile-step__step-on-table_active">маршрут</li>
+                  <li class="profile-step__step-on-table">развлечения</li>
+                </ul>
+              </div>
               <div class="country-selector__wrapper">
                 <div class="country-selector country-selector_selected">
                   <button class="country-selector__select-btn" type="button">Босния и герцеговина</button>
@@ -1029,62 +1052,71 @@
           </section><!-- /.profile-step -->
 
           <section class="profile-step profile-step_three" id="step-3">
-              <p class="profile-step__title">Шаг 3.</p>
-              <h3 class="profile-step__title">Развлечения</h3>
-              <p class="profile-step__desc">
-                  Наконец, расскажите о своих планах времяпровождения.<br class="line-break line-break_desktop"> Можно писать в свободной форме и ставить тэги.
-              </p>
-              <div class="country-entertainment__wrapper">
-                <div class="country-entertainment">
-                  <div class="country-entertainment__holder">
-                    <p class="country-entertainment__country-name">Босния и герцеговина</p>
-                    <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
-                      <img
-                        class="country-entertainment__country-flag"
-                        src="img/flag-bosnia.svg"
-                        alt="Флаг Боснии и Герцеговина"
-                        width="35"
-                        height="24"
-                      >
-                      <p class="tooltip-wrapper__content">
-                        Босния и Герцегов
-                      </p>
-                    </div>
+            <div class="profile-step__head">
+              <div class="profile-step__head-left">
+                <p class="profile-step__title">Шаг 3.</p>
+                <h3 class="profile-step__title">Развлечения</h3>
+                <p class="profile-step__desc">
+                    Наконец, расскажите о своих планах времяпровождения.<br class="line-break line-break_desktop"> Можно писать в свободной форме и ставить тэги.
+                </p>
+              </div>
+              <ul class="profile-step__steps-on-table">
+                <li class="profile-step__step-on-table">даты</li>
+                <li class="profile-step__step-on-table">маршрут</li>
+                <li class="profile-step__step-on-table profile-step__step-on-table_active">развлечения</li>
+              </ul>
+            </div>
+            <div class="country-entertainment__wrapper">
+              <div class="country-entertainment">
+                <div class="country-entertainment__holder">
+                  <p class="country-entertainment__country-name">Босния и герцеговина</p>
+                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="img/flag-bosnia.svg"
+                      alt="Флаг Боснии и Герцеговина"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Босния и Герцегов
+                    </p>
                   </div>
-                  <textarea
-                    class="country-entertainment__desc"
-                    placeholder="План действий"
-                    required
-                    name="action-plan-a"></textarea>
                 </div>
+                <textarea
+                  class="country-entertainment__desc"
+                  placeholder="План действий"
+                  required
+                  name="action-plan-a"></textarea>
+              </div>
 
-                <div class="country-entertainment">
-                  <div class="country-entertainment__holder">
-                    <p class="country-entertainment__country-name">Чехословакия</p>
-                    <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
-                      <img
-                        class="country-entertainment__country-flag"
-                        src="img/flag-czech.svg"
-                        alt="Флаг Чехословакии"
-                        width="35"
-                        height="24"
-                      >
-                      <p class="tooltip-wrapper__content">
-                        Чехословакия
-                      </p>
-                    </div>
+              <div class="country-entertainment">
+                <div class="country-entertainment__holder">
+                  <p class="country-entertainment__country-name">Чехословакия</p>
+                  <div class="tooltip-wrapper country-entertainment__country-flag-wrapper">
+                    <img
+                      class="country-entertainment__country-flag"
+                      src="img/flag-czech.svg"
+                      alt="Флаг Чехословакии"
+                      width="35"
+                      height="24"
+                    >
+                    <p class="tooltip-wrapper__content">
+                      Чехословакия
+                    </p>
                   </div>
-                  <textarea
-                    class="country-entertainment__desc"
-                    placeholder="План действий"
-                    required
-                    name="action-plan-b">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                 </div>
+                <textarea
+                  class="country-entertainment__desc"
+                  placeholder="План действий"
+                  required
+                  name="action-plan-b">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
               </div>
-              <div class="profile-step__controls">
-                <button class="profile-step__next-step-btn link-btn link-btn_width_230" type="submit">Отправить</button>
-                <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-2">На шаг назад</a>
-              </div>
+            </div>
+            <div class="profile-step__controls">
+              <button class="profile-step__next-step-btn link-btn link-btn_width_230" type="submit">Отправить</button>
+              <a class="profile-step__prev-step-btn link-btn link-btn_width_230 link-btn_bgc_transparent" href="#step-2">На шаг назад</a>
+            </div>
           </section><!-- /.profile-step -->
         </form>
 
