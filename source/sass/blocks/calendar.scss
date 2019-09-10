@@ -130,7 +130,7 @@
 
 @media #{$media-desktop-more} {
   .calendar {
-    max-width: unset;
+    max-width: none;
     margin-bottom: 56px;
   }
 

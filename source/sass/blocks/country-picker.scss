@@ -168,6 +168,8 @@
 
   .companions-country-filter__country-picker-control_active ~ .country-picker {
     display: flex;
+
+    flex-direction: column;
   }
 
   .country-picker__alphabet {

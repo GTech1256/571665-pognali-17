@@ -95,7 +95,7 @@
       top: 48%;
       right: 15px;
 
-      box-shadow: unset;
+      box-shadow: none;
     }
   }
 }
@@ -146,7 +146,7 @@
   position: relative;
 
   &::before {
-    content: unset;
+    content: none;
   }
 }
 
@@ -320,7 +320,7 @@
 
     top: 26px;
     right: 129px;
-    transform: unset;
+    transform: none;
   }
 
   .country-selector:last-of-type::before {
@@ -342,7 +342,7 @@
   }
 
   .country-selector:not(:last-of-type)::after {
-    content: unset;
+    content: none;
   }
 
   .country-selector__select-btn_add-element::before,
@@ -440,7 +440,7 @@
     width: 435px;
     margin-bottom: 17px;
 
-    border: unset;
+    border: none;
   }
 
   .country-selector__add-form-letter {
