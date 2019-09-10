@@ -12,7 +12,7 @@ var countriesInAddFormOfCountrySelector = document.querySelectorAll('.country-se
 var lettersInAddFormOfCountrySelector = document.querySelectorAll('.country-selector__add-form-letter');
 
 // catalog.html controls
-var countryPickerBar = document.querySelector('.country-picker-bar');
+var countryPickerBarToggleBtn = document.querySelector('.country-picker-bar__toggle-btn');
 var countryPickerBtn = document.querySelector('.country-picker__close-btn-wrapper');
 var countryPickerControl = document.querySelector('.companions-country-filter__country-picker-control');
 
@@ -43,14 +43,6 @@ function revertAddFormInCountrySelector(evt) {
   countrySelectorWithAddForm.classList.add(activeClassAddFormInCountrySelector)
 }
 function revertCatalogBar(evt) {
-
-  var isNotClearClick = evt.path.some(function (node) {
-    return node.classList && node.classList.contains('country-picker__name-words')
-  })
-
-  if (isNotClearClick) {
-    return;
-  }
   evt.preventDefault();
 
   //country-picker__name-words
@@ -125,8 +117,8 @@ document.addEventListener('scroll', function(evt) {
   }
 })
 
-if (countryPickerBar) {
-  countryPickerBar.addEventListener('click', revertCatalogBar);
+if (countryPickerBarToggleBtn) {
+  countryPickerBarToggleBtn.addEventListener('click', revertCatalogBar);
   countryPickerBtn.addEventListener('click', revertCatalogBar);
 }
 

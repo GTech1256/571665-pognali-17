@@ -25,10 +25,20 @@
   }
 }
 
-.country-picker-bar__toggle-title {
-  display: none;
+.country-picker-bar__toggle-btn {
+  display: flex;
+  padding: 0;
   margin: 0;
   margin-left: auto;
+
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+}
+
+.country-picker-bar__toggle-title {
+  display: none;
   margin-right: 20px;
 
   color: $blue-nav-text;

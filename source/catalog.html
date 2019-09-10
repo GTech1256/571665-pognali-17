@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления — Погнали!</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <svg style="display: none;">
@@ -208,13 +208,16 @@
                 Острова
             </label>
           </span>
-          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</p>
-          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</p>
-          <span class="country-picker-bar__toggle-element-wrapper">
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-          </span>
+          <button class="country-picker-bar__toggle-btn" type="button">
+            <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</p>
+            <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</p>
+            <span class="country-picker-bar__toggle-element-wrapper">
+
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+            </span>
+          </button>
         </div>
         <div class="country-picker">
           <span class="visually-hidden">Выбор части света</span>
