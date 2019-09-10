@@ -36,13 +36,18 @@
   }
 
   .nav__item {
-    margin-right: 39px;
+    margin-right: 34px;
 
     font-size: 20px;
     line-height: 30px;
+    letter-spacing: 0.4px;
   }
 
+  //.top-bar_position-fixed
+
   .top-bar_position-fixed .nav::before {
+    width: 45px;
+    height: 2px;
     background-color: $blue-nav-text;
   }
 

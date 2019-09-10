@@ -7,72 +7,96 @@
   align-items: center;
 
   position: relative;
+}
 
+
+.contacts-paragraph__link_color_yellow {
+  .contacts-paragraph__content-wrapper {
+    color: $yellow-base;
+  }
+
+  .contacts-paragraph__svg {
+    fill: $yellow-base;
+  }
+}
+
+.contacts-paragraph__link_color_yellow:hover {
+  .contacts-paragraph__content-wrapper {
+    color: #ffbd30;
+  }
+
+  .contacts-paragraph__svg {
+    fill: #ffbd30;
+  }
+}
+
+.contacts-paragraph__link_color_yellow:active {
+  .contacts-paragraph__content-wrapper,
+  .contacts-paragraph__svg {
+    opacity: 0.3;
+  }
+}
+
+.contacts-paragraph__content-wrapper {
   color: $blue-nav-text;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
   line-height: 45px;
+}
 
-  &::before {
-    margin-right: 16px;
-    width: 45px;
-    height: 45px;
+.contacts-paragraph__svg-wrapper {
+  display: flex;
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
 
-    background-color: #121936;
-    background-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    content: "";
-  }
+  background-color: #121936;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
 
-  &_phone {
-    &::before {
-      background-image: url("../img/contacts-phone-yellow.svg");
-    }
+.contacts-paragraph__svg {
+  margin: auto;
 
-    &:hover::before {
-      background-image: url("../img/contacts-phone-orange.svg");
-    }
-  }
-
-  &_email {
-    &::before {
-      background-image: url("../img/contacts-mail-yellow.svg");
-    }
-
-    &:hover::before {
-      background-image: url("../img/contacts-mail-orange.svg");
-    }
-  }
-
-  &_color_yellow {
-    color: $yellow-base;
+  &_yellow {
+    fill: $yellow-base;
   }
 }
 
 @media #{$media-tablet-more} {
-  .contacts-paragraph__link {
+  .contacts-paragraph__svg-wrapper {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+
+    background-size: 27px;
+  }
+
+  .contacts-paragraph__content-wrapper {
     font-size: 28px;
     line-height: 28px;
+  }
 
-    &::before {
-      width: 68px;
-      height: 68px;
-      margin-right: 23px;
-
-      background-size: 27px;
-    }
+  .contacts-paragraph__svg {
+    width: 27px;
+    height: 27px;
   }
 }
 
 @media #{$media-desktop-more} {
-  .contacts-paragraph__link::before {
+  .contacts-paragraph__svg-wrapper {
     width: 90px;
     height: 90px;
     margin-right: 30px;
 
     background-size: 36px;
+  }
+
+  .contacts-paragraph__svg {
+    width: 36px;
+    height: 36px;
   }
 }
