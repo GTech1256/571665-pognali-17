@@ -271,6 +271,9 @@
         <ul class="section-wrapper__list">
           <li class="section-wrapper__item country-card">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
               <img
                 class="country-card__pic"
@@ -304,6 +307,9 @@
           </li>
           <li class="section-wrapper__item country-card">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
               <img
                 class="country-card__pic"
@@ -337,6 +343,9 @@
           </li>
           <li class="section-wrapper__item country-card">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
               <img
                 class="country-card__pic"
@@ -401,6 +410,10 @@
             </div> <!-- /.user-card__level /.round-level -->
             <a href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
                 <img
@@ -539,6 +552,10 @@
             </div> <!-- /.user-card__level /.round-level -->
             <a href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                 <img
@@ -760,7 +777,21 @@
 
       <section class="page-main__map map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img class="map__pic" src="http://placehold.it/320x546" alt="Карта улицы Большая Конюшенная, дом 19/8" width="320" height="546">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+          <img
+            class="map__pic"
+            src="img/map-mobile@1x.jpg"
+            srcset="img/map-mobile@1x.png 1x, img/map-mobile@2x.png 2x"
+            alt="Карта улицы Большая Конюшенная, дом 19/8"
+            sizes="(max-width: 767px) 320px, (min-width: 768px) 768px, (min-width: 1440px) 1440px"
+          >
+        </picture>
         <iframe
           class="map__iframe"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A4552bfa40275aaafe2d2152c1678da88014fd3bfa95d0df711bde6b36ebfdd68&amp;source=constructor"
