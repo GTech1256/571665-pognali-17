@@ -29,11 +29,16 @@
   height: 24px;
 
   position: absolute;
-  top: -13px;
+  top: 88px;
   left: 25px;
 
   border-radius: 3px;
   z-index: 10;
+}
+
+.country-card__flag-img {
+  width: inherit;
+  height: inherit;
 }
 
 .country-card__info-wrapper {
@@ -132,7 +137,7 @@
     border-radius: 5px;
 
     left: auto;
-    right: -35px;
+    right: 150px;
     top: 16px;
   }
 
@@ -173,6 +178,7 @@
 
   .country-card__flag {
     top: 23px;
+    right: 152px;
   }
 
   .country-card__info-wrapper {

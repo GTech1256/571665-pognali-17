@@ -131,7 +131,12 @@
   .top-bar__logo {
     width: 205px;
     height: 50px;
+    margin-top: -2px;
     margin-right: 35px;
+  }
+
+  .top-bar_position-fixed .top-bar__logo {
+    margin-right: 50px;
   }
 
   .top-bar__top-wrappers {
@@ -143,5 +148,10 @@
 
   .top-bar__toggle-btn {
     display: none;
+  }
+
+  .top-bar_position-fixed {
+    min-height: 85px;
+    padding-top: 15px;
   }
 }

@@ -104,6 +104,10 @@
   }
 }
 
+.CTA-form__desc-text {
+  display: none;
+}
+
 @media #{$media-tablet-more} {
   .CTA-form {
     padding: 121px 75px;
@@ -159,6 +163,12 @@
   }
 }
 
+@media #{$media-desktop-less} {
+  .CTA-form__desc-text_tablet-less {
+    display: inline;
+  }
+}
+
 @media #{$media-desktop-more} {
   .CTA-form {
     padding-top: 152px;
@@ -202,5 +212,9 @@
     max-width: 865px;
     margin: auto;
     justify-content: space-between;
+  }
+
+  .CTA-form__desc-text_tablet-more {
+    display: inline;
   }
 }
