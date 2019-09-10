@@ -23,6 +23,7 @@
   margin-bottom: 24px;
 
   line-height: 40px;
+  font-family: inherit;
 }
 
 @media #{$media-tablet-more} {
@@ -85,14 +86,14 @@
     align-items: center;
 
     position: absolute;
-    right: 153px;
-    top: -189px;
+    right: 155px;
+    top: -190px;
 
     z-index: 20;
   }
 
   .profile-settings__round-level {
-    margin-bottom: 13px;
+    margin-bottom: 24px;
   }
 
   .profile-settings__user-pic {
@@ -103,6 +104,19 @@
   }
 
   .profile-settings__btn {
+    height: 46px;
+    width: 190px;
+
+    position: absolute;
+    top: 0;
+    right: 155px;
+
+    line-height: 20px;
+
+    border-radius: 0 0 10px 10px;
+  }
+
+  .profile-settings__btn-content-table-hide {
     display: none;
   }
 }

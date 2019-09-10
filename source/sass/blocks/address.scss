@@ -13,10 +13,12 @@
 }
 
 .address__path-btn {
-  display: block;
+  display: flex;
   padding: 19px;
 
   color: $blue-base;
+
+  align-items: center;
 
   text-align: center;
   font-size: 18px;
@@ -121,6 +123,7 @@
   }
 
   .address__path-btn::after {
+    margin-top: 6px;
     margin-left: 20px;
   }
 }

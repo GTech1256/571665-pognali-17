@@ -122,7 +122,7 @@
 
     &::before,
     &::after {
-      content: unset;
+      content: none;
     }
   }
 }
@@ -404,6 +404,7 @@
     margin: 0 auto;
 
     font-size: 20px;
+    font-family: inherit;
   }
 }
 
@@ -533,5 +534,9 @@
 
     font-size: 20px;
     line-height: 50px;
+  }
+
+  .accordion__level-input {
+    padding-left: 14px;
   }
 }

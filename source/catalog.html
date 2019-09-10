@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления — Погнали!</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <svg style="display: none;">
@@ -57,7 +57,6 @@
                   src="img/logo-mobile-white@1x.png"
                   srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
                   alt="Логотип: 'Погнали?'"
-                  sizes="(max-width: 767px) 100px, (min-width: 768px) 164px, (min-width: 1440px) 200px"
                 >
               </picture>
                 <!-- float -->
@@ -73,7 +72,6 @@
                   src="img/logo-mobile-blue@1x.png"
                   srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
                   alt="Логотип: 'Погнали?'"
-                  sizes="(max-width: 767px) 100px, (min-width: 768px) 164px, (min-width: 1440px) 200px"
                 >
               </picture>
             </a>
@@ -208,13 +206,16 @@
                 Острова
             </label>
           </span>
-          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</p>
-          <p class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</p>
-          <span class="country-picker-bar__toggle-element-wrapper">
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-            <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
-          </span>
+          <button class="country-picker-bar__toggle-btn" type="button">
+            <span class="country-picker-bar__toggle-title country-picker-bar__toggle-title_show">Показать все</span>
+            <span class="country-picker-bar__toggle-title country-picker-bar__toggle-title_hide">Свернуть</span>
+            <span class="country-picker-bar__toggle-element-wrapper">
+
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+              <span class="country-picker-bar__toggle-element"></span> <!-- /.country-picker-bar__toggle-element_close -->
+            </span>
+          </button>
         </div>
         <div class="country-picker">
           <span class="visually-hidden">Выбор части света</span>
@@ -829,7 +830,6 @@
                           src="img/firsova-mobile@1x.jpg"
                           srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x"
                           alt="Фотография пользователя"
-                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
                         >
                       </picture>
                     </a>
@@ -974,7 +974,6 @@
                           src="img/demin-mobile@1x.jpg"
                           srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x"
                           alt="Фотография пользователя"
-                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
                         >
                       </picture>
                     </a>
@@ -1114,7 +1113,6 @@
                           src="img/smolov-mobile@1x.jpg"
                           srcset="img/smolov-mobile@1x.jpg 1x, img/smolov-mobile@2x.jpg 2x"
                           alt="Фотография пользователя"
-                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
                         >
                       </picture>
                     </a>
@@ -1258,7 +1256,6 @@
                           src="img/rogovaya-mobile@1x.jpg"
                           srcset="img/rogovaya-mobile@1x.jpg 1x, img/rogovaya-mobile@2x.jpg 2x"
                           alt="Фотография пользователя"
-                          sizes="(max-width: 767px) 70px, (min-width: 768px) 75px, (min-width: 1440px) 285px"
                         >
                       </picture>
                     </a>
@@ -1441,7 +1438,6 @@
             src="img/logo-mobile-blue@1x.png"
             srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
             alt="Логотип: 'Погнали?'"
-            sizes="(max-width: 767px) 96px, (min-width: 768px) 164px, (min-width: 1440px) 198px"
           >
         </picture>
       </a>
@@ -1478,5 +1474,6 @@
       </div>
     </footer> <!-- /.page-footer -->
     <script src="js/index.js"></script>
+    <script src="js/picturefill.min.js" async></script>
   </body>
 </html>

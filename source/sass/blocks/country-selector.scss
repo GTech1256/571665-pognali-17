@@ -51,6 +51,7 @@
   color: $blue-base;
   font-size: 14px;
   font-weight: 500;
+  font-family: inherit;
   line-height: 18px;
   letter-spacing: 1.4px;
   text-align: left;
@@ -95,7 +96,7 @@
       top: 48%;
       right: 15px;
 
-      box-shadow: unset;
+      box-shadow: none;
     }
   }
 }
@@ -146,7 +147,7 @@
   position: relative;
 
   &::before {
-    content: unset;
+    content: none;
   }
 }
 
@@ -211,6 +212,7 @@
   line-height: 38px;
   text-align: center;
   text-transform: uppercase;
+  font-family: inherit;
   font-weight: 500;
 
   background-color: transparent;
@@ -320,7 +322,7 @@
 
     top: 26px;
     right: 129px;
-    transform: unset;
+    transform: none;
   }
 
   .country-selector:last-of-type::before {
@@ -342,7 +344,7 @@
   }
 
   .country-selector:not(:last-of-type)::after {
-    content: unset;
+    content: none;
   }
 
   .country-selector__select-btn_add-element::before,
@@ -440,7 +442,7 @@
     width: 435px;
     margin-bottom: 17px;
 
-    border: unset;
+    border: none;
   }
 
   .country-selector__add-form-letter {

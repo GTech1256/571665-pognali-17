@@ -18,17 +18,28 @@
   font-weight: 700;
   line-height: 24px;
   font-size: 24px;
+}
 
-  &::after {
-    display: block;
-    width: 47px;
-    height: 5px;
+.profile-add-plan__title-dots {
+  display: flex;
+  width: 47px;
+  margin-top: 4px;
+  margin-right: 18px;
+  margin-left: auto;
 
-    margin-left: auto;
+  justify-content: space-between;
+}
 
-    background: url("../img/dots.svg") no-repeat;
+.profile-add-plan__title-dot {
+  display: block;
+  width: 5px;
+  height: 5px;
 
-    content: "";
+  background-color: #bbbfcc;
+  border-radius: 50%;
+
+  &_active {
+    background-color: $blue-base;
   }
 }
 
@@ -40,6 +51,12 @@
   .profile-add-plan__title {
     font-size: 36px;
     margin-bottom: 66px;
+  }
+
+  .profile-add-plan__title-dots {
+    width: 73px;
+    margin-top: 3px;
+    margin-right: 0;
   }
 }
 
@@ -53,5 +70,9 @@
   .profile-add-plan__title {
     padding-left: 73px;
     margin-bottom: 67px;
+  }
+
+  .profile-add-plan__title-dots {
+    display: none;
   }
 }
