@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var deploy = require('gulp-gh-pages');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -106,3 +107,17 @@ gulp.task("build", gulp.series(
 ))
 
 gulp.task("start", gulp.series("build", "server"));
+
+
+gulp.task("post-deploy", function () {
+  return gulp.src("build/**/*")
+    .pipe(deploy({
+      remoteUrl: "https://github.com/GTech1256/571665-device-25.git",
+      branch: "gh-pages"
+    }))
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task("deploy", gulp.series("build", "post-deploy"));
