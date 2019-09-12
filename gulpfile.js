@@ -107,17 +107,3 @@ gulp.task("build", gulp.series(
 ))
 
 gulp.task("start", gulp.series("build", "server"));
-
-
-gulp.task("post-deploy", function () {
-  return gulp.src("build/**/*")
-    .pipe(deploy({
-      remoteUrl: "https://github.com/GTech1256/571665-device-25.git",
-      branch: "gh-pages"
-    }))
-});
-
-/**
- * Push build to gh-pages
- */
-gulp.task("deploy", gulp.series("build", "post-deploy"));
