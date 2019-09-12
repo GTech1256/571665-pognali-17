@@ -1,7 +1,9 @@
 .user-card {
   position: relative;
+  z-index: 1;
 
   max-width: 285px;
+  width: 285px;
 }
 
 .user-card__level {

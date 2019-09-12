@@ -173,7 +173,7 @@
   .companions-country-filter__country-picker-control_active ~ .country-picker {
     display: flex;
 
-    flex-direction: column;
+    // flex-direction: column;
   }
 
   .country-picker__alphabet {
@@ -231,7 +231,7 @@
     color: $blue-nav-text;
     font-size: 60px;
     font-weight: bold;
-    line-height: 82px;
+    line-height: 83px;
 
     background-color: transparent;
     border: none;
@@ -273,6 +273,7 @@
   }
 
   .country-picker__close-btn {
+    height: 20px;
     padding-left: 35px;
 
     font-size: 20px;
